@@ -1,0 +1,13 @@
+# Jekyll
+_site
+.jekyll-metadata
+.sass-cache
+
+# Ruby and Bundler
+Gemfile.lock
+.ruby-version
+vendor
+.bundle
+
+# Editor
+*.swp
