@@ -1,10 +1,23 @@
 .profile {
   img {
     box-shadow: 0 0 5px $grey-color;
-    width: 100%;
-    margin-left: 5px;
+    width: 230px;
+    margin: 5px 0px 5px 15px;
+    display: inline;
+    float: right;
   }
 }
+@media screen and (max-width: $viewport-medium) {
+  .profile {
+    img {
+      width: 230px;
+      margin: 0px auto 25px auto;
+      display: block;
+      float: none;
+    }
+  }
+}
+
 .address {
   font-weight: bold;
   p {

@@ -3,13 +3,11 @@ layout: page
 ---
 
 {% if page.profile %}
-<div class="profile col one {{ page.profile.align }}">
-  {% if page.profile.image %}
+<div class="profile">
   <img
-    class="one"
     src="{{ page.profile.image | prepend: '/assets/img/' | prepend: site.baseurl }}"
   />
-  {% endif %} {% if page.profile.address %}
+  {% if page.profile.address %}
   <div class="address">{{ page.profile.address }}</div>
   {% endif %}
 </div>
