@@ -11,10 +11,10 @@ permalink: /projects/
     {% if project.redirect %}
     <a href="{{ project.redirect }}" target="_blank">
     {% else %}
-    <a href="{{ project.url | prepend: site.baseurl | prepend: site.url }}">
+    <a href="{{ project.url | prepend: site.baseurl }}">
     {% endif %}
 
-    <img src="{{ project.img | prepend: site.baseurl | prepend: site.url }}" />
+    <img src="{{ project.img | prepend: site.baseurl }}" />
     <h5>{{project.title}}</h5>
     <p>{{project.description}}</p>
 
