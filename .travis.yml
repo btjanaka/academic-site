@@ -1,0 +1,23 @@
+language: ruby
+cache: bundler
+rvm:
+  - 2.5.1
+
+git:
+  depth: 1
+branches:
+  only:
+    - master
+
+script: bundle exec jekyll build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: master
+  local_dir: build
+  repo: btjanaka/btjanaka.github.io
+  target_branch: master
