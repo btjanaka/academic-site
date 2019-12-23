@@ -31,3 +31,5 @@ During high school, I competed in the
 [VEX Robotics Competition](https://en.wikipedia.org/wiki/VEX_Robotics_Competition)
 with team 86868: The Resistance and won the 2017 VEX Robotics High School World
 Championship.
+
+[Resume](/assets/pdf/btjanaka-resume.pdf) \| [CV](/assets/pdf/btjanaka-cv.pdf)
