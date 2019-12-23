@@ -1,0 +1,37 @@
+.card-container {
+  text-align: center;
+}
+
+.card {
+  margin: 5px 9px;
+  display: inline-block;
+  width: 210px;
+  text-align: left;
+  border: 1px solid white;
+
+  a {
+    img {
+      width: 210px;
+    }
+    h5 {
+      color: $dark-gray;
+      font-size: 1.3rem;
+      margin: 5px 8px;
+    }
+    p {
+      color: $dark-gray;
+      font-size: 1rem;
+      margin: 5px 8px;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &:hover {
+    // box-shadow: 0px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: $lighter-gray;
+  }
+}

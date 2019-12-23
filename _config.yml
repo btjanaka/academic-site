@@ -1,18 +1,15 @@
-# -----------------------------------------------------------------------------
-# Site settings
-# -----------------------------------------------------------------------------
 name: Bryon Tjanaka
 email: bryon@btjanaka.net
-description: > # this means to ignore newlines until "url:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+description: >
+  Personal website of Bryon Tjanaka.
 footer_text: >
-  Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+  Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a
+  href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a
+  href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
-url:  # the base hostname & protocol for your site
-baseurl: /al-folio # the subpath of your site, e.g. /blog/
-last_updated: # leave blank if you don't want to display last updated
+url: # base hostname & protocol
+baseurl: # site subpath, e.g. /blog/
+last_updated: "Dec. 2019" # can leave blank
 
 # -----------------------------------------------------------------------------
 # Open Graph
@@ -20,50 +17,50 @@ last_updated: # leave blank if you don't want to display last updated
 # Display links to the page with a preview object on social media.
 # To achieve this, change serve_og_meta to true and then provide the URL of the
 # preview image as the value of og_image.
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+og_image: /assets/img/open-graph-img.png # Site-wide (default for all links) Open Graph preview img
 # -----------------------------------------------------------------------------
-# Social integration
+# Social integration - Leave blank to exclude
 # -----------------------------------------------------------------------------
-github_username: # your GitHub user name
-twitter_username: # your Twitter handle
-linkedin_username: # your LinkedIn user name
-scholar_userid: # your Google Scholar ID
-orcid_id: # your ORCID ID
-medium_username: # your Medium username
-quora_username: # your Quora username
-publons_id: # your ID on Publons
-research_gate_profile: # your profile on ResearchGate
-blogger_url: # your blogger URL
+github_username: btjanaka
+twitter_username:
+linkedin_username: btjanaka
+scholar_userid:
+orcid_id:
+medium_username:
+quora_username:
+publons_id:
+research_gate_profile:
+blogger_url:
 
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Best reached via email
 
-google_analytics: UA-XXXXXXXXX # out your google-analytics code
+google_analytics: # google-analytics code
 
 # -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
-blog_name: al-folio
-blog_description: a simple whitespace theme for academics
+blog_name: Blog
+blog_description: Coming soon!
 
 # Pagination
-paginate: 4
+paginate: 5
 permalink: /blog/:year/:title/
 paginate_path: /blog/page:num/
 
 text:
   pagination:
-    newer: 'Newer'
-    older: 'Older'
+    newer: "Newer"
+    older: "Older"
 
 # Comments
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: btjanaka
 
 # Optional features
-show_social_icons:  false
-enable_anchorjs:    false
-enable_katex:       true
+show_social_icons: false
+enable_anchorjs: false
+enable_katex: true
 
 # -----------------------------------------------------------------------------
 # Collections
@@ -78,30 +75,33 @@ collections:
     output: true
     permalink: /projects/:path/
 
-news_limit: 5
+news_limit: 3
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
 # -----------------------------------------------------------------------------
 
+# Source and destination directories
+source: src
+destination: build
+
 # Build settings
 markdown: kramdown
 highlighter: pygments
 
-# Includes & excludes
-include: ['_pages']
-exclude: [vendor]
+# Includes and excludes
+include: ["_pages"]
+exclude: []
 
 # Plug-ins
 plugins:
-    - jekyll-email-protect
-    - jekyll-paginate
-    - jekyll/scholar
-    - jemoji
+  - jekyll-email-protect
+  - jekyll-paginate
+  - jekyll/scholar
+  - jemoji
 
 # Jekyll-Scholar
 scholar:
-
   last_name: Einstein
 
   style: apa
@@ -122,6 +122,13 @@ scholar:
   details_link: Details
 
   query: "@*"
+
+# -----------------------------------------------------------------------------
+# Serve settings
+# -----------------------------------------------------------------------------
+
+port: 8686
+livereload: true
 
 # -----------------------------------------------------------------------------
 # Other settings

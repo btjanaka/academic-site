@@ -1,0 +1,3 @@
+[submodule "branding"]
+	path = external/branding
+	url = https://github.com/btjanaka/branding
