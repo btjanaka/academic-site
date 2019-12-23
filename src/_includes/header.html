@@ -30,18 +30,28 @@
 
       <div class="trigger">
         <!-- About -->
-        <a class="page-link" href="{{ site.baseurl }}/">about</a>
+        {% assign current_url = site.baseurl | append: "/" %}
+        <a
+          class="page-link {% if page.url == current_url %}current{% endif %}"
+          href="{{ current_url }}"
+          >about</a
+        >
 
         <!-- Blog -->
-        <a class="page-link" href="{{ '/blog/' | prepend: site.baseurl }}"
+        {% assign current_url = site.baseurl | append: "/blog/" %}
+        <a
+          class="page-link {% if page.url == current_url %}current{% endif %}"
+          href="{{ current_url }}"
           >blog</a
         >
 
         <!-- Pages -->
-        {% for page in site.pages %} {% if page.title and page.url != "/" and
-        page.url != "/404.html" %}
-        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}"
-          >{{ page.title }}</a
+        {% for p in site.pages %} {% if p.title and p.url != "/" and p.url !=
+        "/404.html" %} {% assign current_url = site.baseurl | append: p.url %}
+        <a
+          class="page-link {% if page.url == current_url %}current{% endif %}"
+          href="{{ current_url }}"
+          >{{ p.title }}</a
         >
         {% endif %} {% endfor %}
       </div>

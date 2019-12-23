@@ -27,6 +27,12 @@
     display: none;
   }
 
+  .current {
+    // Use text shadow to simulate making the text bold, since bold will change
+    // the text width.
+    text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
+    text-decoration: underline;
+  }
   .page-link {
     line-height: $line-height;
     // Gaps between nav items, but not on the first one
