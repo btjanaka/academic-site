@@ -3,7 +3,7 @@
 
 {% if entry.abbr %} {% if site.data.venues[entry.abbr] %}
 <abbr
-  >[<a href="{{site.data.venues[entry.abbr].url}}" target="_blank"
+  >[<a href="{{site.data.venues[entry.abbr].url}}"
     >{{entry.abbr}}</a
   >]</abbr
 >
@@ -20,13 +20,13 @@
     author.last == site.scholar.last_name %}
     <em>{{author.last}}, {{author.first}}</em>, {% else %} {% if
     site.data.coauthors[author.last] %}
-    <a href="{{site.data.coauthors[author.last].url}}" target="_blank"
+    <a href="{{site.data.coauthors[author.last].url}}"
       >{{author.last}}, {{author.first}}</a
     >, {% else %} {{author.last}}, {{author.first}}, {% endif %} {% endif %} {%
     else %} {% if author.last == site.scholar.last_name %} and
     <em>{{author.last}}, {{author.first}}</em> {% else %} {% if
     site.data.coauthors[author.last] %} and
-    <a href="{{site.data.coauthors[author.last].url}}" target="_blank"
+    <a href="{{site.data.coauthors[author.last].url}}"
       >{{author.last}}, {{author.first}}</a
     >
     {% else %} and {{author.last}}, {{author.first}} {% endif %} {% endif %} {%
@@ -44,31 +44,24 @@
     {% if entry.abstract %} [<a class="abstract">Abs</a>] {% endif %} {% if
     entry.arxiv %} [<a
       href="http://arxiv.org/abs/{{ entry.arxiv }}"
-      target="_blank"
       >arXiv</a
     >] {% endif %} {% if entry.html %} [<a
       href="{{ entry.html }}"
-      target="_blank"
       >HTML</a
     >] {% endif %} {% if entry.pdf %} [<a
       href="{{ entry.pdf | prepend: '/assets/pdf/' | prepend: site.baseurl }}"
-      target="_blank"
       >PDF</a
     >] {% endif %} {% if entry.supp %} [<a
       href="{{ entry.supp | prepend: '/assets/pdf/' | prepend: site.baseurl }}"
-      target="_blank"
       >Supp</a
     >] {% endif %} {% if entry.poster %} [<a
       href="{{ entry.poster | prepend: '/assets/pdf/' | prepend: site.baseurl }}"
-      target="_blank"
       >Poster</a
     >] {% endif %} {% if entry.slides %} [<a
       href="{{ entry.slides | prepend: '/assets/pdf/' | prepend: site.baseurl }}"
-      target="_blank"
       >Slides</a
     >] {% endif %} {% if entry.code %} [<a
       href="{{ entry.code }}"
-      target="_blank"
       >Code</a
     >] {% endif %}
   </span>

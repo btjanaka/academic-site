@@ -3,9 +3,9 @@ email: bryon@btjanaka.net
 description: >
   Personal website of Bryon Tjanaka.
 footer_text: >
-  Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a
+  Powered by <a href="http://jekyllrb.com/">Jekyll</a> with <a
   href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a
-  href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+  href="https://pages.github.com/">GitHub Pages</a>.
 
 url: # base hostname & protocol - do not use
 baseurl: # site subpath, e.g. /blog/
