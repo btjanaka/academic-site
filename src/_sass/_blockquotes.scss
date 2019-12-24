@@ -3,6 +3,18 @@ blockquote {
   font-style: italic;
   margin-left: $space-1;
   padding: $space-1;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .speaker::before {
+    content: "- ";
+  }
+  .speaker {
+    text-align: right;
+  }
 }
 
 blockquote footer {

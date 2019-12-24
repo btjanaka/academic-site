@@ -46,8 +46,9 @@
         >
 
         <!-- Pages -->
-        {% for p in site.pages %} {% if p.title and p.url != "/" and p.url !=
-        "/404.html" %} {% assign current_url = site.baseurl | append: p.url %}
+        {% assign sorted_pages = site.pages | sort: "order" %} {% for p in
+        sorted_pages %} {% if p.title and p.url != "/" and p.url != "/404.html"
+        %} {% assign current_url = site.baseurl | append: p.url %}
         <a
           class="page-link {% if page.url == current_url %}current{% endif %}"
           href="{{ current_url }}"
