@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Website History
-date: 2019-12-25 00:00:00-0800
+date: 2019-12-24 16:00:00-0800
 description: An overview of how this site came to be.
 tags:
   - website
