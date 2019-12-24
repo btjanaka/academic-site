@@ -65,6 +65,18 @@ ACM@UCI_
 
 ## Miscellaneous
 
+### Competitive Programming Profiles
+
+I use these sites when practicing for competitions like
+[ICPC](https://icpc.baylor.edu/).
+
+- [UVa profile](https://uhunt.onlinejudge.org/id/945356)
+- [Kattis profile](https://open.kattis.com/users/btjanaka)
+- [LeetCode profile](https://leetcode.com/btjanaka/)
+- [HackerRank profile](https://www.hackerrank.com/btjanaka)
+
+### TypeRacer Profile
+
 <a href="https://data.typeracer.com/pit/profile?user=btjanaka&ref=badge" target="_top">
 <img
   src="https://data.typeracer.com/misc/badge?user=btjanaka"
