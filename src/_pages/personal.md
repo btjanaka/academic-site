@@ -14,7 +14,7 @@ order: 2
 I typically use [Inkscape](https://inkscape.org) to draw these. Refer to this
 [GitHub repo](https://github.com/btjanaka/art) for the sources.
 
-<img style="width:35%" alt="hero drawing" src="{{ site.baseurl }}/assets/img/hero-drawing.png">
+<img class="vertical" alt="hero drawing" src="{{ site.baseurl }}/assets/img/hero-drawing.png">
 _phone wallpaper_
 
 ![mountain explorer]({{ site.baseurl }}/assets/img/mountain-explorer-blue.png)
