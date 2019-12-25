@@ -10,6 +10,7 @@ footer_text: >
 url: # base hostname & protocol - do not use
 baseurl: # site subpath, e.g. /blog/
 last_updated: "Dec. 2019" # can leave blank
+timezone: America/Los_Angeles
 
 # -----------------------------------------------------------------------------
 # Open Graph
