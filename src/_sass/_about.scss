@@ -1,5 +1,5 @@
 .profile {
-  img {
+  img.profile {
     box-shadow: 0 0 5px $grey-color;
     width: 230px;
     margin: 5px 0px 5px 15px;
@@ -9,7 +9,7 @@
 }
 @media screen and (max-width: $viewport-medium) {
   .profile {
-    img {
+    img.profile {
       width: 230px;
       margin: 0px auto 25px auto;
       display: block;

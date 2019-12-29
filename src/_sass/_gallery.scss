@@ -40,23 +40,25 @@ figcaption {
 }
 
 // Default images for posts
-img {
-  width: 65%;
-  margin: 30px auto 5px auto;
-  display: block;
-}
-img.vertical {
-  width: 35%;
-}
-// A caption is simply an emphasized block of text placed after the image.
-img + em {
-  text-align: center;
-  display: block;
-  margin: 5px auto 30px auto;
-}
-@media screen and (max-width: $viewport-small) {
-  img,
+.post {
+  img {
+    width: 65%;
+    margin: 30px auto 5px auto;
+    display: block;
+  }
   img.vertical {
-    width: 100%;
+    width: 35%;
+  }
+  // A caption is simply an emphasized block of text placed after the image.
+  img + em {
+    text-align: center;
+    display: block;
+    margin: 5px auto 30px auto;
+  }
+  @media screen and (max-width: $viewport-small) {
+    img,
+    img.vertical {
+      width: 100%;
+    }
   }
 }

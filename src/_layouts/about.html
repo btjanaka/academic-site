@@ -5,7 +5,7 @@ layout: page
 {% if page.profile %}
 <div class="profile">
   <img
-    src="{{ page.profile.image | prepend: '/assets/img/' | prepend: site.baseurl }}"
+    class="profile" src="{{ page.profile.image | prepend: '/assets/img/' | prepend: site.baseurl }}"
   />
   {% if page.profile.address %}
   <div class="address">{{ page.profile.address }}</div>
