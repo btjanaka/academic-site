@@ -43,7 +43,7 @@ google_analytics: # google-analytics code
 # Blog
 # -----------------------------------------------------------------------------
 blog_name: Blog
-blog_description: Coming soon!
+blog_description:
 
 # Pagination
 paginate: 5
