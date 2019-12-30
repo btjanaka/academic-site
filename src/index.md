@@ -3,6 +3,8 @@ layout: article
 title: Bryon Tjanaka
 ---
 
+<!-- Biography -->
+
 <div class="card profile-pic">
   <div class="card__image">
     <img class="image" src="/assets/img/btjanaka.jpg"/>
@@ -33,6 +35,8 @@ with 86868: The Resistance and won the
 
 [<i class="far fa-file-alt"></i> Resume](/assets/pdf/btjanaka-resume.pdf){:.button.button--primary.button--pill}
 [<i class="far fa-file-alt"></i> CV](/assets/pdf/btjanaka-cv.pdf){:.button.button--primary.button--pill}
+
+<!-- News -->
 
 <div class="news-section">
   <h2>News</h2>
@@ -65,39 +69,39 @@ with 86868: The Resistance and won the
   {% endif %}
 </div>
 
-<!-- [> Konami Code and Modal <] -->
-<!-- See https://www.w3schools.com/howto/howto_css_modals.asp -->
+<!-- Konami Code and Car Animation -->
+<!-- See also https://www.w3schools.com/howto/howto_css_modals.asp -->
 
+<!-- A modal that displays the animation. It starts out hidden. -->
 <div id="modal" class="custom__modal">
-
-  <!-- Modal content -->
   <div class="custom__modal-content">
     <span id="close" class="custom__modal-close">&times;</span>
-    <p>Some text in the Modal..</p>
+    <h2>Konami Code!</h2>
+    {% include projects/car-animation.html %}
   </div>
-
 </div>
 
-
 <script type="text/javascript" src="/assets/js/konami.js"></script>
+
 <script type="text/javascript">
+  let modal = document.getElementById("modal");
 
-let modal = document.getElementById("modal");
-
-// Clicking on the close button or outside the window closes the modal.
-let close = document.getElementById("close");
-close.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if(event.target == modal) {
+  // Clicking on the close button or outside the window closes the modal.
+  let close = document.getElementById("close");
+  close.onclick = function() {
+    window.showing_car = false;
     modal.style.display = "none";
   }
-}
+  window.onclick = function(event) {
+    if(event.target == modal) {
+      window.showing_car = false;
+      modal.style.display = "none";
+    }
+  }
 
-// Konami code activates it.
-let konami = new Konami(function() {
-  modal.style.display = "block";
-});
-
+  // Konami code activates the modal.
+  let konami = new Konami(function() {
+    window.showing_car = true; // Global variable for activating the car.
+    modal.style.display = "block";
+  });
 </script>

@@ -1,0 +1,151 @@
+<script type="x-shader/x-vertex" id="vshader-source">
+  attribute vec3 a_coords;
+  attribute vec3 a_normal;
+  uniform mat4 modelview;
+  uniform mat4 projection;
+  uniform mat3 normalMatrix;
+  varying vec3 cameraCoords;
+  varying vec3 cameraNormal;
+  void main() {
+    vec4 coords = vec4(a_coords,1.0);
+    vec4 cameraCoords4 = modelview * coords;
+    cameraCoords = cameraCoords4.xyz / cameraCoords4.w;
+    cameraNormal = normalMatrix * a_normal;
+    gl_Position = projection * cameraCoords4;
+  }
+</script>
+
+<script type="x-shader/x-fragment" id="fshader-source">
+  precision mediump float;
+  uniform vec4 sunlightPosition;
+  uniform int sunlightOn;
+  uniform vec4 streetLampPosition;
+  uniform int streetLampOn;
+  uniform vec4 leftHeadlightPosition;
+  uniform vec4 rightHeadlightPosition;
+  uniform vec3 headlightDirection;
+  uniform int headlightsOn;
+  uniform float shouldGlow;
+  uniform vec4 diffuseColor;
+  uniform vec3 specularColor;
+  uniform float specularExponent;
+  varying vec3 cameraCoords;
+  varying vec3 cameraNormal;
+  void main() {
+    vec4 sunlightColor;
+    if (sunlightOn == 1) {
+      float K_a = 0.1;
+      float K_d = 0.6;
+      float K_s = 0.4;
+      vec3 N = normalize(cameraNormal);
+      vec3 V = normalize(-cameraCoords.xyz);
+      vec3 L = normalize(sunlightPosition.xyz);
+      vec3 R = 2.0 * N * dot(N,L) - L;
+      vec3 color = vec3(0,0,0);
+      color += K_a * diffuseColor.rgb;
+      color += K_d * diffuseColor.rgb * max(dot(N,L),0.0);
+      color += K_s * specularColor * pow(max(dot(R,V), 0.0), specularExponent);
+      sunlightColor = vec4(color, diffuseColor.a);
+    } else {
+      sunlightColor = vec4(0,0,0,1);
+    }
+    vec4 streetLampColor;
+    if (streetLampOn == 1) {
+      float K_a = 0.1;
+      float K_d = 0.5;
+      float K_s = 0.2;
+      float K_falloff = 0.1;
+      vec3 N = normalize(cameraNormal);
+      vec3 V = normalize(-cameraCoords.xyz);
+      vec3 L = normalize(streetLampPosition.xyz /
+                         streetLampPosition.w - cameraCoords);
+      vec3 R = -reflect(L, N);
+      float d = distance(streetLampPosition.xyz / streetLampPosition.w, cameraCoords);
+      float falloff = 1.0 / (1.0 + K_falloff * d * d);
+      vec3 color = vec3(0,0,0);
+      color += K_a * diffuseColor.rgb;
+      color += K_d * diffuseColor.rgb * max(dot(N,L),0.0);
+      color += K_s * specularColor * pow(max(dot(R,V), 0.0), specularExponent);
+      streetLampColor = falloff * vec4(color, diffuseColor.a);
+    } else {
+      streetLampColor = vec4(0,0,0,1);
+    }
+    vec4 leftHeadlightColor;
+    if (headlightsOn == 1) {
+      float K_a = 0.1;
+      float K_d = 0.3;
+      float K_s = 0.2;
+      float K_falloff = 0.1;
+      vec3 N = normalize(cameraNormal);
+      vec3 V = normalize(-cameraCoords.xyz);
+      vec3 L = normalize(leftHeadlightPosition.xyz /
+                         leftHeadlightPosition.w - cameraCoords);
+      vec3 R = -reflect(L, N);
+      float d = distance(leftHeadlightPosition.xyz / leftHeadlightPosition.w, cameraCoords);
+      float falloff = 1.0 / (1.0 + K_falloff * d * d);
+      vec3 H = normalize(-headlightDirection);
+      float cosinePhi = dot(L, H);
+      float spotlight = 0.0;
+      if (cosinePhi >= 0.8) {
+        spotlight = pow(cosinePhi, 5.0);
+      }
+      vec3 color = vec3(0,0,0);
+      color += K_a * diffuseColor.rgb;
+      color += K_d * diffuseColor.rgb * max(dot(N,L),0.0);
+      color += K_s * specularColor * pow(max(dot(R,V), 0.0), specularExponent);
+      leftHeadlightColor = falloff * spotlight * vec4(color, diffuseColor.a);
+    } else {
+      leftHeadlightColor = vec4(0,0,0,1);
+    }
+    vec4 rightHeadlightColor;
+    if (headlightsOn == 1) {
+      float K_a = 0.1;
+      float K_d = 0.3;
+      float K_s = 0.2;
+      float K_falloff = 0.1;
+      vec3 N = normalize(cameraNormal);
+      vec3 V = normalize(-cameraCoords.xyz);
+      vec3 L = normalize(rightHeadlightPosition.xyz /
+                         rightHeadlightPosition.w - cameraCoords);
+      vec3 R = -reflect(L, N);
+      float d = distance(rightHeadlightPosition.xyz / rightHeadlightPosition.w, cameraCoords);
+      float falloff = 1.0 / (1.0 + K_falloff * d * d);
+      vec3 H = normalize(-headlightDirection);
+      float cosinePhi = dot(L, H);
+      float spotlight = 0.0;
+      if (cosinePhi >= 0.8) {
+        spotlight = pow(cosinePhi, 5.0);
+      }
+      vec3 color = vec3(0,0,0);
+      color += K_a * diffuseColor.rgb;
+      color += K_d * diffuseColor.rgb * max(dot(N,L),0.0);
+      color += K_s * specularColor * pow(max(dot(R,V), 0.0), specularExponent);
+      rightHeadlightColor = falloff * spotlight * vec4(color, diffuseColor.a);
+    } else {
+      rightHeadlightColor = vec4(0,0,0,1);
+    }
+    gl_FragColor = vec4((streetLampColor + sunlightColor +
+                         leftHeadlightColor + rightHeadlightColor +
+                         shouldGlow * diffuseColor).xyz,
+                         diffuseColor.a);
+  }
+</script>
+
+<!-- Scripts -->
+<script type="text/javascript" src="/assets/js/projects/car/gl-matrix-min.js"></script>
+<script type="text/javascript" src="/assets/js/projects/car/webgl-utils.js"></script>
+<script type="text/javascript" src="/assets/js/projects/car/models.js"></script>
+<script type="text/javascript" src="/assets/js/projects/car/car.js"></script>
+
+<script type="text/javascript">
+  window.onload = startup;
+</script>
+
+<div id="canvas-holder">
+  <!-- Optional checkbox for animation -->
+  <!-- <label class="checkLabel"> -->
+  <!--   <input type="checkbox" id="animate"/> -->
+  <!--   Click to Animate -->
+  <!-- </label> -->
+  <canvas id="myGLCanvas" width="500" height="500"></canvas>
+</div>

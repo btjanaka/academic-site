@@ -6,9 +6,7 @@
 
 /* The Modal (background) */
 .custom__modal {
-  // TODO
-  // display: none; [> Hidden by default <]
-  display: block; /* Hidden by default */
+  display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -41,6 +39,27 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+  }
+}
+
+//
+// Car animation
+//
+
+#canvas-holder {
+  #myGLCanvas {
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    width: 500px;
+    height: 500px;
+  }
+
+  @media screen and (max-width: 700px) {
+    #myGLCanvas {
+      width: 70vw;
+      height: 70vw;
+    }
   }
 }
 
