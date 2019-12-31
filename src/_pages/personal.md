@@ -6,8 +6,8 @@ permalink: /personal/
 order: 2
 ---
 
-[Graphic Design](#graphic-design) \| [Quotes](#quotes) \|
-[Modular Origami](#modular-origami) \| [Miscellaneous](#miscellaneous)
+1. TOC
+{:toc}
 
 ## Graphic Design
 

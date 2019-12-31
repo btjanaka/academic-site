@@ -1,0 +1,21 @@
+// Add 'Contents' headline
+#markdown-toc::before {
+  content: "Contents";
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin: 1px auto;
+}
+
+// Style nested lists
+#markdown-toc ol {
+  margin-bottom: 0px;
+}
+
+#markdown-toc {
+  border: 1px solid $light-gray;
+  padding: 10px 30px;
+  list-style: decimal;
+  display: inline-block;
+  margin: 10px 0px;
+}

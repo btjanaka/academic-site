@@ -12,7 +12,10 @@ tags:
 My personal website has gone through several iterations. Here, I will briefly
 describe the motivation and technologies behind each major version.
 
-## v1 | Jekyll
+* TOC
+{:toc}
+
+## v1 - Jekyll
 
 Inspired by several friends, I began investigating web development in
 December 2018. Using [Jekyll](https://jekyllrb.com/) with a
@@ -24,7 +27,7 @@ to explore more.
 [Archived Site](https://btjanaka.net/jekyll-site) \|
 [Source Code](https://github.com/btjanaka/jekyll-site)
 
-## v2 | "Vanilla"
+## v2 - "Vanilla"
 
 To better understand basic web technologies, I built a new website from the
 ground up, using raw/vanilla HTML, CSS, and JavaScript. Eventually, I used
@@ -37,7 +40,7 @@ full of an endless, ever-changing list of libraries and tools.
 [Archived Site](https://btjanaka.net/vanilla-site) \|
 [Source Code](https://github.com/btjanaka/vanilla-site)
 
-## v3 | React
+## v3 - React
 
 To gain more experience with higher-level frameworks, I used
 [React](https://reactjs.org) to build the next version of my website. In the
@@ -54,7 +57,7 @@ plugging in small React components if needed.
 [Archived Site](https://btjanaka.net/react-site) \|
 [Source Code](https://github.com/btjanaka/react-site)
 
-## v4 | Jekyll (again)
+## v4 - Jekyll (again)
 
 Thus, I have come full circle and decided to use Jekyll once more, this time
 with the [al-folio](https://github.com/alshedivat/al-folio) theme and numerous
