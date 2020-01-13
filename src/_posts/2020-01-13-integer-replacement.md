@@ -26,7 +26,7 @@ Given a positive integer $$n$$, you can perform the following operations:
 1. If $$n$$ is even, replace $$n$$ with $$n/2$$
 2. If $$n$$ is odd, replace $$n$$ with either $$n + 1$$ or $$n - 1$$
 
-What is the minimum number of replacements needed for $$n$$ to become 1?.
+What is the minimum number of replacements needed for $$n$$ to become $$1$$?
 
 ## Hints
 
