@@ -13,7 +13,7 @@ social: true
 ---
 
 I am an undergraduate computer science major at [UC Irvine](https://uci.edu/).
-Currently, I work with [Roy Fox](https://roydfox.com/) on hierarchical
+Currently, I work with [Roy Fox](https://royf.org/) on hierarchical
 reinforcement learning and with the [Mobley Lab](https://mobleylab.org/) on
 molecular dynamics force fields. I also serve as Internal Vice President of
 [ACM@UCI](http://acm-uci.org/), and I have interned at
