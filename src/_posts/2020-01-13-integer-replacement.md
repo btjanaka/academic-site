@@ -1,21 +1,14 @@
 ---
-layout: post
+layout: article
+key: 2020-01-13-integer-replacement
 title: Integer Replacement
 date: 2020-01-13 11:00:00-0800
-description: Discussion of a practice interview problem.
-comments: yes
-tags:
-  - algorithm-problems
-  - leetcode
-  - algorithms
+tags: Algorithms Problems LeetCode
 ---
 
 This is a problem I brought along to the WICSxACM Technical Interview Prep
 workshop on 13 January 2020. It is also available at
 [bit.ly/integer-replacement](https://bit.ly/integer-replacement).
-
-1. TOC
-{:toc}
 
 ## Problem Description
 

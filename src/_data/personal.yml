@@ -1,0 +1,49 @@
+graphic_design:
+  - img: /assets/img/graphic-design/mountain-explorer-blue.png
+    caption: "Mountain explorer (Guess Who?)"
+  - img: /assets/img/graphic-design/hero-drawing.png
+    caption: "A hero holding up a sword"
+    vertical: true
+  - img: /assets/img/graphic-design/explosion-drawing.png
+    caption: "An explosion?"
+  - img: /assets/img/graphic-design/tower-drawing.png
+    caption: "Perspective drawing of a tower"
+
+origami:
+  - img: /assets/img/origami/menger.jpg
+    caption: "Menger Sponge, n=1"
+  - img: /assets/img/origami/origami-assortment.jpg
+    caption: "An assortment of modular origami"
+  - img: /assets/img/origami/acm-cube.jpg
+    caption: "A small cube for ACM@UCI"
+
+quotes:
+  - quote: Audentes fortuna iuvat.
+  - quote:
+      Life is about waiting for the right moment to act. So relax. You are not
+      early. You are not late. You are very much on time.
+  - quote: The hardest choices require the strongest wills.
+    speaker: Thanos
+  - quote:
+      Go confidently in the direction of your dreams! Live the life you have
+      imagined.
+    speaker: Henry David Thoreau
+  - quote: If greedy doesn't work, the input is wrong.
+    speaker: Karthik Gajulapalli
+  - quote: The early bird gets the worm, but the second mouse gets the cheese.
+    speaker: Aldrich Killian
+  - quote: We live in the age of information, not the age of knowledge.
+  - quote:
+      Success is about being at the right place at the right time, and knowing
+      it.
+  - quote: You miss 100% of the shots you don't take.
+    speaker: Wayne Gretzky
+  - quote: You can do anything, but not everything.
+    speaker: David Allen
+  - quote:
+      Consistency and repeatability is a hallmark and pillar of all engineering,
+      and I don't know if I could have seen a more inopportune time for
+      something not to work.
+    speaker:
+      '<a href="https://youtu.be/v_KTkTS6GrQ?t=174">2016 VEX World Championship
+      Finals 3</a>'

@@ -1,0 +1,44 @@
+.image {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  @extend .image--md;
+}
+.image + em {
+  // Image captions are italicized text below a .image
+  text-align: center;
+  display: block;
+  margin: 5px auto 30px auto;
+}
+.image--md {
+  width: map-get($image, width);
+}
+.image--xl {
+  width: map-get($image, width-xl);
+}
+.image--lg {
+  width: map-get($image, width-lg);
+}
+.image--sm {
+  width: map-get($image, width-sm);
+}
+.image--xs {
+  width: map-get($image, width-xs);
+}
+
+// For bigger pictures.
+.image--full {
+  width: 100%;
+}
+.image--vertical {
+  width: percentage(1080 / 1920 * 1080 / 1920);
+}
+
+// For adding custom properties to the images
+.image--shadow {
+  @include box-shadow();
+}
+.image--round-corners {
+  border-radius: map-get($base, border-radius);
+}
