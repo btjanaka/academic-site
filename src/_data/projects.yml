@@ -37,3 +37,15 @@
   links:
     - name: GitHub
       url: https://github.com/btjanaka/algorithm-problems
+- name: Taxicab
+  img: /assets/img/projects/duckietown.png
+  description: >
+    This project was completed as part of the <a
+    href="https://royf.org/crs/W20/CS175/">Winter 2020 offering of CS 175</a> at
+    UC Irvine. In it, we attempt to use <a
+    href="https://arxiv.org/abs/1801.01290">Soft Actor-Critic</a> to train an
+    agent to drive in a simulated <a
+    href="https://www.duckietown.org">Duckietown</a> environment.
+  links:
+    - name: Website
+      url: https://taxicab175.github.io
