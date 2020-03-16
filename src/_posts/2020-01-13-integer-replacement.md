@@ -7,7 +7,7 @@ tags: Algorithms Problems LeetCode
 ---
 
 This is a problem I brought along to the WICSxACM Technical Interview Prep
-workshop on 13 January 2020. It is also available at
+workshop on 13 January 2020.<!--excerpt-separator--> It is also available at
 [bit.ly/integer-replacement](https://bit.ly/integer-replacement).
 
 ## Problem Description
@@ -44,14 +44,14 @@ instance.
 
 This solution was suggested in the [Hints](#hints). The idea is to think of the
 numbers as a graph, where each number is a node and there are edges connecting
-each node $$x$$ to $$x/2$$ if $$x$$ is even, or to $$x + 1$$ and $$x - 1$$ if $$x$$ is odd.
-We can then perform a BFS (Breadth-First Search) on the graph to find the length
-of the shortest path from $$n$$ to $$1$$.
+each node $$x$$ to $$x/2$$ if $$x$$ is even, or to $$x + 1$$ and $$x - 1$$ if
+$$x$$ is odd. We can then perform a BFS (Breadth-First Search) on the graph to
+find the length of the shortest path from $$n$$ to $$1$$.
 
-- Time complexity: $$O(n)$$ -- we can only encounter numbers in the range $$[1, 2n]$$
-  since if you reach $$2n$$, you wasted a bunch of steps because $$2n$$ can just be
-  divided by $$2$$ to get $$n$$. Since we never visit the same number twice, the
-  time complexity is $$O(2n) = O(n)$$
+- Time complexity: $$O(n)$$ -- we can only encounter numbers in the range
+  $$[1, 2n]$$ since if you reach $$2n$$, you wasted a bunch of steps because
+  $$2n$$ can just be divided by $$2$$ to get $$n$$. Since we never visit the
+  same number twice, the time complexity is $$O(2n) = O(n)$$
 - Space complexity: $$O(n)$$ -- same reason as above.
 
 ```cpp
