@@ -12,7 +12,7 @@ articles:
   <div class="item__image">
     <img
       class="image image--md image--shadow image--round-corners"
-      style="margin-top: 0px;margin-bottom: 20px"
+      style="margin-top: 8px;margin-bottom: 15px"
       alt="{{ proj.name }}"
       src="{{ proj.img }}"
     />
