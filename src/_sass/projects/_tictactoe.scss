@@ -1,0 +1,64 @@
+// Styles for a tictactoe game
+
+// The main div where everything is built
+.project__tictactoe {
+  $game-width: 210px;
+  $game-height: 310px;
+  $game-padding: 15px;
+
+  background-color: $main-color-3;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: $game-height + 2 * $game-padding;
+  width: $game-width + 2 * $game-padding;
+  padding: $game-padding;
+
+  // Cells for the game board
+  .tictactoe-cell {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    font-family: arial, sans-serif;
+    float: left;
+    font-size: 40px;
+    font-weight: bold;
+    height: $game-width / 3;
+    margin: 0px;
+    padding: 0px;
+    width: $game-width / 3;
+
+    &:hover {
+      background-color: $main-color-1;
+    }
+  }
+
+  // A box with information on the game state
+  .tictactoe-info {
+    border: 1px solid black;
+    border-top-width: 6px;
+    display: block;
+    float: left;
+    width: $game-width;
+    margin: 0px;
+    padding: 8px 0px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  // A reset button
+  .tictactoe-reset {
+    @include clickable($text-color-1, $main-color-1);
+    display: block;
+    float: left;
+    margin: 10px 0.05 * $game-width 0px 0.05 * $game-width;
+    padding: 5px 0px;
+    width: 0.9 * $game-width;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}

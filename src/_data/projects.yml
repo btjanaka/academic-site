@@ -49,3 +49,10 @@
   links:
     - name: Website
       url: https://taxicab175.github.io
+- name: Games
+  img: /assets/img/projects/robots-square.svg
+  description: >
+    Small browser game(s).
+  links:
+    - name: Website
+      url: /projects/games
