@@ -5,7 +5,7 @@ Current version of [btjanaka.net](https://btjanaka.net).
 Based on the [TeXt Theme](https://tianqi.name/jekyll-TeXt-theme/test/).
 
 This site is built at https://travis-ci.com/btjanaka/academic-site, and hosted
-from the master branch at https://github.com/btjanaka/btjanaka.github.io.
+from the `master` branch at https://github.com/btjanaka/btjanaka.github.io.
 
 ## Instructions
 
