@@ -9,14 +9,15 @@ title: Bryon Tjanaka
   </div>
 </div>
 
-I am an undergraduate computer science major at [UC Irvine](https://uci.edu/).
-Currently, I work with [Roy Fox](https://royf.org/) on hierarchical
-reinforcement learning and with the [Mobley Lab](https://mobleylab.org/) on
-molecular dynamics force fields. I also serve as Internal Vice President of
-[ACM@UCI](http://acm-uci.org/), and I have interned at
-[Google](https://google.com) for two summers. This Fall, I will be joining the
-[ICAROS Lab](http://icaros.usc.edu) at USC as I pursue a PhD in Computer Science
-under the supervision of [Stefanos Nikolaidis](https://stefanosnikolaidis.net).
+I am an undergraduate computer science major at [UC Irvine](https://uci.edu/). I
+work with [Roy Fox](https://royf.org/) and the Intelligent Dynamics Lab on
+hierarchical reinforcement learning, and with David Mobley, Jessica Maat, and
+the [Mobley Lab](https://mobleylab.org/) on molecular dynamics force fields. I
+have also served as Internal Vice President of [ACM@UCI](http://acm-uci.org/),
+and I have interned at [Google](https://google.com) for two summers. This Fall,
+I will be joining the [ICAROS Lab](http://icaros.usc.edu) at USC as I pursue a
+PhD in Computer Science under the supervision of
+[Stefanos Nikolaidis](https://stefanosnikolaidis.net).
 
 My main interests are in robotics and AI, particularly hierarchical
 reinforcement and imitation learning, clustering, and human-robot collaboration.
@@ -30,7 +31,6 @@ Championship.
 
 [Resume](/assets/pdf/btjanaka-resume.pdf){:.button.button--primary.button--pill}
 [CV](/assets/pdf/btjanaka-cv.pdf){:.button.button--primary.button--pill}
-
 
 <div class="news">
   <h2>News</h2>
