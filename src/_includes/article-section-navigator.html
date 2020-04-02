@@ -34,7 +34,13 @@
   {%- assign _next = page.next -%}
 {%- endif -%}
 
+{%- assign _show_section_navigator = site.data.variables.default.page.show_section_navigator -%}
+{%- if page.show_section_navigator != nil -%}
+  {%- assign _show_section_navigator = page.show_section_navigator -%}
+{%- endif -%}
+
 {%- if _next or _previous -%}
+{%- if _show_section_navigator -%}
   <div class="article__section-navigator clearfix">
     {%- if _previous -%}
       {%- include snippets/prepend-baseurl.html path=_previous.url -%}
@@ -51,4 +57,5 @@
       <div class="next"><span>{{ _locale_next }}</span><a href="{{ _href }}">{{ _next.title }}</a></div>
     {%- endif -%}
   </div>
+{%- endif -%}
 {%- endif -%}
