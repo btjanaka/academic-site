@@ -21,12 +21,12 @@
     problems. It allows one to easily create and save new solution files from
     templates.
   links:
+    - name: Website
+      url: /projects/cpsm
     - name: GitHub
       url: https://github.com/btjanaka/cpsm
     - name: PyPI
       url: https://pypi.org/project/cpsm
-    - name: Website
-      url: https://btjanaka.net/cpsm
 - name: Algorithm Problems
   img: /assets/img/projects/handwritten-code.jpg
   description: >
