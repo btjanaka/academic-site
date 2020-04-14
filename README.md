@@ -36,3 +36,10 @@ The site will now be available at http://localhost:8686.
 1. Add content to the `<page>.md`.
 1. Add the page in `_data/navigation.yml`, using the URL `/<page>.html` and the
    title `<page>`.
+
+## License
+
+The content of this project itself is licensed under the
+[Creative Commons Attribution-NonCommercial 4.0 International license](https://creativecommons.org/licenses/by-nc/4.0/),
+and the underlying source code used to format and display that content is
+licensed under the [MIT license](https://en.wikipedia.org/wiki/MIT_License).
