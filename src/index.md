@@ -35,10 +35,13 @@ Championship.
 <div class="news">
   <h2>News</h2>
   <table>
-    <tr>
-      <td class="date">13 March 2020</td>
-      <td class="desc">Website update! Now using the <a href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.</td>
-    </tr>
+    {% assign reverse_events = site.data.news.events | reverse %}
+    {% for event in reverse_events limit:site.data.news.limit %}
+      <tr>
+        <td class="date">{{ event.date }}</td>
+        <td class="desc">{{ event.desc }}</td>
+      </tr>
+    {% endfor %}
   </table>
 </div>
 
