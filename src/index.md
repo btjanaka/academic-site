@@ -32,9 +32,10 @@ Championship.
 [Resume](/assets/pdf/btjanaka-resume.pdf){:.button.button--primary.button--pill}
 [CV](/assets/pdf/btjanaka-cv.pdf){:.button.button--primary.button--pill}
 
-<div class="news">
+<div class="news-section">
   <h2>News</h2>
-  <table>
+
+  <table class="news">
     {% assign reverse_events = site.data.news.events | reverse %}
     {% for event in reverse_events limit:site.data.news.limit %}
       <tr>
@@ -43,6 +44,22 @@ Championship.
       </tr>
     {% endfor %}
   </table>
+
+  {% assign num_events = site.data.news.events | size %}
+  {% if num_events > site.data.news.limit %}
+  <details class="show-more">
+    <summary>Show More</summary>
+    <table class="news">
+      {% assign reverse_events = site.data.news.events | reverse %}
+      {% for event in reverse_events offset:site.data.news.limit %}
+        <tr>
+          <td class="date">{{ event.date }}</td>
+          <td class="desc">{{ event.desc }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </details>
+  {% endif %}
 </div>
 
 <!-- [> Konami Code <] -->

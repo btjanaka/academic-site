@@ -238,8 +238,21 @@
     }
   }
 
-  // News on homepage
-  div.news {
+  // News
+  table.news {
+    display: block;
+    margin: 0px auto;
+    td {
+      border: 0px;
+    }
+    td.date {
+      font-weight: bold;
+      padding: 8px 8px 8px 0px;
+      width: 9em;
+    }
+  }
+  // On the homepage
+  div.news-section {
     border-top: 1px solid $border-color-l;
     border-bottom: 1px solid $border-color-l;
     padding-top: 10px;
@@ -250,17 +263,13 @@
     h2 {
       border: 0px;
     }
-    table {
-      display: block;
-      margin: 0px auto;
-      td {
-        border: 0px;
-      }
-      td.date {
+    details.show-more {
+      summary {
+        padding: 4px 0px;
         font-weight: bold;
-        padding-left: 0;
-        width: 9em;
+        color: $main-color-1;
       }
+
     }
   }
 }
