@@ -8,7 +8,7 @@ aside:
 ## Graphic Design
 
 I typically use [Inkscape](https://inkscape.org) to draw these. Refer to this
-[GitHub repo](https://github.com/btjanaka/art) for the sources.
+[GitHub repo](https://github.com/btjanaka/art) for the SVG sources.
 
 <div class="swiper swiper-graphic-design">
   <div class="swiper__wrapper">
@@ -92,6 +92,15 @@ window.Lazyload.js(SOURCES.jquery, function() {
 <p>Nothing gold can stay.</p>
 <div class="speaker">Robert Frost</div>
 </blockquote>
+
+## Pronouncing My Name
+
+**Bryon** is pronounced exactly the same as _Brian_. Notably, my name has been
+known to cause temporary cases of dyslexia, and many have mispronounced it as
+_Byron_.
+
+**Tjanaka** is pronounced like _chuh-NAH-kah_. Just imagine the _tj_ as a _ch_,
+and you'll be well on your way.
 
 ## Competitive Programming
 
