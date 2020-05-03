@@ -24,7 +24,19 @@ articles:
     <div class="item__description">
       <p>{{ proj.description }}</p>
       {% for link in proj.links %}
-      <a class="button button--primary button--pill" href="{{ link.url }}">{{ link.name }}</a>
+        <a class="button button--primary button--pill" href="{{ link.url }}">
+          {% case link.name %}
+            {% when "GitHub" %}
+              <i class="fab fa-github"></i>
+            {% when "PyPI" %}
+              <i class="fab fa-python"></i>
+            {% when "DevPost" %}
+              <i class="far fa-file-code"></i>
+            {% else %}
+              <i class="fas fa-link"></i>
+          {% endcase %}
+          {{ link.name }}
+        </a>
       {% endfor %}
     </div>
   </div>

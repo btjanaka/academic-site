@@ -19,8 +19,8 @@ website and hosted it on [GitHub Pages](https://pages.github.com). Though I
 thought the website looked good, I hardly knew how it all worked, so I decided
 to explore more.
 
-[Archived Site](https://btjanaka.net/jekyll-site){:.button.button--primary.button--pill}
-[Source Code](https://github.com/btjanaka/jekyll-site){:.button.button--primary.button--pill}
+[<i class="fas fa-link"></i> Archived Site](https://btjanaka.net/jekyll-site){:.button.button--primary.button--pill}
+[<i class="far fa-file-code"></i> Source Code](https://github.com/btjanaka/jekyll-site){:.button.button--primary.button--pill}
 
 ## v2 - "Vanilla"
 
@@ -32,8 +32,8 @@ primitive static site generator, similar to Jekyll. Overall, I learned much
 about web development from this project. I especially saw how web development is
 full of an endless, ever-changing list of libraries and tools.
 
-[Archived Site](https://btjanaka.net/vanilla-site){:.button.button--primary.button--pill}
-[Source Code](https://github.com/btjanaka/vanilla-site){:.button.button--primary.button--pill}
+[<i class="fas fa-link"></i> Archived Site](https://btjanaka.net/vanilla-site){:.button.button--primary.button--pill}
+[<i class="far fa-file-code"></i> Source Code](https://github.com/btjanaka/vanilla-site){:.button.button--primary.button--pill}
 
 ## v3 - React
 
@@ -49,8 +49,8 @@ result, but others, like DuckDuckGo, did not, and so my website did not show up.
 Hence, I concluded that I should use a static site framework like Jekyll, while
 plugging in small React components if needed.
 
-[Archived Site](https://btjanaka.net/react-site){:.button.button--primary.button--pill}
-[Source Code](https://github.com/btjanaka/react-site){:.button.button--primary.button--pill}
+[<i class="fas fa-link"></i> Archived Site](https://btjanaka.net/react-site){:.button.button--primary.button--pill}
+[<i class="far fa-file-code"></i> Source Code](https://github.com/btjanaka/react-site){:.button.button--primary.button--pill}
 
 ## v4 - Jekyll (again)
 
@@ -61,4 +61,4 @@ numerous custom tweaks, of course. Now that I have a better understanding of
 both how Jekyll works and why it exists, I believe I will be able to better
 leverage it in the future.
 
-[Source Code](https://github.com/btjanaka/academic-site){:.button.button--primary.button--pill}
+[<i class="far fa-file-code"></i> Source Code](https://github.com/btjanaka/academic-site){:.button.button--primary.button--pill}
