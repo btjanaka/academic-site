@@ -5,7 +5,9 @@ aside:
   toc: true
 ---
 
-## Graphic Design
+## Hobbies
+
+### Graphic Design
 
 I typically use [Inkscape](https://inkscape.org) to draw these. Refer to this
 [GitHub repo](https://github.com/btjanaka/art) for the SVG sources.
@@ -35,13 +37,13 @@ window.Lazyload.js(SOURCES.jquery, function() {
 });
 </script>
 
-## Drone
+### Drone
 
 Filmed with a [DJI Spark](https://www.dji.com/spark).
 
 <div>{%- include extensions/youtube.html id='ocbqDGYMGUA' -%}</div>
 
-## Modular Origami
+### Modular Origami
 
 Each object is composed of up to several hundred pieces of paper.
 
@@ -69,7 +71,40 @@ window.Lazyload.js(SOURCES.jquery, function() {
 });
 </script>
 
-## Quotes
+### Competitive Programming
+
+I have used these sites when practicing for competitions such as
+[ICPC](https://icpc.baylor.edu/).
+
+- [uHunt profile](https://uhunt.onlinejudge.org/id/945356)
+- [Kattis profile](https://open.kattis.com/users/btjanaka)
+- [LeetCode profile](https://leetcode.com/btjanaka/)
+- [HackerRank profile](https://www.hackerrank.com/btjanaka)
+
+### TypeRacer
+
+<a href="https://data.typeracer.com/pit/profile?user=btjanaka&ref=badge" target="_top">
+<img
+  src="https://data.typeracer.com/misc/badge?user=btjanaka"
+  class="image image--md"
+  border="0"
+  style="width: 150px;"
+  alt="TypeRacer.com scorecard for user btjanaka"
+/>
+</a>
+
+## Musings
+
+### Pronouncing My Name
+
+**Bryon** is pronounced exactly the same as _Brian_. Notably, my name has been
+known to cause temporary cases of dyslexia, and many have mispronounced it as
+_Byron_.
+
+**Tjanaka** is pronounced like _chuh-NAH-kah_. Just imagine the _tj_ as a _ch_,
+and you'll be well on your way.
+
+### Quotes
 
 {% for quote in site.data.personal.quotes %}
 
@@ -93,33 +128,24 @@ window.Lazyload.js(SOURCES.jquery, function() {
 <div class="speaker">Robert Frost</div>
 </blockquote>
 
-## Pronouncing My Name
+## Varia
 
-**Bryon** is pronounced exactly the same as _Brian_. Notably, my name has been
-known to cause temporary cases of dyslexia, and many have mispronounced it as
-_Byron_.
+### Tic-Tac-Toe
 
-**Tjanaka** is pronounced like _chuh-NAH-kah_. Just imagine the _tj_ as a _ch_,
-and you'll be well on your way.
-
-## Competitive Programming
-
-I have used these sites when practicing for competitions such as
-[ICPC](https://icpc.baylor.edu/).
-
-- [uHunt profile](https://uhunt.onlinejudge.org/id/945356)
-- [Kattis profile](https://open.kattis.com/users/btjanaka)
-- [LeetCode profile](https://leetcode.com/btjanaka/)
-- [HackerRank profile](https://www.hackerrank.com/btjanaka)
-
-## TypeRacer
-
-<a href="https://data.typeracer.com/pit/profile?user=btjanaka&ref=badge" target="_top">
-<img
-  src="https://data.typeracer.com/misc/badge?user=btjanaka"
-  class="image image--md"
-  border="0"
-  style="width: 150px;"
-  alt="TypeRacer.com scorecard for user btjanaka"
-/>
-</a>
+<script src="/assets/js/projects/tictactoe.js" type="text/javascript"></script>
+<div class="project__tictactoe" id="tictactoe">
+  <button class="tictactoe-cell" id="tictactoe-cell0"></button>
+  <button class="tictactoe-cell" id="tictactoe-cell1"></button>
+  <button class="tictactoe-cell" id="tictactoe-cell2"></button>
+  <button class="tictactoe-cell" id="tictactoe-cell3"></button>
+  <button class="tictactoe-cell" id="tictactoe-cell4"></button>
+  <button class="tictactoe-cell" id="tictactoe-cell5"></button>
+  <button class="tictactoe-cell" id="tictactoe-cell6"></button>
+  <button class="tictactoe-cell" id="tictactoe-cell7"></button>
+  <button class="tictactoe-cell" id="tictactoe-cell8"></button>
+  <p class="tictactoe-info" id="tictactoe-info">x's turn</p>
+  <button class="tictactoe-reset" id="tictactoe-reset">Reset</button>
+</div>
+<script>
+  tictactoe.buildGame();
+</script>
