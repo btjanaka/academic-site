@@ -1,51 +1,66 @@
-- name: Algorithm Problems
-  img: /assets/img/projects/handwritten-code.jpg
-  description: >
-    Solutions to algorithm problems from various competitions and websites, such
-    as <a href='https://hackerrank.com'>HackerRank</a> and <a
-    href='https://open.kattis.com/problems'>Kattis</a>. Currently 600+ solutions
-    in 7 languages.
-  links:
-    - name: GitHub
-      url: https://github.com/btjanaka/algorithm-problems
-- name: CPSM
-  img: /assets/img/projects/cpsm.svg
-  description: >
-    Competitive Programming Solutions Manager (CPSM) is a tool for managing
-    solutions to programming problems, particularly competitive programming
-    problems. It allows one to easily create and save new solution files from
-    templates.
-  links:
-    - name: Website
-      url: /projects/cpsm
-    - name: GitHub
-      url: https://github.com/btjanaka/cpsm
-    - name: PyPI
-      url: https://pypi.org/project/cpsm
-- name: Safeline
-  img: /assets/img/projects/safeline.png
-  description: >
-    Falls are one of the leading causes of injury for the elderly. To help solve
-    this problem, Safeline uses a Raspberry Pi camera to continuously scan for
-    falls. Once a fall is detected, Safeline alerts connected users by pushing a
-    notification to their iPhones. These users can then seek medical assistance
-    for the fall victim.
-  links:
-    - name: DevPost
-      url: https://devpost.com/software/safeline-9eqyxs
-    - name: GitHub
-      url: https://github.com/codyenokida/safeline
-    - name: Website
-      url: https://codyenokida.github.io/safeline/
-- name: Taxicab
-  img: /assets/img/projects/duckietown.png
-  description: >
-    This project was completed as part of the <a
-    href="https://royf.org/crs/W20/CS175/">Winter 2020 offering of CS 175</a> at
-    UC Irvine. In it, we attempt to use <a
-    href="https://arxiv.org/abs/1801.01290">Soft Actor-Critic</a> to train an
-    agent to drive in a simulated <a
-    href="https://www.duckietown.org">Duckietown</a> environment.
-  links:
-    - name: Website
-      url: https://taxicab175.github.io
+- category_name: Research
+  projects:
+    - name: DANCE
+      img: /assets/img/projects/dance.svg
+      description: >
+        DANCE is a pipeline for generating molecule datasets.
+      links:
+        - name: GitHub
+          url: https://github.com/btjanaka/dance
+        - name: Documentation
+          url: https://dance.readthedocs.io
+- category_name: Coursework
+  projects:
+    - name: Taxicab
+      img: /assets/img/projects/duckietown.png
+      description: >
+        This project was completed as part of the <a
+        href="https://royf.org/crs/W20/CS175/">Winter 2020 offering of CS
+        175</a> at UC Irvine. In it, we attempt to use <a
+        href="https://arxiv.org/abs/1801.01290">Soft Actor-Critic</a> to train
+        an agent to drive in a simulated <a
+        href="https://www.duckietown.org">Duckietown</a> environment.
+      links:
+        - name: Website
+          url: https://taxicab175.github.io
+- category_name: Miscellaneous
+  projects:
+    - name: Algorithm Problems
+      img: /assets/img/projects/handwritten-code.jpg
+      description: >
+        Solutions to algorithm problems from various competitions and websites,
+        such as <a href='https://hackerrank.com'>HackerRank</a> and <a
+        href='https://open.kattis.com/problems'>Kattis</a>. Currently 600+
+        solutions in 7 languages.
+      links:
+        - name: GitHub
+          url: https://github.com/btjanaka/algorithm-problems
+    - name: CPSM
+      img: /assets/img/projects/cpsm.svg
+      description: >
+        Competitive Programming Solutions Manager (CPSM) is a tool for managing
+        solutions to programming problems, particularly competitive programming
+        problems. It allows one to easily create and save new solution files
+        from templates.
+      links:
+        - name: Website
+          url: /projects/cpsm
+        - name: GitHub
+          url: https://github.com/btjanaka/cpsm
+        - name: PyPI
+          url: https://pypi.org/project/cpsm
+    - name: Safeline
+      img: /assets/img/projects/safeline.png
+      description: >
+        Falls are one of the leading causes of injury for the elderly. To help
+        solve this problem, Safeline uses a Raspberry Pi camera to continuously
+        scan for falls. Once a fall is detected, Safeline alerts connected users
+        by pushing a notification to their iPhones. These users can then seek
+        medical assistance for the fall victim.
+      links:
+        - name: DevPost
+          url: https://devpost.com/software/safeline-9eqyxs
+        - name: GitHub
+          url: https://github.com/codyenokida/safeline
+        - name: Website
+          url: https://codyenokida.github.io/safeline/
