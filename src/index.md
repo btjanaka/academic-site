@@ -11,13 +11,15 @@ title: Bryon Tjanaka
 
 I am an undergraduate computer science major at [UC Irvine](https://uci.edu/). I
 work with [Roy Fox](https://royf.org/) and the Intelligent Dynamics Lab on
-hierarchical reinforcement learning, and with David Mobley, Jessica Maat, and
-the [Mobley Lab](https://mobleylab.org/) on molecular dynamics force fields. I
-have also served as Internal Vice President of [ACM@UCI](http://acm-uci.org/),
-and I have interned at [Google](https://google.com) for two summers. This Fall,
-I will be joining the [ICAROS Lab](http://icaros.usc.edu) at USC as I pursue a
-PhD in Computer Science under the supervision of
-[Stefanos Nikolaidis](https://stefanosnikolaidis.net).
+hierarchical reinforcement learning, and with
+[David Mobley](https://mobleylab.org/people/david-mobley/),
+[Jessica Maat](https://www.linkedin.com/in/jessica-maat-2a1875119/), and the
+[Mobley Lab](https://mobleylab.org/) on molecular dynamics force fields. I have
+also served as Internal Vice President of [ACM@UCI](http://acm-uci.org/), and I
+have interned at [Google](https://google.com) for two summers. This Fall, I will
+be joining the [ICAROS Lab](http://icaros.usc.edu) at
+[USC](https://www.usc.edu/) as I pursue a PhD in Computer Science under the
+supervision of [Stefanos Nikolaidis](https://stefanosnikolaidis.net).
 
 My main interests are in robotics and AI, particularly hierarchical
 reinforcement and imitation learning, clustering, and human-robot collaboration.
@@ -26,8 +28,8 @@ development.
 
 During high school, I competed in the
 [VEX Robotics Competition](https://en.wikipedia.org/wiki/VEX_Robotics_Competition)
-with team 86868: The Resistance and won the 2017 VEX Robotics High School World
-Championship.
+with 86868: The Resistance and won the
+[2017 VEX Robotics High School World Championship](https://www.robotevents.com/robot-competitions/vex-robotics-competition/RE-VRC-17-4887.html).
 
 [<i class="far fa-file-alt"></i> Resume](/assets/pdf/btjanaka-resume.pdf){:.button.button--primary.button--pill}
 [<i class="far fa-file-alt"></i> CV](/assets/pdf/btjanaka-cv.pdf){:.button.button--primary.button--pill}
@@ -47,6 +49,7 @@ Championship.
 
   {% assign num_events = site.data.news.events | size %}
   {% if num_events > site.data.news.limit %}
+
   <details class="show-more">
     <summary>Show More</summary>
     <table class="news">
