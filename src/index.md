@@ -77,7 +77,7 @@ with 86868: The Resistance and won the
   <div class="custom__modal-content">
     <span id="close" class="custom__modal-close">&times;</span>
     <h2>Konami Code!</h2>
-    {% include projects/car-animation.html %}
+    {% include projects/car/car.html %}
   </div>
 </div>
 

@@ -2,6 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+/* prettier-ignore */
 @import
 
     "skins/{{ site.text_skin | default: site.data.variables.default.text_skin }}",
@@ -71,6 +72,7 @@
     "layout/404",
 
     "projects/tictactoe",
+    "projects/car",
 
     "custom"
 ;

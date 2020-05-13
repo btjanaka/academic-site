@@ -42,25 +42,4 @@
   }
 }
 
-//
-// Car animation
-//
-
-#canvas-holder {
-  #myGLCanvas {
-    display: block;
-    margin: 0px auto;
-    text-align: center;
-    width: 500px;
-    height: 500px;
-  }
-
-  @media screen and (max-width: 700px) {
-    #myGLCanvas {
-      width: 70vw;
-      height: 70vw;
-    }
-  }
-}
-
 /* end custom scss snippet */

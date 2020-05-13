@@ -132,16 +132,18 @@
 </script>
 
 <!-- Scripts -->
-<script type="text/javascript" src="/assets/js/projects/car/gl-matrix-min.js"></script>
-<script type="text/javascript" src="/assets/js/projects/car/webgl-utils.js"></script>
-<script type="text/javascript" src="/assets/js/projects/car/models.js"></script>
-<script type="text/javascript" src="/assets/js/projects/car/car.js"></script>
+<script>
+  {% include projects/car/gl-matrix-min.js %}
+  {% include projects/car/webgl-utils.js %}
+  {% include projects/car/models.js %}
+  {% include projects/car/car.js %}
+</script>
 
 <script type="text/javascript">
   window.onload = startup;
 </script>
 
-<div id="canvas-holder">
+<div class="project__car" id="canvas-holder">
   <!-- Optional checkbox for animation -->
   <!-- <label class="checkLabel"> -->
   <!--   <input type="checkbox" id="animate"/> -->
