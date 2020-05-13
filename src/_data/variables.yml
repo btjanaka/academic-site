@@ -39,6 +39,7 @@ default:
     license: false
     pageview: false
     search: default
+    use_page_title_as_title: false
 
 sources:
   bootcdn:

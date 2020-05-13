@@ -37,6 +37,18 @@ The site will now be available at http://localhost:8686.
 1. Add the page in `_data/navigation.yml`, using the URL `/<page>.html` and the
    title `<page>`.
 
+## Modifications to TeXt-theme
+
+This site makes several modifications to the original TeXt-theme.
+
+### Article / Page Configuration
+
+- `show_section_navigator` allows one to show or hide the section navigator at
+  the bottom of articles.
+- `use_page_title_as_title` allows one to make the page title be the title shown
+  in the `title` tag in the header (by default, the title is
+  `page title - site title`)
+
 ## License
 
 The content of this project itself is licensed under the
