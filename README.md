@@ -49,6 +49,10 @@ This site makes several modifications to the original TeXt-theme.
   in the `title` tag in the header (by default, the title is
   `page title - site title`)
 
+### Plugins
+
+- [Jekyll-Scholar](https://github.com/inukshuk/jekyll-scholar)
+
 ## License
 
 The content of this project itself is licensed under the
