@@ -20,10 +20,10 @@ livereload: true
 ##############################
 text_skin: red # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url: # the base hostname & protocol for your site e.g. https://www.someone.com
-baseurl: # does not include hostname
+url: https://btjanaka.net # the base hostname & protocol e.g. https://www.someone.com
+baseurl: / # does not include hostname
 title: "Bryon Tjanaka"
-description: "Computer Science @ UCI"
+description: "Personal website of Bryon Tjanaka"
 collections:
   projects:
     output: true

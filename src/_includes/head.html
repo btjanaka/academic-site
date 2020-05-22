@@ -2,18 +2,47 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+{%- assign title = "" -%}
 {%- include snippets/get-article-title.html article=page -%}
 {%- if page.use_page_title_as_title -%}
-  <!-- Use the page title as the title if it is available. -->
-  <title>{%- if __return -%}{{ __return }}{%- else -%}{{ site.title }}{%- endif -%}</title>
+  {% comment %}
+    Use the page title as the title if it is available.
+  {% endcomment %}
+  {%- if __return -%}
+    {%- assign title = __return -%}
+  {%- else -%}
+    {%- assign title = site.title -%}
+  {%- endif -%}
 {%- else -%}
-  <!-- Otherwise, use `page title - site title` -->
-  <title>{%- if __return -%}{{ __return }} - {{ site.title }}{%- else -%}{{ site.title }}{%- endif -%}</title>
+  {% comment %}
+    Otherwise, use `page title - site title`
+  {% endcomment %}
+  {%- if __return -%}
+    {%- assign title =  __return | append: ' - ' | append: site.title -%}
+  {%- else -%}
+    {%- assign title = site.title -%}
+  {%- endif -%}
 {%- endif -%}
+<title>{{ title }}</title>
 
+{%- assign description = "" -%}
+{%- if page.excerpt -%}
+  {%- assign description = page.excerpt | strip_html | strip_newlines | strip
+                           | truncate: 160 -%}
+{%- else -%}
+  {%- assign description = site.description -%}
+{%- endif -%}
+<meta name="description" content="{{ description }}">
 
-<meta name="description" content="{%- if page.excerpt -%}{{ page.excerpt | strip_html | strip_newlines | strip | truncate: 160 }}{%- else -%}{{ site.description }}{%- endif -%}">
 <link rel="canonical" href="{%- include snippets/page-url.html -%}">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{%- include snippets/page-url.html -%}" />
+<meta property="og:image" content="{{ "/assets/img/graphic-design/mountain-explorer-blue.png" | absolute_url }}" />
+<meta property="og:description" content="{{ description }}" />
+
 
 {%- assign _paths_rss = site.paths.rss | default: site.data.variables.default.paths.rss -%}
 {%- include snippets/get-nav-url.html path=_paths_rss -%}
