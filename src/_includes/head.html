@@ -43,7 +43,6 @@
 <meta property="og:image" content="{{ "/assets/img/graphic-design/mountain-explorer-blue.png" | absolute_url }}" />
 <meta property="og:description" content="{{ description }}" />
 
-
 {%- assign _paths_rss = site.paths.rss | default: site.data.variables.default.paths.rss -%}
 {%- include snippets/get-nav-url.html path=_paths_rss -%}
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ __return }}">
@@ -56,5 +55,11 @@
 {%- include snippets/get-sources.html -%}
 {%- assign _sources = __return -%}
 <link rel="stylesheet" href="{{ _sources.font_awesome }}" >
+
+<!-- Webpack -->
+{%- if page.use_webpack -%}
+<script type="text/javascript" src="/assets/bundle/bundle.js" defer></script>
+<link rel="stylesheet" href="/assets/bundle/bundle.css">
+{%- endif -%}
 
 {%- include head/custom.html -%}

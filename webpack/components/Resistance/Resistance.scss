@@ -1,0 +1,44 @@
+$color-primary: #e62020;
+$text-color: #222;
+$box-padding: 17px;
+
+#Resistance {
+  #roboticstimeline {
+    .eventHeader {
+      color: white;
+      background-color: $color-primary;
+      margin: 0px;
+      padding: $box-padding;
+      font-size: 115%;
+      font-weight: bold;
+    }
+
+    .eventDesc {
+      padding: $box-padding;
+      margin: 0px;
+    }
+
+    img.timelineDesc {
+      margin: 0px;
+      width: 100%;
+      display: block;
+      padding: 0px;
+    }
+
+    p.timelineDesc {
+      color: $text-color;
+      margin: 5px 0px;
+      padding: 0px;
+    }
+
+    @media screen and (max-width: 600px) {
+      img.timelineDesc {
+        margin-top: 10px;
+      }
+
+      p.timelineDesc {
+        margin: 0px;
+      }
+    }
+  }
+}

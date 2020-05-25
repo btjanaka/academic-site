@@ -52,8 +52,8 @@ with 86868: The Resistance and won the
     {% endfor %}
   </table>
 
-  {% assign num_events = site.data.news.events | size %}
-  {% if num_events > site.data.news.limit %}
+{% assign num_events = site.data.news.events | size %}
+{% if num_events > site.data.news.limit %}
 
   <details class="show-more">
     <summary>Show More</summary>
