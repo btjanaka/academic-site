@@ -8,8 +8,8 @@ aside:
 ---
 <!--excerpt-separator-->
 
-<a class="button button--primary button--pill" href="https://github.com/btjanaka/cpsm">GitHub</a>
-<a class="button button--primary button--pill" href="https://pypi.org/project/cpsm">PyPI</a>
+<a class="button button--primary button--pill" href="https://github.com/btjanaka/cpsm"><i class="fab fa-github"></i> GitHub</a>
+<a class="button button--primary button--pill" href="https://pypi.org/project/cpsm"><i class="fab fa-python"></i> PyPI</a>
 
 <p align="center">
 <img src="/assets/img/projects/cpsm-demo.gif" alt="cpsm demo">
