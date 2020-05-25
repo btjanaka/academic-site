@@ -17,10 +17,7 @@ December 2018. Using [Jekyll](https://jekyllrb.com/) with a
 [Moon](https://github.com/TaylanTatli/Moon) theme, I eventually built a personal
 website and hosted it on [GitHub Pages](https://pages.github.com). Though I
 thought the website looked good, I hardly knew how it all worked, so I decided
-to explore more.
-
-[<i class="fas fa-link"></i> Archived Site](https://btjanaka.net/jekyll-site){:.button.button--primary.button--pill}
-[<i class="far fa-file-code"></i> Source Code](https://github.com/btjanaka/jekyll-site){:.button.button--primary.button--pill}
+to explore further.
 
 ## v2 - "Vanilla"
 
@@ -31,9 +28,6 @@ used [liquidjs](https://www.npmjs.com/package/liquidjs) to essentially build a
 primitive static site generator, similar to Jekyll. Overall, I learned much
 about web development from this project. I especially saw how web development is
 full of an endless, ever-changing list of libraries and tools.
-
-[<i class="fas fa-link"></i> Archived Site](https://btjanaka.net/vanilla-site){:.button.button--primary.button--pill}
-[<i class="far fa-file-code"></i> Source Code](https://github.com/btjanaka/vanilla-site){:.button.button--primary.button--pill}
 
 ## v3 - React
 
@@ -49,16 +43,14 @@ result, but others, like DuckDuckGo, did not, and so my website did not show up.
 Hence, I concluded that I should use a static site framework like Jekyll, while
 plugging in small React components if needed.
 
-[<i class="fas fa-link"></i> Archived Site](https://btjanaka.net/react-site){:.button.button--primary.button--pill}
-[<i class="far fa-file-code"></i> Source Code](https://github.com/btjanaka/react-site){:.button.button--primary.button--pill}
-
 ## v4 - Jekyll (again)
 
 Thus, I have come full circle and decided to use Jekyll once more, initially
 with the [al-folio](https://github.com/alshedivat/al-folio) theme, and then with
 the [TeXt](https://github.com/kitian616/jekyll-TeXt-theme) theme -- with
-numerous custom tweaks, of course. Now that I have a better understanding of
-both how Jekyll works and why it exists, I believe I will be able to better
-leverage it in the future.
+numerous custom tweaks, of course. Furthermore, I have integrated React into
+this theme, allowing me to add interactive components if need be. Now that I
+have a better understanding of both how Jekyll works and why it exists, I will
+be able to better leverage it in the future.
 
 [<i class="far fa-file-code"></i> Source Code](https://github.com/btjanaka/academic-site){:.button.button--primary.button--pill}
