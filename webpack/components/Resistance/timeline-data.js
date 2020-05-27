@@ -1,7 +1,6 @@
 // Make sure to import Bootstrap in `index.js` in order for this to work
 // ( import 'bootstrap/dist/css/bootstrap.min.css'; )
 import { Col, Container, Row } from "react-bootstrap";
-import PropTypes from "prop-types";
 
 import React from "react";
 import imgFounding from "./img/founding.jpg";
@@ -22,10 +21,6 @@ function TimelineCol(props) {
   );
 }
 
-TimelineCol.propTypes = {
-  children: PropTypes.element,
-};
-
 function TimelineDesc(props) {
   return (
     <TimelineCol>
@@ -34,10 +29,6 @@ function TimelineDesc(props) {
   );
 }
 
-TimelineDesc.propTypes = {
-  children: PropTypes.element,
-};
-
 function TimelineImg(props) {
   return (
     <TimelineCol>
@@ -45,11 +36,6 @@ function TimelineImg(props) {
     </TimelineCol>
   );
 }
-
-TimelineImg.propTypes = {
-  src: PropTypes.string,
-  alt: PropTypes.string,
-};
 
 const timelineData = [
   {
