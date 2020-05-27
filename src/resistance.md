@@ -40,6 +40,39 @@ information.
 
 <div class="react" id="resistance"></div>
 
+## Links
+
+### Robots
+
+- Rebel (2016-2017)
+  - [2017 Teaser](https://youtu.be/M55QvYIqk2w)
+  - [2017 Reveal](https://youtu.be/WykDRSjNVOs)
+  - [2016-2017 Season Recap](https://youtu.be/hUtrqf6Oids)
+- [SAMMY (2017)](https://youtu.be/o0C9QKUtFYs)
+- Revolt (2017-2018)
+  - [2017-2018 Season Recap](https://youtu.be/eGpasQFLgAY)
+- Rascal (2018-2019)
+  - [2019 Early Season Reveal](https://youtu.be/MwTPCQwXQTk)
+  - [2019 Programming Skills Practice](https://youtu.be/LtVP1sy85i0)
+
+### Matches
+
+- [2017 VEX High School World Championship Finals 2](https://youtu.be/ZcwFCBO9kpQ)
+- [2018 VEX High School World Championship Arts R16 5-1](https://youtu.be/Q5qKFyzIs-I)
+- [2019 University of South Florida Signature Event Finals 1](https://youtu.be/5a7XcuzMSSs)
+
+### Press
+
+- [Silicon Valley Voice, 2017](https://www.svvoice.com/tjanaka-brothers-win-high-school-division-2017-vex-robotics-world-championship/)
+- [PR Newswire, 2017](https://www.prnewswire.com/news-releases/vex-robotics-world-championship-crowns-2017-winners-300446176.html)
+- [CBS Sports, 2017](https://youtu.be/9shA1fdX18w)
+
+### VEX Forum posts
+
+- [2017 Starstruck Teaser and Reveal](https://www.vexforum.com/t/86868-the-resistance-vex-starstruck-reveal/40629)
+- [2016-2017 Season Recap](https://www.vexforum.com/t/86868-the-resistance-2016-2017-season-recap-video/42302)
+- [Thank You (2017)](https://www.vexforum.com/t/thank-you-from-bryon-tjanaka-86868-the-resistance/42172)
+
 ## Affiliations
 
 The Resistance is proud to be affiliated with the following alliances:
