@@ -17,7 +17,7 @@ article_header:
 ## Overview
 
 <img
-  style="display:block; margin:0px auto; border-radius:50%; width:200px"
+  style="display:block; margin:0px auto; border-radius:50%; width:200px; box-shadow:4px 6px 4px rgba(0, 0, 0, 0.23);"
   alt="Logo of The Resistance"
   src="/assets/img/resistance/logo.jpg"
 />
@@ -39,3 +39,36 @@ information.
 ## A Brief History
 
 <div class="react" id="resistance"></div>
+
+## Affiliations
+
+The Resistance is proud to be affiliated with the following alliances:
+
+<div class="grid-container">
+  <div class="grid grid--p-3">
+    <div class="cell cell--6"><div>
+      <div class="card">
+        <div class="card__image">
+          <img class="image" src="/assets/img/resistance/camel.jpg"/>
+        </div>
+        <div class="card__content">
+          <div class="card__header">
+            <h4>Camel Alliance</h4>
+          </div>
+        </div>
+      </div>
+    </div></div>
+    <div class="cell cell--6"><div>
+      <div class="card">
+        <div class="card__image">
+          <img class="image" style="background-color:black" src="/assets/img/resistance/breadstick.png"/>
+        </div>
+        <div class="card__content">
+          <div class="card__header">
+            <h4>Breadstick Alliance</h4>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+</div>
