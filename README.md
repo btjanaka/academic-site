@@ -67,7 +67,7 @@ Jekyll command above.
 
 To add a React component, implement it in `webpack/components`. Then, register
 it under some `ID` in the `REACT_COMPONENTS` object in `webpack/index.js`.
-Finally, on a Jekyll page, add `<div class="react" id=ID />` to indicate where
+Finally, on a Jekyll page, add `<div class="react" id=ID></div>` to indicate where
 the component should mount. Note that multiple components can be mounted on a
 page, by adding multiple `div`'s.
 

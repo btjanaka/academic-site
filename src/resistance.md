@@ -38,4 +38,4 @@ information.
 
 ## A Brief History
 
-<div class="react" id="resistance" />
+<div class="react" id="resistance"></div>
