@@ -1,5 +1,4 @@
 language: ruby
-cache: bundler
 rvm:
   - 2.5.1
 
@@ -9,7 +8,21 @@ branches:
   only:
     - master
 
-script: bundle exec jekyll build
+before_install:
+  - nvm install 12.0
+
+install:
+  - bundle install --path vendor/bundle
+  - npm ci
+
+cache:
+  - directories:
+      - vendor/bundle
+      - node_modules
+
+script:
+  - npm run build
+  - bundle exec jekyll build
 
 deploy:
   provider: pages
