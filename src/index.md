@@ -31,7 +31,7 @@ development.
 
 During high school, I competed in the
 [VEX Robotics Competition](https://en.wikipedia.org/wiki/VEX_Robotics_Competition)
-with 86868: The Resistance and won the
+with [86868: The Resistance](/resistance) and won the
 [2017 VEX Robotics High School World Championship](https://www.robotevents.com/robot-competitions/vex-robotics-competition/RE-VRC-17-4887.html).
 
 [<i class="far fa-file-alt"></i> Resume](/assets/pdf/btjanaka-resume.pdf){:.button.button--primary.button--pill}
