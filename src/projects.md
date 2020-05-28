@@ -21,9 +21,14 @@ articles:
     </div>
     <div class="item__content">
       <header>
-        <h3 itemprop="headline" class="item__header project-header">{{ proj.name }}</h3>
+        <h3 itemprop="headline" class="item__header project-header">
+          {{ proj.name }}
+        </h3>
       </header>
       <div class="item__description">
+        <p class="project-date">
+          <b>{{ proj.date }}</b>
+        </p>
         <p>{{ proj.description }}</p>
         {% for link in proj.links %}
           <a class="button button--primary button--pill" href="{{ link.url }}">

@@ -1,6 +1,7 @@
 - category_name: Research
   projects:
     - name: DANCE
+      date: Nov. 2018 - Present
       img: /assets/img/projects/dance.svg
       description: >
         DANCE is a pipeline for generating molecule datasets.
@@ -12,6 +13,7 @@
 - category_name: Coursework
   projects:
     - name: Taxicab
+      date: Jan. 2020 - Mar. 2020
       img: /assets/img/projects/duckietown.png
       description: >
         This project was completed as part of the <a
@@ -26,6 +28,7 @@
 - category_name: Miscellaneous
   projects:
     - name: Algorithm Problems
+      date: July 2018 - Present
       img: /assets/img/projects/handwritten-code.jpg
       description: >
         Solutions to algorithm problems from various competitions and websites,
@@ -36,6 +39,7 @@
         - name: GitHub
           url: https://github.com/btjanaka/algorithm-problems
     - name: CPSM
+      date: Mar. 2019 - Present
       img: /assets/img/projects/cpsm.svg
       description: >
         Competitive Programming Solutions Manager (CPSM) is a tool for managing
@@ -50,6 +54,7 @@
         - name: PyPI
           url: https://pypi.org/project/cpsm
     - name: Safeline
+      date: Feb. 2018
       img: /assets/img/projects/safeline.png
       description: >
         Falls are one of the leading causes of injury for the elderly. To help

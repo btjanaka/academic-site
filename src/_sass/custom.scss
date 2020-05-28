@@ -42,4 +42,16 @@
   }
 }
 
+//
+// Item descriptions, specifically for project page
+//
+
+div.item__content h3.project-header {
+  margin-bottom: 0px;
+}
+
+div.item__description p.project-date {
+  margin-top: 0px;
+}
+
 /* end custom scss snippet */
