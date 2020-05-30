@@ -41,6 +41,8 @@ articles:
                 <i class="far fa-file-code"></i>
               {% when "Documentation" %}
                 <i class="fas fa-book"></i>
+              {% when "Report" %}
+                <i class="far fa-file-alt"></i>
               {% else %}
                 <i class="fas fa-link"></i>
             {% endcase %}
