@@ -61,11 +61,23 @@ information.
 - [2018 VEX High School World Championship Arts R16 5-1](https://youtu.be/Q5qKFyzIs-I)
 - [2019 University of South Florida Signature Event Finals 1](https://youtu.be/5a7XcuzMSSs)
 
+### Online Challenges
+
+- 2017 Make It Real CAD Engineering Challenge
+  - [The Standoff Slide Truck (2nd place)](https://challenges.robotevents.com/challenge/58/entry/3478)
+- 2017 VEX Robotics Photography Challenge
+  - [Pushing the Limits](https://challenges.robotevents.com/challenge/59/entry/2925)
+- 2019 VEX Photography Online Challenge
+  - [Empowering the Next Generation of Womem Engineers (Winner)](https://challenges.robotevents.com/challenge/93/entry/6296)
+
 ### Press
 
-- [Silicon Valley Voice, 2017](https://www.svvoice.com/tjanaka-brothers-win-high-school-division-2017-vex-robotics-world-championship/)
-- [PR Newswire, 2017](https://www.prnewswire.com/news-releases/vex-robotics-world-championship-crowns-2017-winners-300446176.html)
-- [CBS Sports, 2017](https://youtu.be/9shA1fdX18w)
+- 2017 World Championship
+  - [Silicon Valley Voice](https://www.svvoice.com/tjanaka-brothers-win-high-school-division-2017-vex-robotics-world-championship/)
+  - [PR Newswire](https://www.prnewswire.com/news-releases/vex-robotics-world-championship-crowns-2017-winners-300446176.html)
+  - [CBS Sports](https://youtu.be/9shA1fdX18w)
+- Autodesk
+  - [Visiting the  Megabots lab (2017)](https://youtu.be/D4t3Nqjl3wM)
 
 ### VEX Forum posts
 
