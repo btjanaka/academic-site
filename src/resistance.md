@@ -13,6 +13,7 @@ article_header:
   background_image:
     src: /assets/img/resistance/resistance.jpg
 ---
+<!--excerpt-separator-->
 
 ## Overview
 
