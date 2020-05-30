@@ -1,9 +1,12 @@
 # Personal Website
 
+[![Build Status](https://travis-ci.com/btjanaka/academic-site.svg?branch=master)](https://travis-ci.com/btjanaka/academic-site)
+
 Current version of [btjanaka.net](https://btjanaka.net).
 
-Based on the [TeXt Theme](https://tianqi.name/jekyll-TeXt-theme/test/). Modified
-to include Webpack and React.
+Based on the [TeXt Theme](https://tianqi.name/jekyll-TeXt-theme/test/) for
+Jekyll. [Modified](#modifications-to-text-theme), particularly to include
+Webpack and React.
 
 This site is built at https://travis-ci.com/btjanaka/academic-site, and hosted
 from the `master` branch at https://github.com/btjanaka/btjanaka.github.io.
@@ -67,9 +70,9 @@ Jekyll command above.
 
 To add a React component, implement it in `webpack/components`. Then, register
 it under some `ID` in the `REACT_COMPONENTS` object in `webpack/index.js`.
-Finally, on a Jekyll page, add `<div class="react" id=ID></div>` to indicate where
-the component should mount. Note that multiple components can be mounted on a
-page, by adding multiple `div`'s.
+Finally, on a Jekyll page, add `<div class="react" id=ID></div>` to indicate
+where the component should mount. Note that multiple components can be mounted
+on a page, by adding multiple `div`'s.
 
 ### Jekyll Plugins
 
