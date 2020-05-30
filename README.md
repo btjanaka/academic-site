@@ -19,7 +19,7 @@ Full docs available
 Clone the repo, then run:
 
 ```
-bundle install --path vendor/bundle
+bundle install
 npm install
 ```
 
