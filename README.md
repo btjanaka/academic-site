@@ -79,6 +79,17 @@ on a page, by adding multiple `div`'s.
 
 - [Jekyll-Scholar](https://github.com/inukshuk/jekyll-scholar)
 
+### Archive
+
+Modified to include a list of pages as well as the posts. The provided `archive`
+layout is no longer used on the `archive` page.
+
+### Article Lists
+
+Added a `use_h3` option -- when making an article list with `brief` type,
+passing `use_h3=true` will cause h3 to be used instead of h2 for the titles. See
+`archive.html` for an example.
+
 ## License
 
 The content of this project itself is licensed under the

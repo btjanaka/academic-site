@@ -50,7 +50,7 @@
         from templates.
       links:
         - name: Website
-          url: /projects/cpsm
+          url: /cpsm
         - name: GitHub
           url: https://github.com/btjanaka/cpsm
         - name: PyPI
