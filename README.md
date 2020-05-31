@@ -41,7 +41,8 @@ The site will now be available at http://localhost:8686.
    `index.md` and modifying it.
 1. Add content to the `<page>.md`.
 1. Add the page in `_data/navigation.yml`, using the URL `/<page>.html` and the
-   title `<page>`.
+   title `<page>`. Alternatively, if not listing this page on the header, put it
+   in `miscpages.yml`.
 
 ## Modifications to TeXt-theme
 
