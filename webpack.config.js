@@ -36,7 +36,18 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "assets/bundle/img/[name]-[contenthash].[ext]",
+              name: "/assets/bundle/img/[name]-[contenthash].[ext]",
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(off|ttf)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "/assets/bundle/font/[name].[ext]",
             },
           },
         ],
@@ -45,7 +56,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "assets/bundle/bundle.css",
+      filename: "/assets/bundle/bundle.css",
       chunkFilename: "[id].css",
       ignoreOrder: false,
     }),

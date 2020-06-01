@@ -1,0 +1,26 @@
+$color-primary: #e62020;
+$text-color: #222;
+
+@font-face {
+  font-family: alarm-clock;
+  src: url(./alarm-clock.ttf);
+}
+
+#Clock {
+  .time {
+    margin: 0px auto;
+    width: 300px;
+    padding: 10px 25px 5px 5px;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.23);
+
+    background-color: black;
+    color: $color-primary;
+
+    text-align: right;
+    font-family: alarm-clock, monospace;
+    font-weight: bold;
+    font-size: 50px;
+  }
+}

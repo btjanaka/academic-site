@@ -1,12 +1,14 @@
 // Bootstrap stylesheet
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import Clock from "./components/Clock/Clock";
 import React from "react";
 import Resistance from "./components/Resistance/Resistance";
 import { render } from "react-dom";
 
 // Mapping from different id's to React components.
 const REACT_COMPONENTS = {
+  clock: <Clock />,
   resistance: <Resistance />,
 };
 
