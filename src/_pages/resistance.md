@@ -1,6 +1,8 @@
 ---
 layout: article
 title: The Resistance
+show_date: false
+show_section_navigator: false
 use_webpack: true
 use_page_title_as_title: true
 mode: immersive
