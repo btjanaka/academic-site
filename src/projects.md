@@ -8,7 +8,9 @@ articles:
 ---
 
 {% for category in site.data.projects %}
-  <h2>{{ category.category_name }}</h2>
+
+## {{ category.category_name }}
+
   {% for proj in category.projects %}
   <article class="item" style="margin-top: 20px">
     <div class="item__image">
