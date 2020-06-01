@@ -12,6 +12,21 @@
           url: https://dance.readthedocs.io
 - category_name: Coursework
   projects:
+    - name: Bird Audio Detection
+      date: Apr. 2020 - June 2020
+      img: /assets/img/projects/hhh.png
+      description: >
+        This project was completed with the "High Entropy Homies" team as part
+        of the Spring 2020 offering of CS 172B at UC Irvine. In it, we explore
+        the performance differences from using various audio features to detect
+        bird sounds in the <a
+        href="http://dcase.community/challenge2018/task-bird-audio-detection/">DCASE
+        2018 Challenge</a>.
+      links:
+        - name: GitHub
+          url: https://github.com/btjanaka/hhh
+        - name: Report
+          url: https://github.com/btjanaka/hhh/tree/master/docs/report.pdf
     - name: Taxicab
       date: Jan. 2020 - Mar. 2020
       img: /assets/img/projects/duckietown.png
