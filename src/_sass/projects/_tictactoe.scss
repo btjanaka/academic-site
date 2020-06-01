@@ -6,7 +6,9 @@
   $game-height: 310px;
   $game-padding: 15px;
 
-  background-color: $main-color-3;
+  border-radius: map-get($base, border-radius);
+  @include box-shadow();
+  background-color: white;
   display: block;
   margin-left: auto;
   margin-right: auto;

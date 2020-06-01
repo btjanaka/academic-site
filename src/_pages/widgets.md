@@ -9,3 +9,7 @@ use_webpack: true
 ## Clock
 
 <div class="react" id="clock"></div>
+
+## Tic-Tac-Toe
+
+{% include projects/tictactoe/tictactoe.html %}

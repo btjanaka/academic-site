@@ -130,6 +130,4 @@ and you'll be well on your way.
 
 ## Varia
 
-### Tic-Tac-Toe
-
-{% include projects/tictactoe/tictactoe.html %}
+[Random Widgets](/widgets)
