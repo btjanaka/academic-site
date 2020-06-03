@@ -9,23 +9,23 @@ import Slider from "react-rangeslider";
 import { faChessQueen } from "@fortawesome/free-solid-svg-icons";
 
 const CELL_SIZE = 40;
+
+// Number of queens settings
 const DEFAULT_QUEENS = 4;
 const MIN_QUEENS = 1;
 const MAX_QUEENS = 15;
 const QUEEN_LABELS = { 1: "1", 8: "8", 15: "15" };
 
-// Milliseconds between updates when running the engine.
-// TODO: make this adjustable
-const DEFAULT_DELAY = 250;
+// Settings for the delay between each simulation step.
+const DEFAULT_DELAY = -300;
+const MIN_DELAY = -600;
+const MAX_DELAY = 0; // The delay is still 12.5ms at 0 (see calcDelay)
+const DELAY_LABELS = { [MIN_DELAY]: "Slow", [MAX_DELAY]: "Fast" };
 
-function Queen(props) {
-  return (
-    <FontAwesomeIcon
-      icon={faChessQueen}
-      className={`queen ${props.type}`}
-      style={{ fontSize: 0.7 * CELL_SIZE }}
-    />
-  );
+// Calculates the delay with an exponential function. Lower values (more
+// negative) correspond to longer delays.
+function calcDelay(delaySetting) {
+  return 12.5 * Math.exp(-delaySetting / 100);
 }
 
 class NQueens extends Component {
@@ -33,26 +33,20 @@ class NQueens extends Component {
     super(props);
     this.engine = new NQueensEngine();
     this.state = {
+      // Queen settings.
       n: DEFAULT_QUEENS,
       queens: undefined,
       curQueen: undefined,
       conflicts: undefined,
       foundSolution: undefined,
       done: false,
+
+      // Timer settings.
       runTimerId: undefined, // A timer for running the simulation.
-      delay: DEFAULT_DELAY,
+      delay: calcDelay(DEFAULT_DELAY),
+      delaySetting: DEFAULT_DELAY,
     };
   }
-
-  //
-  // Lifecycle
-  //
-
-  componentDidMount() {
-    this.setState(this.engine.reset(this.state.n));
-  }
-
-  componentWillUnmount() {}
 
   //
   // Engine
@@ -62,8 +56,11 @@ class NQueens extends Component {
     clearInterval(this.state.runTimerId);
   }
 
+  // Resets the engine with the given size. If n is not given, the current n
+  // will be used.
   engineReset(n) {
     this.setState(state => {
+      if (n === undefined) n = state.n;
       this.engineStop();
       const info = this.engine.reset(n);
       return { ...info, n: n };
@@ -74,12 +71,10 @@ class NQueens extends Component {
     this.setState(this.engine.step());
   }
 
-  // TODO: display message if no solution found -- make this part of the
-  // state or something
   engineFindSolution() {
+    this.engineStop(); // Avoid setting multiple timers at once.
     this.setState(state => {
-      // This timer runs the engine until it finds a solution or
-      // completes.
+      // This timer runs the engine until it finds a solution or completes.
       const runTimerId = setInterval(() => {
         const info = this.engine.step();
         this.setState(info);
@@ -89,8 +84,102 @@ class NQueens extends Component {
     });
   }
 
-  // TODO: stop button
-  render() {
+  //
+  // Lifecycle
+  //
+
+  componentDidMount() {
+    this.engineReset();
+  }
+
+  componentWillUnmount() {
+    this.engineStop();
+  }
+
+  //
+  // Rendering
+  //
+
+  // Various controls for the simulation.
+  renderControls() {
+    // TODO: Consider using symbols for the buttons
+    return (
+      <div className="control">
+        <p className="slider-name">Number of Queens: {this.state.n}</p>
+        <Slider
+          min={MIN_QUEENS}
+          max={MAX_QUEENS}
+          value={this.state.n}
+          labels={QUEEN_LABELS}
+          onChange={n => {
+            this.engineReset(n);
+          }}
+        />
+        <p className="slider-name">Speed</p>
+        <Slider
+          min={MIN_DELAY}
+          max={MAX_DELAY}
+          value={this.state.delaySetting}
+          labels={DELAY_LABELS}
+          tooltip={false}
+          onChange={delaySetting => {
+            this.setState({
+              delaySetting: delaySetting,
+              delay: calcDelay(delaySetting),
+            });
+          }}
+        />
+        <div className="buttons">
+          <button
+            className="command reset"
+            onClick={() => {
+              this.engineReset();
+            }}
+          >
+            Reset
+          </button>
+          <button
+            className="command step"
+            onClick={() => {
+              this.engineStep();
+            }}
+          >
+            Step
+          </button>
+          <button
+            className="command run"
+            onClick={() => {
+              this.engineFindSolution();
+            }}
+          >
+            Run Until Solution
+          </button>
+          <button
+            className="command stop"
+            onClick={() => {
+              this.engineStop();
+            }}
+          >
+            Stop
+          </button>
+        </div>
+        {this.state.done ? <p className="done">No more solutions.</p> : null}
+      </div>
+    );
+  }
+
+  // Renders the board and all the queens on it. Returns a list of board cells.
+  renderBoard() {
+    function Queen(props) {
+      return (
+        <FontAwesomeIcon
+          icon={faChessQueen}
+          className={`queen ${props.type}`}
+          style={{ fontSize: 0.7 * CELL_SIZE }}
+        />
+      );
+    }
+
     const board = [];
     for (let r = 0; r < this.state.n; ++r) {
       for (let c = 0; c < this.state.n; ++c) {
@@ -98,6 +187,7 @@ class NQueens extends Component {
         // and if its row matches.
         let queen = null;
         if (c <= this.state.curQueen && r == this.state.queens[c]) {
+          // Different queen colors based on their state.
           let type = "";
           if (this.state.foundSolution) {
             type = "solved-queen";
@@ -109,6 +199,7 @@ class NQueens extends Component {
           queen = <Queen type={type} />;
         }
 
+        // Add the cell and its associated queen.
         board.push(
           <div
             className={`cell ${(r + c) % 2 == 0 ? "light" : "dark"}`}
@@ -121,77 +212,26 @@ class NQueens extends Component {
       }
     }
 
-    // TODO: refactor the buttons into a list
+    return (
+      <div
+        className="board"
+        style={{
+          width: this.state.n * CELL_SIZE,
+          height: this.state.n * CELL_SIZE,
+        }}
+      >
+        {board}
+      </div>
+    );
+  }
+
+  render() {
+    // TODO: show algorithm internals
     return (
       <div id="NQueens">
         <div className="main">
-          <div className="control">
-            <p className="slider-name">Number of Queens</p>
-            <Slider
-              min={MIN_QUEENS}
-              max={MAX_QUEENS}
-              value={this.state.n}
-              labels={QUEEN_LABELS}
-              onChange={n => {
-                this.engineReset(n);
-              }}
-            />
-            <p className="slider-name">Speed</p>
-            <Slider
-              min={-1000}
-              max={-10}
-              value={-this.state.delay}
-              labels={{ "-1000": "Slow", "-10": "Fast" }}
-              tooltip={false}
-              onChange={delay => {
-                this.setState({ delay: -delay });
-              }}
-            />
-            <div className="buttons">
-              <button
-                className="command reset"
-                onClick={() => {
-                  this.engineReset();
-                }}
-              >
-                Reset
-              </button>
-              <button
-                className="command step"
-                onClick={() => {
-                  this.engineStep();
-                }}
-              >
-                Step
-              </button>
-              <button
-                className="command run"
-                onClick={() => {
-                  this.engineFindSolution();
-                }}
-              >
-                Run Until Solution
-              </button>
-              <button
-                className="command stop"
-                onClick={() => {
-                  this.engineStop();
-                }}
-              >
-                Stop
-              </button>
-            </div>
-          </div>
-
-          <div
-            className="board"
-            style={{
-              width: this.state.n * CELL_SIZE,
-              height: this.state.n * CELL_SIZE,
-            }}
-          >
-            {board}
-          </div>
+          {this.renderControls()}
+          {this.renderBoard()}
         </div>
       </div>
     );

@@ -1,6 +1,8 @@
 $color-primary: #e62020;
 $color-lighter-bkgd: #f2f2f2;
-$color-darker-bkgd: #e2e2e2;
+$color-darker-bkgd-1: #e2e2e2;
+$color-darker-bkgd-2: #d2d2d2;
+$color-darker-bkgd-3: #8f8f8f;
 
 $color-solve: #008000; // Green
 $color-bad: #e62020; // Red
@@ -28,16 +30,50 @@ $border-color: white;
     border-radius: 10px;
     margin-bottom: 20px;
 
-    // Button
+    // Slider
+    .slider-name {
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 8px;
+    }
+    .rangeslider {
+      background-color: $color-darker-bkgd-1;
+      box-shadow: none;
+      margin-top: 8px;
+      margin-bottom: 40px;
+    }
+    .rangeslider__fill {
+      box-shadow: none;
+      background-color: $color-primary;
+    }
+    .rangeslider__handle {
+      box-shadow: none;
+    }
+    .rangeslider__handle::after {
+      display: none;
+    }
+    .rangeslider__labels {
+      margin-top: 0px;
+      margin-left: 0px;
+    }
+
+    // Buttons
     .buttons {
       margin-top: 50px;
     }
     .command {
       font-weight: bold;
-      background-color: $color-darker-bkgd;
+      background-color: $color-darker-bkgd-1;
       border-radius: 30px;
       padding: 5px 20px;
       margin: 5px 5px;
+
+      &:hover {
+        background-color: $color-darker-bkgd-2;
+      }
+      &:active {
+        background-color: $color-darker-bkgd-3;
+      }
     }
     .reset {
       color: black;
@@ -51,31 +87,13 @@ $border-color: white;
     .stop {
       color: $color-bad;
     }
-  }
 
-  // Slider
-  .slider-name {
-    font-weight: bold;
-    text-align: left;
-  }
-  .rangeslider {
-    background-color: $color-darker-bkgd;
-    box-shadow: none;
-    margin-bottom: 40px;
-  }
-  .rangeslider__fill {
-    box-shadow: none;
-    background-color: $color-primary;
-  }
-  .rangeslider__handle {
-    box-shadow: none;
-  }
-  .rangeslider__handle::after {
-    display: none;
-  }
-  .rangeslider__labels {
-    margin-top: 0px;
-    margin-left: 0px;
+    .done {
+      display: block;
+      font-weight: bold;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
   }
 
   .board {
