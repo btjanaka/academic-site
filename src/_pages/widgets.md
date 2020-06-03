@@ -13,3 +13,7 @@ use_webpack: true
 ## Tic-Tac-Toe
 
 {% include projects/tictactoe/tictactoe.html %}
+
+## N-Queens
+
+<div class="react" id="nqueens"></div>

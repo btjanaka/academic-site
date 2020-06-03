@@ -1,0 +1,115 @@
+$color-primary: #e62020;
+$color-lighter-bkgd: #f2f2f2;
+$color-darker-bkgd: #e2e2e2;
+
+$color-solve: #008000; // Green
+$color-bad: #e62020; // Red
+$color-cur: #2b65ec; // Ocean blue
+
+$board-light-color: #f2d9b9; // Lighter brown
+$board-dark-color: #b98768; // Darker brown
+
+$border-color: white;
+
+#NQueens {
+  .main {
+    display: block;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.23);
+  }
+
+  // Controls
+  .control {
+    background-color: $color-lighter-bkgd;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+    // Button
+    .buttons {
+      margin-top: 50px;
+    }
+    .command {
+      font-weight: bold;
+      background-color: $color-darker-bkgd;
+      border-radius: 30px;
+      padding: 5px 20px;
+      margin: 5px 5px;
+    }
+    .reset {
+      color: black;
+    }
+    .step {
+      color: $color-cur;
+    }
+    .run {
+      color: $color-solve;
+    }
+    .stop {
+      color: $color-bad;
+    }
+  }
+
+  // Slider
+  .slider-name {
+    font-weight: bold;
+    text-align: left;
+  }
+  .rangeslider {
+    background-color: $color-darker-bkgd;
+    box-shadow: none;
+    margin-bottom: 40px;
+  }
+  .rangeslider__fill {
+    box-shadow: none;
+    background-color: $color-primary;
+  }
+  .rangeslider__handle {
+    box-shadow: none;
+  }
+  .rangeslider__handle::after {
+    display: none;
+  }
+  .rangeslider__labels {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  .board {
+    // Width and height set in the React component.
+
+    margin: 0px auto;
+
+    .cell {
+      display: block;
+      float: left;
+      line-height: 1;
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
+      text-align: center;
+    }
+    .queen {
+      color: black;
+      margin-top: 5px;
+    }
+    .cur-queen {
+      color: $color-cur;
+    }
+    .conflict-queen {
+      color: $color-bad;
+    }
+    .solved-queen {
+      color: $color-solve;
+    }
+    .light {
+      background-color: $board-light-color;
+    }
+    .dark {
+      background-color: $board-dark-color;
+    }
+  }
+}

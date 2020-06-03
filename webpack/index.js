@@ -2,6 +2,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Clock from "./components/Clock/Clock";
+import NQueens from "./components/NQueens/NQueens";
 import React from "react";
 import Resistance from "./components/Resistance/Resistance";
 import { render } from "react-dom";
@@ -10,6 +11,7 @@ import { render } from "react-dom";
 const REACT_COMPONENTS = {
   clock: <Clock />,
   resistance: <Resistance />,
+  nqueens: <NQueens />,
 };
 
 // Mounts React components at various points on the page. All mount points are

@@ -18,15 +18,18 @@ module.exports = {
     SharedArrayBuffer: "readonly",
   },
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
     sourceType: "module",
     ecmaFeatures: {
       jsx: true,
     },
   },
+  parser: "babel-eslint",
   rules: {
     "require-jsdoc": 0,
     "sort-imports": 1,
+    "no-invalid-this": 0,
+    "react/prop-types": 0,
   },
   settings: {
     react: {
