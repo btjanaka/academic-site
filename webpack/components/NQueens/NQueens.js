@@ -2,13 +2,20 @@ import "./NQueens.scss";
 import "react-rangeslider/lib/index.css";
 
 import React, { Component } from "react";
+import {
+  faChessQueen,
+  faForward,
+  faPlay,
+  faRedo,
+  faStop,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import NQueensEngine from "./n-queens-engine";
+import ReactTooltip from "react-tooltip";
 import Slider from "react-rangeslider";
-import { faChessQueen } from "@fortawesome/free-solid-svg-icons";
 
-const CELL_SIZE = 40;
+const CELL_SIZE = 34;
 
 // Number of queens settings
 const DEFAULT_QUEENS = 4;
@@ -84,6 +91,19 @@ class NQueens extends Component {
     });
   }
 
+  engineRunUntilDone() {
+    this.engineStop(); // Avoid setting multiple timers at once.
+    this.setState(state => {
+      // This timer runs the engine until it completes.
+      const runTimerId = setInterval(() => {
+        const info = this.engine.step();
+        this.setState(info);
+        if (info.done) clearInterval(runTimerId);
+      }, state.delay);
+      return { runTimerId: runTimerId };
+    });
+  }
+
   //
   // Lifecycle
   //
@@ -102,10 +122,53 @@ class NQueens extends Component {
 
   // Various controls for the simulation.
   renderControls() {
-    // TODO: Consider using symbols for the buttons
+    const commandButtons = [
+      {
+        class: "reset",
+        dataTip: "Reset",
+        onClick: () => {
+          this.engineReset();
+        },
+        content: <FontAwesomeIcon icon={faRedo} />,
+      },
+      {
+        class: "step",
+        dataTip: "Step",
+        onClick: () => {
+          this.engineStep();
+        },
+        content: "+1",
+      },
+      {
+        class: "run",
+        dataTip: "Run until a solution is found",
+        onClick: () => {
+          this.engineFindSolution();
+        },
+        content: <FontAwesomeIcon icon={faPlay} />,
+      },
+      {
+        class: "fast",
+        dataTip: "Run indefinitely",
+        onClick: () => {
+          this.engineRunUntilDone();
+        },
+        content: <FontAwesomeIcon icon={faForward} />,
+      },
+      {
+        class: "stop",
+        dataTip: "Stop",
+        onClick: () => {
+          this.engineStop();
+        },
+        content: <FontAwesomeIcon icon={faStop} />,
+      },
+    ];
+
     return (
       <div className="control">
-        <p className="slider-name">Number of Queens: {this.state.n}</p>
+        <ReactTooltip />
+        <p className="control-name">Number of Queens: {this.state.n}</p>
         <Slider
           min={MIN_QUEENS}
           max={MAX_QUEENS}
@@ -115,7 +178,7 @@ class NQueens extends Component {
             this.engineReset(n);
           }}
         />
-        <p className="slider-name">Speed</p>
+        <p className="control-name">Speed</p>
         <Slider
           min={MIN_DELAY}
           max={MAX_DELAY}
@@ -129,39 +192,18 @@ class NQueens extends Component {
             });
           }}
         />
+        <p className="control-name">Controls</p>
         <div className="buttons">
-          <button
-            className="command reset"
-            onClick={() => {
-              this.engineReset();
-            }}
-          >
-            Reset
-          </button>
-          <button
-            className="command step"
-            onClick={() => {
-              this.engineStep();
-            }}
-          >
-            Step
-          </button>
-          <button
-            className="command run"
-            onClick={() => {
-              this.engineFindSolution();
-            }}
-          >
-            Run Until Solution
-          </button>
-          <button
-            className="command stop"
-            onClick={() => {
-              this.engineStop();
-            }}
-          >
-            Stop
-          </button>
+          {commandButtons.map(info => (
+            <button
+              key={info.class}
+              className={`command ${info.class}`}
+              data-tip={info.dataTip}
+              onClick={info.onClick}
+            >
+              {info.content}
+            </button>
+          ))}
         </div>
         {this.state.done ? <p className="done">No more solutions.</p> : null}
       </div>
@@ -169,6 +211,7 @@ class NQueens extends Component {
   }
 
   // Renders the board and all the queens on it. Returns a list of board cells.
+  // TODO: show algorithm internals
   renderBoard() {
     function Queen(props) {
       return (
@@ -213,20 +256,21 @@ class NQueens extends Component {
     }
 
     return (
-      <div
-        className="board"
-        style={{
-          width: this.state.n * CELL_SIZE,
-          height: this.state.n * CELL_SIZE,
-        }}
-      >
-        {board}
+      <div className="board-holder">
+        <div
+          className="board"
+          style={{
+            width: this.state.n * CELL_SIZE,
+            height: this.state.n * CELL_SIZE,
+          }}
+        >
+          {board}
+        </div>
       </div>
     );
   }
 
   render() {
-    // TODO: show algorithm internals
     return (
       <div id="NQueens">
         <div className="main">

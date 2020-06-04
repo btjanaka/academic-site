@@ -1,3 +1,4 @@
+// Colors
 $color-primary: #e62020;
 $color-lighter-bkgd: #f2f2f2;
 $color-darker-bkgd-1: #e2e2e2;
@@ -13,29 +14,45 @@ $board-dark-color: #b98768; // Darker brown
 
 $border-color: white;
 
+// Sizes
+$responsive-width: 950px;
+$radius: 10px;
+
 #NQueens {
   .main {
     display: block;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: $radius;
     text-align: center;
     background-color: white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.23);
+    overflow: hidden;
   }
 
   // Controls
   .control {
     background-color: $color-lighter-bkgd;
     padding: 10px 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: $radius;
 
-    // Slider
-    .slider-name {
+    display: inline-block;
+    float: left;
+    width: 250px;
+
+    @media screen and (max-width: $responsive-width) {
+      margin-bottom: 20px;
+      display: block;
+      float: none;
+      width: 100%;
+    }
+
+    .control-name {
       font-weight: bold;
       text-align: left;
       margin-bottom: 8px;
     }
+
+    // Slider
     .rangeslider {
       background-color: $color-darker-bkgd-1;
       box-shadow: none;
@@ -59,14 +76,16 @@ $border-color: white;
 
     // Buttons
     .buttons {
-      margin-top: 50px;
+      margin-top: 5px;
     }
     .command {
       font-weight: bold;
       background-color: $color-darker-bkgd-1;
-      border-radius: 30px;
-      padding: 5px 20px;
-      margin: 5px 5px;
+
+      border-radius: 20px;
+      width: 37px;
+      height: 37px;
+      margin: 5px 2px;
 
       &:hover {
         background-color: $color-darker-bkgd-2;
@@ -84,6 +103,9 @@ $border-color: white;
     .run {
       color: $color-solve;
     }
+    .fast {
+      color: #893BFF;
+    }
     .stop {
       color: $color-bad;
     }
@@ -96,10 +118,24 @@ $border-color: white;
     }
   }
 
+  .board-holder {
+    padding: 15px;
+    border-radius: $radius;
+    background-color: $color-lighter-bkgd;
+
+    display: inline-block;
+    float: left;
+    margin-left: 20px;
+
+    @media screen and (max-width: $responsive-width) {
+      display: inline-block;
+      float: none;
+      margin: 0px auto;
+    }
+  }
+
   .board {
     // Width and height set in the React component.
-
-    margin: 0px auto;
 
     .cell {
       display: block;

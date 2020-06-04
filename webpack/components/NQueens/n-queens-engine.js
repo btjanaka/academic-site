@@ -43,7 +43,15 @@ export default class NQueensEngine {
   // - done: whether we are done searching
   step = () => {
     // curQueen is -1 when we finish backtracking from column 0.
-    if (this.curQueen == -1) return { done: true };
+    if (this.curQueen == -1) {
+      return {
+        queens: this.queens, // Should be all 0's.
+        curQueen: this.curQueen, // -1
+        conflicts: this.conflicts, // Should be all false.
+        foundSolution: false,
+        done: true,
+      };
+    }
 
     let foundSolution = false;
     let done = false;
