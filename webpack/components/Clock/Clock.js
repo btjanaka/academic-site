@@ -41,7 +41,13 @@ class Clock extends Component {
   render() {
     return (
       <div id="Clock">
-        <p className="time">{`${this.state.date.hour}:${this.state.date.minute}:${this.state.date.seconds}${this.state.date.ampm}`}</p>
+        {/* double-digit-hour class is added when the hour has two digits, as
+          the padding on the left has to change a bit */}
+        <p
+          className={`time ${
+            this.state.date.hour.length == 2 ? "double-digit-hour" : ""
+          }`}
+        >{`${this.state.date.hour}:${this.state.date.minute}:${this.state.date.seconds}${this.state.date.ampm}`}</p>
       </div>
     );
   }

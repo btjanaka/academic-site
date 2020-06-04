@@ -12,7 +12,8 @@ $text-color: #222;
 
   .time {
     margin: 0px;
-    padding: 10px 25px 0px 10px;
+    padding: 10px 25px 0px 27px;
+
     border-radius: 10px;
     display: inline-block;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.23);
@@ -24,5 +25,9 @@ $text-color: #222;
     font-family: alarm-clock, monospace;
     font-weight: bold;
     font-size: 3rem;
+  }
+
+  .double-digit-hour {
+    padding-left: 15px;
   }
 }
