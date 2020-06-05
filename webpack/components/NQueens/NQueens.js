@@ -4,6 +4,7 @@ import "react-rangeslider/lib/index.css";
 import React, { Component } from "react";
 import {
   faChessQueen,
+  faExternalLinkAlt,
   faForward,
   faPlay,
   faRedo,
@@ -15,24 +16,24 @@ import NQueensEngine from "./n-queens-engine";
 import ReactTooltip from "react-tooltip";
 import Slider from "react-rangeslider";
 
-const CELL_SIZE = 34;
+const CELL_SIZE = 33;
 
 // Number of queens settings
-const DEFAULT_QUEENS = 4;
+const DEFAULT_QUEENS = 8;
 const MIN_QUEENS = 1;
 const MAX_QUEENS = 15;
 const QUEEN_LABELS = { 1: "1", 8: "8", 15: "15" };
 
 // Settings for the delay between each simulation step.
-const DEFAULT_DELAY = -300;
-const MIN_DELAY = -600;
-const MAX_DELAY = 0; // The delay is still 12.5ms at 0 (see calcDelay)
+const DEFAULT_DELAY = -350; // ~330 ms
+const MIN_DELAY = -700; // ~11 seconds
+const MAX_DELAY = 0; // 10 ms -- hardly any difference with 1 ms b/c of rendering
 const DELAY_LABELS = { [MIN_DELAY]: "Slow", [MAX_DELAY]: "Fast" };
 
 // Calculates the delay with an exponential function. Lower values (more
 // negative) correspond to longer delays.
 function calcDelay(delaySetting) {
-  return 12.5 * Math.exp(-delaySetting / 100);
+  return 10 * Math.exp(-delaySetting / 100);
 }
 
 class NQueens extends Component {
@@ -42,11 +43,8 @@ class NQueens extends Component {
     this.state = {
       // Queen settings.
       n: DEFAULT_QUEENS,
-      queens: undefined,
-      curQueen: undefined,
-      conflicts: undefined,
-      foundSolution: undefined,
-      done: false,
+      // Fields: queens, curQueen, foundSolution, conflicts, done
+      ...this.engine.reset(DEFAULT_QUEENS),
 
       // Timer settings.
       runTimerId: undefined, // A timer for running the simulation.
@@ -60,7 +58,7 @@ class NQueens extends Component {
   //
 
   engineStop() {
-    clearInterval(this.state.runTimerId);
+    clearTimeout(this.state.runTimerId);
   }
 
   // Resets the engine with the given size. If n is not given, the current n
@@ -75,42 +73,43 @@ class NQueens extends Component {
   }
 
   engineStep() {
-    this.setState(this.engine.step());
+    const info = this.engine.step();
+    this.setState(info);
+    return info;
+  }
+
+  // Sets a timer that runs the engine until it is done. If `checkSolution` is
+  // true, it will also stop when a solution is found.
+  engineRun(checkSolution) {
+    this.engineStop(); // Avoid setting multiple timers at once.
+
+    // After running one step, this callback sets a timeout to run itself again
+    // if it is not done. Using a timeout (instead of interval) allows the speed
+    // to change while the simulation is running.
+    const step = () => {
+      const info = this.engineStep();
+      if ((checkSolution && info.foundSolution) || info.done) return;
+      this.setState(state => {
+        return { runTimerId: setTimeout(step, state.delay) };
+      });
+    };
+
+    // The timeout here is set to 0 so that we run one step without delay, so
+    // the user knows it is working.
+    this.setState({ runTimerId: setTimeout(step, 0) });
   }
 
   engineFindSolution() {
-    this.engineStop(); // Avoid setting multiple timers at once.
-    this.setState(state => {
-      // This timer runs the engine until it finds a solution or completes.
-      const runTimerId = setInterval(() => {
-        const info = this.engine.step();
-        this.setState(info);
-        if (info.foundSolution || info.done) clearInterval(runTimerId);
-      }, state.delay);
-      return { runTimerId: runTimerId };
-    });
+    this.engineRun(true);
   }
 
   engineRunUntilDone() {
-    this.engineStop(); // Avoid setting multiple timers at once.
-    this.setState(state => {
-      // This timer runs the engine until it completes.
-      const runTimerId = setInterval(() => {
-        const info = this.engine.step();
-        this.setState(info);
-        if (info.done) clearInterval(runTimerId);
-      }, state.delay);
-      return { runTimerId: runTimerId };
-    });
+    this.engineRun(false);
   }
 
   //
   // Lifecycle
   //
-
-  componentDidMount() {
-    this.engineReset();
-  }
 
   componentWillUnmount() {
     this.engineStop();
@@ -210,46 +209,65 @@ class NQueens extends Component {
     );
   }
 
-  // Renders the board and all the queens on it. Returns a list of board cells.
-  // TODO: show algorithm internals
+  // Renders the board and all the queens on it.
   renderBoard() {
-    function Queen(props) {
-      return (
-        <FontAwesomeIcon
-          icon={faChessQueen}
-          className={`queen ${props.type}`}
-          style={{ fontSize: 0.7 * CELL_SIZE }}
-        />
-      );
-    }
-
     const board = [];
-    for (let r = 0; r < this.state.n; ++r) {
-      for (let c = 0; c < this.state.n; ++c) {
-        // Display a queen if its column comes before the current queen column,
-        // and if its row matches.
-        let queen = null;
-        if (c <= this.state.curQueen && r == this.state.queens[c]) {
-          // Different queen colors based on their state.
-          let type = "";
-          if (this.state.foundSolution) {
-            type = "solved-queen";
-          } else if (c == this.state.curQueen) {
-            type = "cur-queen";
-          } else if (this.state.conflicts[c]) {
-            type = "conflict-queen";
+    for (let r = -1; r < this.state.n; ++r) {
+      for (let c = -1; c < this.state.n; ++c) {
+        // Default cell is empty and only has types for light and dark squares.
+        let cellContent = null;
+        let cellTypes = [(r + c) % 2 == 0 ? "light" : "dark"];
+
+        // Content is either a number, a queen, or nothing.
+        if (c == -1) {
+          // Display a row number along the left side of the board.
+          cellTypes = ["number"];
+          if (r > -1) cellContent = r;
+        } else if (r == -1) {
+          // Show the internal workings of the algorithm along the top row --
+          // this consists of the row number of the queen in each column.
+          cellTypes = [
+            "internal " + (c % 2 == 0 ? "internal-dark" : "internal-light"),
+          ];
+          if (c <= this.state.curQueen) {
+            cellContent = this.state.queens[c];
+            if (this.state.foundSolution) {
+              cellTypes.push("solved");
+            } else if (c == this.state.curQueen) {
+              cellTypes.push("current");
+            } else if (this.state.conflicts[c]) {
+              cellTypes.push("conflict");
+            }
+          } else {
+            cellContent = "-";
           }
-          queen = <Queen type={type} />;
+        } else if (c <= this.state.curQueen && r == this.state.queens[c]) {
+          // Display a queen if its column comes before the current queen column,
+          // and if its row matches.
+          cellContent = (
+            <FontAwesomeIcon
+              icon={faChessQueen}
+              style={{ fontSize: 0.7 * CELL_SIZE }}
+            />
+          );
+          cellTypes.push("queen"); // Unlike other cases, we keep the cell color.
+          if (this.state.foundSolution) {
+            cellTypes.push("solved");
+          } else if (c == this.state.curQueen) {
+            cellTypes.push("current");
+          } else if (this.state.conflicts[c]) {
+            cellTypes.push("conflict");
+          }
         }
 
-        // Add the cell and its associated queen.
+        // Add the cell and its associated content.
         board.push(
           <div
-            className={`cell ${(r + c) % 2 == 0 ? "light" : "dark"}`}
+            className={`cell ${cellTypes.join(" ")}`}
             style={{ width: CELL_SIZE, height: CELL_SIZE }}
             key={`${r},${c}`}
           >
-            {queen}
+            {cellContent}
           </div>
         );
       }
@@ -260,12 +278,24 @@ class NQueens extends Component {
         <div
           className="board"
           style={{
-            width: this.state.n * CELL_SIZE,
-            height: this.state.n * CELL_SIZE,
+            width: (this.state.n + 1) * CELL_SIZE,
+            height: (this.state.n + 1) * CELL_SIZE,
           }}
         >
           {board}
         </div>
+      </div>
+    );
+  }
+
+  // A panel with various commands and info.
+  renderPanel() {
+    return (
+      <div className="panel">
+        Built with <a href="https://reactjs.org">React.js</a>. |{" "}
+        <a href="https://github.com/btjanaka/academic-site/tree/master/webpack/components/NQueens">
+          Source Code <FontAwesomeIcon icon={faExternalLinkAlt} />
+        </a>
       </div>
     );
   }
@@ -276,6 +306,7 @@ class NQueens extends Component {
         <div className="main">
           {this.renderControls()}
           {this.renderBoard()}
+          {this.renderPanel()}
         </div>
       </div>
     );

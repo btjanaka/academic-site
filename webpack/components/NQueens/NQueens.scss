@@ -8,6 +8,7 @@ $color-darker-bkgd-3: #8f8f8f;
 $color-solve: #008000; // Green
 $color-bad: #e62020; // Red
 $color-cur: #2b65ec; // Ocean blue
+$color-neutral: black;
 
 $board-light-color: #f2d9b9; // Lighter brown
 $board-dark-color: #b98768; // Darker brown
@@ -95,7 +96,7 @@ $radius: 10px;
       }
     }
     .reset {
-      color: black;
+      color: $color-neutral;
     }
     .step {
       color: $color-cur;
@@ -104,7 +105,7 @@ $radius: 10px;
       color: $color-solve;
     }
     .fast {
-      color: #893BFF;
+      color: #893bff;
     }
     .stop {
       color: $color-bad;
@@ -120,6 +121,7 @@ $radius: 10px;
 
   .board-holder {
     padding: 15px;
+    padding-left: 1px; // Since the left side of the board has numbers.
     border-radius: $radius;
     background-color: $color-lighter-bkgd;
 
@@ -137,6 +139,7 @@ $radius: 10px;
   .board {
     // Width and height set in the React component.
 
+    // Cell colors
     .cell {
       display: block;
       float: left;
@@ -146,24 +149,56 @@ $radius: 10px;
       border: 0px;
       text-align: center;
     }
-    .queen {
-      color: black;
-      margin-top: 5px;
-    }
-    .cur-queen {
-      color: $color-cur;
-    }
-    .conflict-queen {
-      color: $color-bad;
-    }
-    .solved-queen {
-      color: $color-solve;
-    }
     .light {
       background-color: $board-light-color;
     }
     .dark {
       background-color: $board-dark-color;
     }
+    .internal {
+      padding-top: 7px;
+      font-weight: bold;
+      border-bottom: 4px solid black;
+    }
+    .internal-light {
+      background-color: #d2d2d2;
+    }
+    .internal-dark {
+      background-color: #b2b2b2;
+    }
+
+    // Cell content
+    .queen {
+      color: black;
+      padding-top: 5px;
+    }
+    .number {
+      color: black;
+      padding-top: 10px;
+      padding-right: 7px;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    // Cell content types -- placed here so they override default cell content
+    // above.
+    .current {
+      color: $color-cur;
+    }
+    .conflict {
+      color: $color-bad;
+    }
+    .solved {
+      color: $color-solve;
+    }
+  }
+
+  .panel {
+    display: inline-block;
+    width: 100%;
+    background-color: $color-lighter-bkgd;
+    border-radius: $radius;
+    margin-top: 15px;
+    padding: 5px 0px;
   }
 }
