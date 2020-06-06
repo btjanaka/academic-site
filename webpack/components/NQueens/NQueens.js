@@ -46,6 +46,10 @@ class NQueens extends Component {
       // Fields: queens, curQueen, foundSolution, conflicts, done
       ...this.engine.reset(DEFAULT_QUEENS),
 
+      // Info.
+      message: "Welcome to n-queens!",
+      total_steps: 0,
+
       // Timer settings.
       runTimerId: undefined, // A timer for running the simulation.
       delay: calcDelay(DEFAULT_DELAY),
@@ -58,7 +62,10 @@ class NQueens extends Component {
   //
 
   engineStop() {
-    clearTimeout(this.state.runTimerId);
+    if (this.state.runTimerId) {
+      clearTimeout(this.state.runTimerId);
+      this.setState({ runTimerId: null });
+    }
   }
 
   // Resets the engine with the given size. If n is not given, the current n
@@ -68,13 +75,18 @@ class NQueens extends Component {
       if (n === undefined) n = state.n;
       this.engineStop();
       const info = this.engine.reset(n);
-      return { ...info, n: n };
+      return {
+        ...info,
+        n: n,
+        total_steps: 0,
+        message: `Board reset to size ${n}`,
+      };
     });
   }
 
   engineStep() {
     const info = this.engine.step();
-    this.setState(info);
+    this.setState(state => ({ ...info, total_steps: state.total_steps + 1 }));
     return info;
   }
 
@@ -83,12 +95,31 @@ class NQueens extends Component {
   engineRun(checkSolution) {
     this.engineStop(); // Avoid setting multiple timers at once.
 
+    if (this.state.done) return;
+
+    this.setState({
+      message: checkSolution
+        ? "Running until solution..."
+        : "Running until done...",
+    });
+
     // After running one step, this callback sets a timeout to run itself again
     // if it is not done. Using a timeout (instead of interval) allows the speed
     // to change while the simulation is running.
     const step = () => {
       const info = this.engineStep();
-      if ((checkSolution && info.foundSolution) || info.done) return;
+
+      // Check for completion -- done completely or found a solution.
+      if (info.done) {
+        this.setState({
+          message: "No more solutions. Please reset to continue.",
+        });
+        return;
+      } else if (checkSolution && info.foundSolution) {
+        this.setState({ message: "Solution found." });
+        return;
+      }
+
       this.setState(state => {
         return { runTimerId: setTimeout(step, state.delay) };
       });
@@ -97,14 +128,6 @@ class NQueens extends Component {
     // The timeout here is set to 0 so that we run one step without delay, so
     // the user knows it is working.
     this.setState({ runTimerId: setTimeout(step, 0) });
-  }
-
-  engineFindSolution() {
-    this.engineRun(true);
-  }
-
-  engineRunUntilDone() {
-    this.engineRun(false);
   }
 
   //
@@ -116,6 +139,34 @@ class NQueens extends Component {
   }
 
   //
+  // Button handlers
+  //
+
+  handleReset = () => {
+    this.engineReset();
+  };
+
+  handleSingleStep = () => {
+    if (this.state.done) return;
+    this.engineStep();
+    this.setState({ message: "Single step." });
+  };
+
+  handleFindSolution = () => {
+    this.engineRun(true);
+  };
+
+  handleRunUntilDone = () => {
+    this.engineRun(false);
+  };
+
+  handleStop = () => {
+    if (this.state.done || !this.state.runTimerId) return;
+    this.engineStop();
+    this.setState({ message: "Stopped." });
+  };
+
+  //
   // Rendering
   //
 
@@ -125,41 +176,31 @@ class NQueens extends Component {
       {
         class: "reset",
         dataTip: "Reset",
-        onClick: () => {
-          this.engineReset();
-        },
+        onClick: this.handleReset,
         content: <FontAwesomeIcon icon={faRedo} />,
       },
       {
         class: "step",
         dataTip: "Step",
-        onClick: () => {
-          this.engineStep();
-        },
+        onClick: this.handleSingleStep,
         content: "+1",
       },
       {
         class: "run",
         dataTip: "Run until a solution is found",
-        onClick: () => {
-          this.engineFindSolution();
-        },
+        onClick: this.handleFindSolution,
         content: <FontAwesomeIcon icon={faPlay} />,
       },
       {
         class: "fast",
         dataTip: "Run indefinitely",
-        onClick: () => {
-          this.engineRunUntilDone();
-        },
+        onClick: this.handleRunUntilDone,
         content: <FontAwesomeIcon icon={faForward} />,
       },
       {
         class: "stop",
         dataTip: "Stop",
-        onClick: () => {
-          this.engineStop();
-        },
+        onClick: this.handleStop,
         content: <FontAwesomeIcon icon={faStop} />,
       },
     ];
@@ -204,7 +245,8 @@ class NQueens extends Component {
             </button>
           ))}
         </div>
-        {this.state.done ? <p className="done">No more solutions.</p> : null}
+        <p className="message">{this.state.message}</p>
+        <p className="steps">{`Steps: ${this.state.total_steps}`}</p>
       </div>
     );
   }

@@ -111,11 +111,15 @@ $radius: 10px;
       color: $color-bad;
     }
 
-    .done {
+    .message,
+    .steps {
       display: block;
-      font-weight: bold;
       margin-top: 10px;
       margin-bottom: 5px;
+      line-height: 1.2;
+    }
+    .message {
+      font-weight: bold;
     }
   }
 
