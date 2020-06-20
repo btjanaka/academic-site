@@ -8,7 +8,7 @@ use_page_title_as_title: true
 
 <div class="card profile-pic">
   <div class="card__image">
-    <img class="image" src="/assets/img/btjanaka.jpg"/>
+    <img class="image" src="/assets/img/btjanaka.png"/>
   </div>
 </div>
 
