@@ -1,10 +1,24 @@
 - category_name: Research
   projects:
+    - name: ACBC
+      date: Oct. 2019 - Jun. 2020
+      img: /assets/img/projects/acbc-ant-sub-tasks.png
+      description: >
+        Hierarchical reinforcement learning algorithms typically use a
+        high-level controller to compose sub-policies sequentially or
+        combinationally. Inspired by work on ensembles, we developed an
+        algorithm, ACBC (Actor-Critic By Committee), in which outputs from
+        multiple sub-policies, or experts, are composed with a linear
+        combination. As the experts can control their weights, ACBC performs
+        both sequential and combinational composition without a high-level
+        controller. This work was carried out in UCI's Intelligent Dynamics Lab.
+      links:
     - name: DANCE
-      date: Nov. 2018 - Present
+      date: Nov. 2018 - Jun. 2020
       img: /assets/img/projects/dance.svg
       description: >
-        DANCE is a pipeline for generating molecule datasets.
+        DANCE is a pipeline for generating molecule datasets. It was created in
+        the Mobley Lab at UCI.
       links:
         - name: GitHub
           url: https://github.com/btjanaka/dance
