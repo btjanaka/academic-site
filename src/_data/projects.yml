@@ -13,7 +13,7 @@
 - category_name: Coursework
   projects:
     - name: Bird Audio Detection
-      date: Apr. 2020 - June 2020
+      date: Apr. 2020 - Jun. 2020
       img: /assets/img/projects/hhh.png
       description: >
         This project was completed with the "High Entropy Homies" team as part
@@ -45,7 +45,7 @@
 - category_name: Miscellaneous
   projects:
     - name: Algorithm Problems
-      date: July 2018 - Present
+      date: Jul. 2018 - Present
       img: /assets/img/projects/handwritten-code.jpg
       description: >
         Solutions to algorithm problems from various competitions and websites,
