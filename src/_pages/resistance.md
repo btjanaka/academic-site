@@ -71,7 +71,7 @@ information.
 - 2017 VEX Robotics Photography Challenge
   - [Pushing the Limits](https://challenges.robotevents.com/challenge/59/entry/2925)
 - 2019 VEX Photography Online Challenge
-  - [Empowering the Next Generation of Womem Engineers (Winner)](https://challenges.robotevents.com/challenge/93/entry/6296)
+  - [Empowering the Next Generation of Women Engineers (Winner)](https://challenges.robotevents.com/challenge/93/entry/6296)
 
 ### Press
 
