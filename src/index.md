@@ -12,17 +12,17 @@ use_page_title_as_title: true
   </div>
 </div>
 
-I am an undergraduate computer science major at [UC Irvine](https://uci.edu/). I
-work with [Roy Fox](https://royf.org/) and the Intelligent Dynamics Lab on
+I am a computer science PhD student in the [ICAROS Lab](http://icaros.usc.edu)
+at [USC](https://www.usc.edu/), supervised by
+[Stefanos Nikolaidis](https://stefanosnikolaidis.net). Previously, I was an
+undergraduate in computer science at [UC Irvine](https://uci.edu/), where I
+worked with [Roy Fox](https://royf.org/) and the Intelligent Dynamics Lab on
 hierarchical reinforcement learning, and with
 [David Mobley](https://mobleylab.org/people/david-mobley/),
 [Jessica Maat](https://www.linkedin.com/in/jessica-maat-2a1875119/), and the
-[Mobley Lab](https://mobleylab.org/) on molecular dynamics force fields. I have
-also served as Internal Vice President of [ACM@UCI](http://acm-uci.org/), and I
-have interned at [Google](https://google.com) for two summers. This Fall, I will
-be joining the [ICAROS Lab](http://icaros.usc.edu) at
-[USC](https://www.usc.edu/) as I pursue a PhD in Computer Science under the
-supervision of [Stefanos Nikolaidis](https://stefanosnikolaidis.net).
+[Mobley Lab](https://mobleylab.org/) on molecular dynamics force fields. I also
+served as Internal Vice President of [ACM@UCI](http://acm-uci.org/). Outside of
+academia, I have interned at [Google](https://google.com) for three summers.
 
 My main interests are in robotics and AI, particularly hierarchical
 reinforcement and imitation learning, clustering, and human-robot collaboration.
