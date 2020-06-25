@@ -83,14 +83,14 @@ toc:
 ## => Markdown Enhancements
 ##############################
 ## Mathjax
-mathjax: true # false (default), true
+mathjax: false # false (default), true
 mathjax_autoNumber: false # false (default), true
 
 ## Mermaid
-mermaid: true # false (default), true
+mermaid: false # false (default), true
 
 ## Chart
-chart: true # false (default), true
+chart: false # false (default), true
 
 ## => Scholar
 ##############################

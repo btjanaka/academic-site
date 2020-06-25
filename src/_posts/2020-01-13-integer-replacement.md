@@ -4,6 +4,7 @@ key: 2020-01-13-integer-replacement
 title: Integer Replacement
 date: 2020-01-13 11:00:00-0800
 tags: Algorithms Problems LeetCode
+mathjax: true
 ---
 
 This is a problem I brought along to the WICSxACM Technical Interview Prep
