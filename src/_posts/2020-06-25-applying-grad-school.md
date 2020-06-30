@@ -10,18 +10,18 @@ Having applied to CS PhD programs over the past year or so, I decided to write
 down a few lessons I learned.<!--excerpt-separator--> To begin, I will talk
 about my overall experience. The summer after high school (2017), I took the
 GRE, as I knew I wanted to pursue some kind of graduate education, and the GRE
-was not much of a stretch after the SAT. Then, around March or April of last
-year (2019), I began talking to various professors about what grad school
+was not much of a stretch after the SAT and ACT. Then, around March or April of
+last year (2019), I began talking to various professors about what grad school
 entailed, and whether it would be a good fit for me. Eventually, I decided to
 pursue a PhD, so I began applying to the [NSF GRFP](https://nsfgrfp.org) (a
 fellowship for grad students) around May. Then in fall (October/November), I
-began applying to CS PhD programs. Ultimately, I applied to 9 grad schools and
-was accepted into 2 (UCI and USC). Eventually, I chose to go to USC. With that
-said, below is a list of things I learned. Some items come from first-hand
-experience, while others were passed along to me.
+began applying to CS PhD programs. Ultimately, I applied to nine grad schools
+and was accepted into two. Eventually, I chose to go to USC. With that said,
+below is a list of things I learned. Some items come from first-hand experience,
+while others were passed along to me.
 
 1. **Figure out what you're getting yourself into.** Grad school is no small
-   undertaking. Basically, you'll be spending 6 years (hopefully not more)
+   undertaking. Basically, you'll be spending up to 6 years (hopefully not more)
    working full-time as a researcher in your advisor's lab. Unlike in
    undergraduate, courses will be secondary; i.e. you'll have to take a few, but
    they will mostly be aimed at supplementing your research. In short, grad
@@ -39,21 +39,21 @@ experience, while others were passed along to me.
    your situation. Side note: there are tons of online articles with PhD advice
    (such as this one :wink:). I also found these helpful, but only for figuring
    out the basics.
-1. **Choose the professor, not (just) the school.** Grad school is all about the
-   professor and the people, since you are basically picking your boss and
+1. **Choose the professor(s), not just the school.** Grad school is all about
+   the professor and the people, since you are basically picking your boss and
    coworkers for the next several years. Thus, as you select schools, make sure
    you are looking through professors' publications/websites and finding ones
-   who interest you. Notably, some people say you should completely ignore the
-   school, as it is only a "brand name." Surprise, the best professors tend to
-   be at the best schools. In short, pick the best professors at the best
-   schools. To this end, [CS rankings](http://csrankings.org) is a great website
-   for finding prominent schools and professors in your field of interest.
+   who interest you. You may also want to check whether the school has multiple
+   professors working in your field of interest, as having a community of
+   like-minded researchers can be helpful. To this end,
+   [CS rankings](http://csrankings.org) is a great website for finding prominent
+   schools and professors in your field of interest.
 1. **Aim for a young professor.** Someone who is early in their career, such as
    an assistant professor, will have more time to work with you, and they will
    need to ensure the success of their students so that they can obtain tenure.
-   While an older professor (i.e. one who has tenure) may still be enthusiastic
-   about working with you, they likely also have administrative or other
-   responsibilities that prevent them from spending as much time with students.
+   Older professors will of course be enthusiastic about working with you, but
+   they may also be bogged down by administrative or other responsibilities that
+   prevent them from spending as much time with students.
 1. **Email professors who you may be interested in working with.** If you are
    genuinely interested in working with certain professors, spend some time to
    compose an email asking about their recent research. Importantly, **do not**
