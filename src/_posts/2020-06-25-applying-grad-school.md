@@ -3,6 +3,7 @@ layout: article
 key: 2020-06-25-applying-grad-school
 title: Applying to Grad School
 date: 2020-06-25 10:00:00-0800
+modify_date: 2020-07-02 15:00:00-0800
 tags: Advice Grad-School
 ---
 
@@ -29,6 +30,17 @@ while others were passed along to me.
    helpful in understanding grad school was
    [this blog post](https://stefanosnikolaidis.blogspot.com/2018/12/7-rules-of-grad-school-game.html)
    from my advisor at USC.
+   - Some folks have asked whether they should do a master's before / instead of
+     a PhD. My general impression is that master's degrees are more focused on
+     coursework, though many programs do involve writing a thesis. In general,
+     if you want to pursue a career in research, PhD is the way to go. A PhD is
+     essentially full-time research, and many PhD programs allow you to petition
+     for a master's anyway (e.g. USC lets you grab a master's after you finish
+     the PhD coursework). Furthermore, PhD programs are typically funded, while
+     master's programs can get pretty expensive. If you are thinking of going
+     into a master's and then PhD, keep in mind that a master's is not required
+     to pursue a PhD (i.e. you can go straight from undergrad to PhD), and a
+     master's will not necessarily take time off your PhD.
 1. **Talk to as many people as possible.** Get advice from lots of people when
    you are trying to figure out the program and school to which you should
    apply. Anyone familiar with a PhD (especially professors and other folks who
@@ -39,13 +51,21 @@ while others were passed along to me.
    your situation. Side note: there are tons of online articles with PhD advice
    (such as this one :wink:). I also found these helpful, but only for figuring
    out the basics.
+1. **Figure out an area in which to specialize.** You should be going into a PhD
+   program with a general idea of what problems you want to work on. This will
+   help you decide which professors you want to work with, as well as what you
+   write in your various application materials. Certainly, this will require
+   some soul searching -- read some papers, think about your history, and figure
+   out what you want to work on next. Choosing an interest is important because,
+   even within a specific field, there is still a tremendous amount of knowledge
+   to learn.
 1. **Choose the professor(s), not just the school.** Grad school is all about
    the professor and the people, since you are basically picking your boss and
    coworkers for the next several years. Thus, as you select schools, make sure
    you are looking through professors' publications/websites and finding ones
    who interest you. You may also want to check whether the school has multiple
    professors working in your field of interest, as having a community of
-   like-minded researchers can be helpful. To this end,
+   like-minded researchers can be beneficial. To this end,
    [CS rankings](http://csrankings.org) is a great website for finding prominent
    schools and professors in your field of interest.
 1. **Aim for a young professor.** Someone who is early in their career, such as
