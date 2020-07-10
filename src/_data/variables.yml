@@ -5,6 +5,7 @@ default:
   paths:
     root: /
     home: /
+    blog: /blog/index.html
     archive: /archive.html
     rss: /feed.xml
   mathjax: false

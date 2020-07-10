@@ -65,6 +65,7 @@ repository_tree: master
 paths:
   root: # title link url, "/" (default)
   home: # home layout url, "/" (default)
+  blog: # blog link url, "/blog/index.html" (default)
   archive: # "/archive.html" (default)
   rss: # "/feed.xml" (default)
 
@@ -95,12 +96,12 @@ chart: false # false (default), true
 ## => Scholar
 ##############################
 scholar:
-  style: apa
+  style: ieeetr
 
 ## => Paginate
 ##############################
-# paginate: 8
-# paginate_path: /page:num # don't change this unless for special need
+paginate: 8
+paginate_path: /blog/page:num # don't change this unless for special need
 
 ## => Sources
 ##############################

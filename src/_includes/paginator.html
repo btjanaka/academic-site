@@ -47,12 +47,12 @@
         {%- for page in (1.._length) -%}
           {%- if page == _cur -%}
             <li>
-              <div class="button button--primary button--circle focus"><span>{{ page }}</span></div>
+              <div class="button button--primary button--circle"><span>{{ page }}</span></div>
             </li>
 
           {%- elsif page == 1 -%}
-            {%- assign _home_path = site.paths.home | default: site.data.variables.default.paths.home -%}
-            {%- include snippets/prepend-baseurl.html path=_home_path -%}
+            {%- assign _blog_path = site.paths.blog | default: site.data.variables.default.paths.blog -%}
+            {%- include snippets/prepend-baseurl.html path=_blog_path -%}
             {%- assign _href = __return -%}
             <li>
               <a class="button button--secondary button--circle" href="{{ _href }}"><span>{{ page }}</span></a>
