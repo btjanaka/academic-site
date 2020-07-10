@@ -104,7 +104,7 @@ scholar:
 
 ## => Sources
 ##############################
-sources: # bootcdn (default), unpkg
+sources: unpkg # unpkg (default), bootcdn
 
 ## => Sharing
 ##############################
