@@ -52,9 +52,11 @@
 {%- include snippets/prepend-baseurl.html path='/assets/css/main.css' -%}
 <link rel="stylesheet" href="{{ __return }}">
 
+<!-- FontAwesome and Academicons -->
 {%- include snippets/get-sources.html -%}
 {%- assign _sources = __return -%}
 <link rel="stylesheet" href="{{ _sources.font_awesome }}" >
+<link rel="stylesheet" href="{{ _sources.academicons }}" >
 
 <!-- Webpack -->
 {%- if page.use_webpack -%}
