@@ -1,6 +1,9 @@
 ---
 layout: articles
 title: Blog
+# The key is needed since pagination creates multiple blog pages, and not all
+# the pages have the same url. This key matches the key in _data/navigation.yml
+nav_key: blog
 articles:
   data_source: paginator.posts
   article_type: BlogPosting
@@ -10,6 +13,4 @@ articles:
   show_info: true
 ---
 
-<div class="layout--home">
-  {%- include paginator.html -%}
-</div>
+{%- include paginator.html -%}

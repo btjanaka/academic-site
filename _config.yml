@@ -101,7 +101,7 @@ scholar:
 ## => Paginate
 ##############################
 paginate: 8
-paginate_path: /blog/page:num # don't change this unless for special need
+paginate_path: /blog/page:num
 
 ## => Sources
 ##############################

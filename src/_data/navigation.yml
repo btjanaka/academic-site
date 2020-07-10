@@ -3,6 +3,10 @@ header:
     url: /projects.html
   - title: Blog
     url: /blog/index.html
+    # The key is needed since pagination creates multiple blog pages, and not
+    # all the pages have the same url. This key matches the nav_key in
+    # blog/index.html.
+    key: blog
   - title: Personal
     url: /personal.html
   - title: Archive
