@@ -1,0 +1,11 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+/* prettier-ignore */
+@import
+
+    "skins/{{ site.dark_text_skin | default: site.data.variables.default.dark_text_skin }}",
+    "skins/highlight/{{ site.dark_highlight_theme | default: site.data.variables.default.dark_highlight_theme }}",
+
+    "main";

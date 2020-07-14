@@ -20,6 +20,8 @@ livereload: true
 ##############################
 text_skin: red # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+dark_text_skin: dark-red # skin for dark mode
+dark_highlight_theme: tomorrow-night # highlight theme for dark mode
 url: https://btjanaka.net # the base hostname & protocol e.g. https://www.someone.com
 baseurl: / # does not include hostname
 title: "Bryon Tjanaka"

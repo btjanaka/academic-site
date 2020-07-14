@@ -90,6 +90,14 @@ Added a `use_h3` option -- when making an article list with `brief` type,
 passing `use_h3=true` will cause h3 to be used instead of h2 for the titles. See
 `archive.html` for an example.
 
+### Dark Mode
+
+A button at the top of the page controls whether the page is displayed in dark
+mode. The `dark_text_skin` and `dark_highlight_theme` options in `_config.yml`
+control the skin and highlight theme, respectively, used in this dark mode. The
+user's choice of dark mode is stored persistently in
+[localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
+
 ## License
 
 The content of this project itself is licensed under the
