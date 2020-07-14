@@ -63,9 +63,11 @@ div.item__description p.project-date {
 .toggle-switch {
   $switch-width: 46px;
   $switch-height: 24px;
-  $slider-size: 18px;
-  $slider-movement: 22px;
+  $slider-size: 20px;
+  $slider-movement: 21px;
 
+  margin-top: 4px;
+  margin-right: 4px;
   position: relative;
   display: inline-block;
   width: $switch-width;
@@ -87,10 +89,10 @@ div.item__description p.project-date {
     position: absolute;
     cursor: pointer;
     top: 0;
-    left: 0;
+    left: 1px;
     right: 0;
     bottom: 0;
-    background-color: black;
+    background-color: #333;
     transition: 0.2s;
 
     &:before {
@@ -98,8 +100,8 @@ div.item__description p.project-date {
       content: "";
       height: $slider-size;
       width: $slider-size;
-      left: 3px;
-      bottom: 3px;
+      left: 2px;
+      bottom: 2px;
       background-color: white;
       transition: 0.2s;
     }
