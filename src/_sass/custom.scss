@@ -55,75 +55,74 @@ div.item__description p.project-date {
 }
 
 //
-// Toggle Switch
+// Dark Mode Switch
 // Source: https://www.w3schools.com/howto/howto_css_switch.asp
 //
 
 // The box around the slider.
-.toggle-switch {
-  $switch-width: 46px;
-  $switch-height: 24px;
-  $slider-size: 20px;
-  $slider-movement: 21px;
+.dark-mode-toggle {
+  $overall-width: 44px;
+  $overall-height: 24px;
+  $switch-size: 20px;
+  $switch-movement: 20px;
 
-  margin-top: 4px;
+  margin-top: 2px;
   margin-right: 4px;
   position: relative;
   display: inline-block;
-  width: $switch-width;
-  height: $switch-height;
-
-  font-size: 16px;
-  text-align: center;
-  color: yellow;
-
-  // Hide default HTML checkbox.
-  input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
+  width: $overall-width;
+  height: $overall-height;
 
   // The slider.
   .slider {
     position: absolute;
     cursor: pointer;
     top: 0;
-    left: 1px;
+    left: 0;
     right: 0;
     bottom: 0;
     background-color: #333;
     transition: 0.2s;
+    border-radius: $overall-height; // Rounded.
 
+    // The circular "switch"; it move around in the slider.
     &:before {
       position: absolute;
       content: "";
-      height: $slider-size;
-      width: $slider-size;
+      height: $switch-size;
+      width: $switch-size;
       left: 2px;
       bottom: 2px;
       background-color: white;
       transition: 0.2s;
+      border-radius: 50%; // Rounded.
     }
 
-    // Rounded sliders.
-    &.round {
-      border-radius: $switch-height;
-    }
-
-    &.round:before {
-      border-radius: 50%;
+    // The text labels for "on" and "off".
+    .text {
+      width: $overall-width / 2;
+      height: $overall-height;
+      display: block;
+      float: left;
+      margin: 0px;
+      padding: 0px;
+      text-align: center;
+      vertical-align: middle;
+      color: yellow;
+      font-size: 15px;
     }
   }
 
   input:checked + .slider {
-    background-color: #2196F3;
-  }
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    background-color: #2196f3;
   }
   input:checked + .slider:before {
-    transform: translateX($slider-movement);
+    transform: translateX($switch-movement);
+  }
+
+  // Hide the actual checkbox.
+  .dark-mode-switch {
+    display: none;
   }
 }
 
