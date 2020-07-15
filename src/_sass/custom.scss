@@ -66,9 +66,9 @@ div.item__description p.project-date {
   $switch-size: 20px;
   $switch-movement: 20px;
 
-  margin-top: 2px;
   margin-right: 4px;
   position: relative;
+  top: 5px;
   display: inline-block;
   width: $overall-width;
   height: $overall-height;
