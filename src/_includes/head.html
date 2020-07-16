@@ -49,8 +49,13 @@
 
 {%- include head/favicon.html -%}
 
-{%- include snippets/prepend-baseurl.html path='/assets/css/main.css' -%}
-<link id="main-stylesheet" rel="stylesheet" href="{{ __return }}">
+<!-- Stylesheet loaded by js because of dark mode. -->
+<script>{%- include scripts/lib/load-stylesheet.js -%}</script>
+<noscript>
+  <!-- Insert default stylesheet if JS not supported. -->
+  {% include snippets/prepend-baseurl.html path='/assets/css/main.css' %}
+  <link id="main-stylesheet" rel="stylesheet" href="{{ __return }}">
+</noscript>
 
 <!-- FontAwesome and Academicons -->
 {%- include snippets/get-sources.html -%}

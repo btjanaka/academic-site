@@ -34,21 +34,21 @@
       for(c of checkboxes) c.checked = true;
     }
 
-    // Initialize the mode.
-    const useDarkMode = getUseDarkMode();
-    if(useDarkMode) {
-      setDarkMode();
+    // We used to initialize the loading of the dark mode stylesheet here, but
+    // that has been moved to load-stylesheet.js. Now, we just initialize the
+    // checkboxes.
+    if(getUseDarkMode()) {
+      for(c of checkboxes) c.checked = true;
     } else {
-      setRegularMode();
+      for(c of checkboxes) c.checked = false;
     }
 
-    // Clicking on the checkbox flips the mode. We could reload the page to
+    // Clicking on any checkbox flips the mode. We could reload the page to
     // change color theme for Disqus, but this can be annoying for the user,
     // especially when scripts like Mathjax have to run.
     for(c of checkboxes) {
       c.onchange = function() {
-        const useDarkMode = getUseDarkMode();
-        if(useDarkMode) {
+        if(getUseDarkMode()) {
           setRegularMode();
         } else {
           setDarkMode();
