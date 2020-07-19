@@ -17,10 +17,12 @@ function RoboticsTimeline() {
           <TimelineItem
             key={id}
             dateText={event.date}
+            dateStyle={{
+              backgroundColor: colors.primary,
+            }}
             dateInnerStyle={{
               color: "white",
               backgroundColor: colors.primary,
-              border: "0px",
               textTransform: "uppercase",
             }}
             bodyContainerStyle={{

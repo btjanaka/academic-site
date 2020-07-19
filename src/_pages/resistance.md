@@ -101,7 +101,7 @@ The Resistance is proud to be affiliated with the following alliances:
         </div>
         <div class="card__content">
           <div class="card__header">
-            <h4>Camel Alliance</h4>
+            <h4 style="color:black">Camel Alliance</h4>
           </div>
         </div>
       </div>
@@ -113,7 +113,7 @@ The Resistance is proud to be affiliated with the following alliances:
         </div>
         <div class="card__content">
           <div class="card__header">
-            <h4>Breadstick Alliance</h4>
+            <h4 style="color:black">Breadstick Alliance</h4>
           </div>
         </div>
       </div>

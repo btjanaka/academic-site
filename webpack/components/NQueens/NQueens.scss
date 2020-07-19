@@ -8,7 +8,8 @@ $color-darker-bkgd-3: #8f8f8f;
 $color-solve: #008000; // Green
 $color-bad: #e62020; // Red
 $color-cur: #2b65ec; // Ocean blue
-$color-neutral: black;
+$color-neutral: #222;
+$text-color: #222;
 
 $board-light-color: #f2d9b9; // Lighter brown
 $board-dark-color: #b98768; // Darker brown
@@ -26,6 +27,7 @@ $radius: 10px;
     border-radius: $radius;
     text-align: center;
     background-color: white;
+    color: $text-color;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.23);
     overflow: hidden;
   }
