@@ -1,21 +1,37 @@
+# For images, add vertical: true if the image is vertical. This adds the
+# image--vertical class to the picture (see _sass/common/components/_image.scss
+# for the exact specifications).
+
 graphic_design:
-  - img: /assets/img/graphic-design/mountain-explorer-blue.png
-    caption: "Mountain explorer (Guess Who?)"
-  - img: /assets/img/graphic-design/hero-drawing.png
-    caption: "A hero holding up a sword"
-    vertical: true
-  - img: /assets/img/graphic-design/explosion-drawing.png
-    caption: "An explosion?"
-  - img: /assets/img/graphic-design/tower-drawing.png
-    caption: "Perspective drawing of a tower"
+  - name: Landscapes
+    items:
+      - img: /assets/img/graphic-design/mountain-explorer-blue.png
+        caption: Mountain explorer (Guess Who?)
+      - img: /assets/img/graphic-design/hero.png
+        caption: A hero holding up a sword
+        vertical: true
+      - img: /assets/img/graphic-design/explosion.png
+        caption: An explosion?
+      - img: /assets/img/graphic-design/tower.png
+        caption: Perspective drawing of a tower
+  - name: Quotes
+    items:
+      - img: /assets/img/graphic-design/awkward-success.png
+        caption:
+          Success is directly proportional to how many awkward conversations
+          you're willing to have.
+        vertical: true
+      - img: /assets/img/graphic-design/burn.png
+        caption: Some men just want to watch the world burn.
+        vertical: true
 
 origami:
   - img: /assets/img/origami/menger.jpg
-    caption: "Menger Sponge, n=1"
+    caption: Menger Sponge, n=1
   - img: /assets/img/origami/origami-assortment.jpg
-    caption: "An assortment of modular origami"
+    caption: An assortment of modular origami
   - img: /assets/img/origami/acm-cube.jpg
-    caption: "A small cube for ACM@UCI"
+    caption: A small cube for ACM@UCI
 
 quotes:
   - quote: Audentes fortuna iuvat.
