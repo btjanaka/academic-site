@@ -24,7 +24,7 @@ cache:
 
 script:
   - npm run build
-  - bundle exec jekyll build
+  - JEKYLL_ENV=production bundle exec jekyll build
 
 deploy:
   provider: pages
