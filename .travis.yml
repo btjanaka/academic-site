@@ -4,6 +4,7 @@ rvm:
 
 git:
   depth: 1
+  submodules: true
 branches:
   only:
     - master

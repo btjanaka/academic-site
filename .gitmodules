@@ -1,0 +1,3 @@
+[submodule "external/art"]
+	path = external/art
+	url = https://github.com/btjanaka/art.git
