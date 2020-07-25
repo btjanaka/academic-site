@@ -3,7 +3,7 @@ layout: article
 key: 2020-06-25-applying-grad-school
 title: Applying to Grad School
 date: 2020-06-25 10:00:00-0800
-modify_date: 2020-07-02 15:00:00-0800
+modify_date: 2020-07-25 01:00:00-0800
 tags: Advice Grad-School
 ---
 
@@ -151,3 +151,10 @@ while others were passed along to me.
 
 With that, I hope this list helped clarify some areas of the PhD application
 process. Good luck, and feel free to leave your thoughts in the comments below!
+Also, check out these other pieces of advice:
+
+- [A Five-Minute Guide to Ph.D. Program Applications](https://web.archive.org/web/20200705134015/https://pg.ucsd.edu/PhD-application-tips.htm)
+  -- a short article from an assistant professor that gives a sense of what's at
+  stake
+- [Advice for applying for graduate science fellowships: NSF, NDSEG, Hertz](https://web.archive.org/web/20200514225733/https://grad.illinois.edu/sites/default/files/pdfs/grantwritingadvicefromphilipguo-nsf-ndseg-hertz.pdf)
+  -- fellowships go hand-in-hand with grad school applications
