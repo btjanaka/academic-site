@@ -15,6 +15,9 @@ graphic_design:
       - img: /assets/img/graphic-design/tower.png
         caption: Perspective drawing of a tower
   - name: Quote Drawings
+    description:
+      These are also posted on Instagram <a
+      href="https://instagram.com/q.e.quotes">@q.e.quotes</a>
     items:
       - img: /assets/img/graphic-design/awkward-success.png
         caption:

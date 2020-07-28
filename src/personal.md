@@ -14,6 +14,7 @@ I typically use [Inkscape](https://inkscape.org) to draw these. Refer to this
 
 {% for collection in site.data.personal.graphic_design %}
 #### {{ collection.name }}
+{% if collection.description %}{{ collection.description }}{% endif %}
   <div class="swiper swiper-{{ collection.name | downcase | replace: ' ', '-' }}">
     <div class="swiper__wrapper">
       {% for img in collection.items %}
