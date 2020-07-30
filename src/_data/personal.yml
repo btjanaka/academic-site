@@ -27,6 +27,11 @@ graphic_design:
       - img: /assets/img/graphic-design/burn.png
         caption: Some men just want to watch the world burn.
         vertical: true
+      - img: /assets/img/graphic-design/compromise.png
+        caption:
+          It's not always rainbows and butterflies, it's compromise that moves
+          us along
+        vertical: true
 origami:
   - img: /assets/img/origami/menger.jpg
     caption: Menger Sponge, n=1
