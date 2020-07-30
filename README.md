@@ -11,9 +11,28 @@ Webpack and React.
 This site is built at https://travis-ci.com/btjanaka/academic-site, and hosted
 from the `master` branch at https://github.com/btjanaka/btjanaka.github.io.
 
+## Contents
+
+<!-- vim-markdown-toc GFM -->
+
+* [Instructions](#instructions)
+  * [Installation](#installation)
+  * [Adding a Page](#adding-a-page)
+  * [Adding Quote Drawings to the Personal Page](#adding-quote-drawings-to-the-personal-page)
+* [Modifications to TeXt-theme](#modifications-to-text-theme)
+  * [Article / Page Configuration](#article--page-configuration)
+  * [Webpack / React](#webpack--react)
+  * [Jekyll Plugins](#jekyll-plugins)
+  * [Archive](#archive)
+  * [Article Lists](#article-lists)
+  * [Dark Mode](#dark-mode)
+* [License](#license)
+
+<!-- vim-markdown-toc -->
+
 ## Instructions
 
-Full docs available
+More docs available
 [here](https://tianqi.name/jekyll-TeXt-theme/docs/en/quick-start) and
 [here](https://jekyllrb.com).
 
@@ -43,6 +62,12 @@ The site will now be available at http://localhost:8686.
 1. Add the page in `_data/navigation.yml`, using the URL `/<page>.html` and the
    title `<page>`. Alternatively, if not listing this page on the header, put it
    in `miscpages.yml`.
+
+### Adding Quote Drawings to the Personal Page
+
+The Personal page (in `src/personal.md`) hosts quote drawings from the repo
+https://github.com/btjanaka/art. To pull in a new drawing, run the
+`tools/add_quote_drawing.py` script.
 
 ## Modifications to TeXt-theme
 

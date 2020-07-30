@@ -1,6 +1,6 @@
 # For images, add vertical: true if the image is vertical. This adds the
 # image--vertical class to the picture (see _sass/common/components/_image.scss
-# for the exact specifications).
+# for the exact styling).
 
 graphic_design:
   - name: Landscapes
@@ -27,7 +27,6 @@ graphic_design:
       - img: /assets/img/graphic-design/burn.png
         caption: Some men just want to watch the world burn.
         vertical: true
-
 origami:
   - img: /assets/img/origami/menger.jpg
     caption: Menger Sponge, n=1
@@ -35,7 +34,6 @@ origami:
     caption: An assortment of modular origami
   - img: /assets/img/origami/acm-cube.jpg
     caption: A small cube for ACM@UCI
-
 quotes:
   - quote: Audentes fortuna iuvat.
   - quote:
@@ -64,8 +62,8 @@ quotes:
       and I don't know if I could have seen a more inopportune time for
       something not to work.
     speaker:
-      '<a href="https://youtu.be/v_KTkTS6GrQ?t=174">2016 VEX World Championship
-      Finals 3</a>'
+      <a href="https://youtu.be/v_KTkTS6GrQ?t=174">2016 VEX World Championship
+      Finals 3</a>
   - quote:
       Success is directly proportional to how many awkward conversations you're
       willing to have.
