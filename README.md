@@ -53,6 +53,8 @@ bundle exec jekyll serve --livereload-port 8687
 npm start
 ```
 
+The first command can also be replaced with `tools/start-jekyll.sh`.
+
 The site will now be available at http://localhost:8686.
 
 ### Adding a Page
