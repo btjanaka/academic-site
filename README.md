@@ -45,10 +45,11 @@ bundle install
 npm install
 ```
 
-To get a live preview of the site, run:
+To get a live preview of the site, run the following commands at the same time
+(e.g. in two different terminals, or with one or both in the background):
 
 ```
-bundle exec jekyll serve
+bundle exec jekyll serve --livereload-port 8687
 npm start
 ```
 
