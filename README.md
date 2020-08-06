@@ -49,13 +49,13 @@ To get a live preview of the site, run the following commands at the same time
 (e.g. in two different terminals, or with one or both in the background):
 
 ```
-bundle exec jekyll serve --livereload-port 8687
+bundle exec jekyll serve --livereload-port 8001
 npm start
 ```
 
 The first command can also be replaced with `tools/start-jekyll.sh`.
 
-The site will now be available at http://localhost:8686.
+The site will now be available at http://localhost:8000.
 
 ### Adding a Page
 

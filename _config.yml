@@ -13,7 +13,7 @@
 
 ## => Serve Settings
 ##############################
-port: 8686
+port: 8000
 livereload: true
 
 ## => Site Settings

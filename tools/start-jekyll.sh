@@ -1,1 +1,1 @@
-bundle exec jekyll serve --livereload-port 8687
+bundle exec jekyll serve --livereload-port 8001
