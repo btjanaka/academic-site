@@ -9,10 +9,12 @@ src/assets/bundle
 # Jekyll
 build/
 _site/
-Gemfile.lock
 .sass-cache/
 .jekyll-metadata
 .jekyll-cache/
+
+# Ruby / Bundler
+Gemfile.lock
 .bundle/
 vendor/
 
