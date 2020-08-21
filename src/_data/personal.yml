@@ -44,24 +44,26 @@ quotes:
   - quote:
       Life is about waiting for the right moment to act. So relax. You are not
       early. You are not late. You are very much on time.
-  - quote: The hardest choices require the strongest wills.
-    speaker: Thanos
+  - quote:
+      Success is about being at the right place at the right time, and knowing
+      it.
+  - quote: You can do anything, but not everything.
+    speaker: David Allen
+  - quote: A friend to all is a friend to none.
+    speaker: Aristotle
   - quote:
       Go confidently in the direction of your dreams! Live the life you have
       imagined.
     speaker: Henry David Thoreau
   - quote: If greedy doesn't work, the input is wrong.
     speaker: Karthik Gajulapalli
+  - quote: The hardest choices require the strongest wills.
+    speaker: Thanos
   - quote: The early bird gets the worm, but the second mouse gets the cheese.
     speaker: Aldrich Killian
   - quote: We live in the age of information, not the age of knowledge.
-  - quote:
-      Success is about being at the right place at the right time, and knowing
-      it.
   - quote: You miss 100% of the shots you don't take.
     speaker: Wayne Gretzky
-  - quote: You can do anything, but not everything.
-    speaker: David Allen
   - quote:
       Consistency and repeatability is a hallmark and pillar of all engineering,
       and I don't know if I could have seen a more inopportune time for
