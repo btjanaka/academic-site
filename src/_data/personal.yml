@@ -32,6 +32,9 @@ graphic_design:
           It's not always rainbows and butterflies, it's compromise that moves
           us along
         vertical: true
+      - img: /assets/img/graphic-design/destroyer.png
+        caption: Now I am become death, the destroyer of worlds
+        vertical: true
 origami:
   - img: /assets/img/origami/menger.jpg
     caption: Menger Sponge, n=1
