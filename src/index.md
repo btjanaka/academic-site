@@ -24,10 +24,9 @@ hierarchical reinforcement learning, and with
 served as Internal Vice President of [ACM@UCI](http://acm-uci.org/). Outside of
 academia, I have interned at [Google](https://google.com) for three summers.
 
-My main interests are in robotics and AI, particularly hierarchical
-reinforcement and imitation learning, clustering, and human-robot collaboration.
-I have also explored computational chemistry, competitive programming, and web
-development.
+My main interests are in robotics and AI, particularly reinforcement learning,
+clustering, and human-robot collaboration. I have also explored computational
+chemistry, competitive programming, and web development.
 
 During high school, I competed in the
 [VEX Robotics Competition](https://en.wikipedia.org/wiki/VEX_Robotics_Competition)

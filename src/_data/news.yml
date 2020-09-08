@@ -1,4 +1,4 @@
-limit: 3
+limit: 10
 events:
   - date: 13 March 2020
     desc:
@@ -15,3 +15,5 @@ events:
       with UCI's ICSSC for their Humans of ICS series.
   - date: 13 June 2020
     desc: I have graduated from <a href="https://uci.edu">UC Irvine</a>!
+  - date: 24 August 2020
+    desc: I have started my PhD at <a href="https://usc.edu">USC</a>!
