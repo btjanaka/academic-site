@@ -58,6 +58,15 @@
           url: https://taxicab175.github.io/assets/pdf/taxicab175-final-report.pdf
 - category_name: Miscellaneous
   projects:
+    - name: AI Practice
+      date: Dec. 2019 - Present
+      img: /assets/img/projects/mnist.png
+      description: >
+        Practice implementations for Artificial Intelligence (AI), particularly
+        Machine Learning (ML).
+      links:
+        - name: GitHub
+          url: https://github.com/btjanaka/ai-practice
     - name: Algorithm Problems
       date: Jul. 2018 - Present
       img: /assets/img/projects/handwritten-code.jpg
