@@ -45,7 +45,7 @@
 
     // Clicking on any checkbox flips the mode. We could reload the page to
     // change color theme for Disqus, but this can be annoying for the user,
-    // especially when scripts like Mathjax have to run.
+    // especially when scripts like Katex have to run.
     for(c of checkboxes) {
       c.onchange = function() {
         if(getUseDarkMode()) {

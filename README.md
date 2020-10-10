@@ -27,6 +27,7 @@ from the `master` branch at https://github.com/btjanaka/btjanaka.github.io.
   * [Archive](#archive)
   * [Article Lists](#article-lists)
   * [Dark Mode](#dark-mode)
+  * [Katex](#katex)
 * [License](#license)
 
 <!-- vim-markdown-toc -->
@@ -131,6 +132,11 @@ mode. The `dark_text_skin` and `dark_highlight_theme` options in `_config.yml`
 control the skin and highlight theme, respectively, used in this dark mode. The
 user's choice of dark mode is stored persistently in
 [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
+
+### Katex
+
+Instead of Mathjax, I use [Katex](https://katex.org). Instead of
+`mathjax: true`, use `katex: true` in YAML front matter.
 
 ## License
 

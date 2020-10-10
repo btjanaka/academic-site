@@ -18,7 +18,11 @@
           css: '{{ _sources.gitalk.css }}'
         },
         valine: '{{ _sources.valine }}',
-        mathjax: '{{ _sources.mathjax }}',
+        katex: {
+          js: '{{ _sources.katex.js }}',
+          css: '{{ _sources.katex.css }}',
+          autorender: '{{ _sources.katex.autorender }}',
+        },
         mermaid: '{{ _sources.mermaid }}'
       },
       site: {

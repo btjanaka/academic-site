@@ -4,7 +4,7 @@ title: Widgets
 show_date: false
 show_section_navigator: false
 use_webpack: true
-mathjax: true
+katex: true
 ---
 
 ## N-Queens

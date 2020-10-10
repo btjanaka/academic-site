@@ -1,0 +1,24 @@
+{%- include snippets/get-sources.html -%}
+{%- assign _sources = __return -%}
+
+<link rel="stylesheet" href="{{ _sources.katex.css }}" />
+<script defer src="{{ _sources.katex.js }}"></script>
+<script>
+  document.katexRender = () => {
+    config = {
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "\\[", right: "\\]", display: true}
+      ]
+    };
+
+    renderMathInElement(document.body, config);
+  }
+</script>
+<script
+  defer
+  src="{{ _sources.katex.autorender }}"
+  onload="document.katexRender()"
+></script>

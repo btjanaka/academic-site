@@ -4,10 +4,10 @@
   {%- include markdown-enhancements/chart.html -%}
 {%- endif -%}
 
-{%- include snippets/assign.html target=site.data.variables.default.mathjax
-  source0=site.mathjax source1=page.mathjax -%}
+{%- include snippets/assign.html target=site.data.variables.default.katex
+  source0=site.katex source1=page.katex -%}
 {%- if __return == true -%}
-  {%- include markdown-enhancements/mathjax.html -%}
+  {%- include markdown-enhancements/katex.html -%}
 {%- endif -%}
 
 {%- include snippets/assign.html target=site.data.variables.default.mermaid

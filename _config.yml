@@ -85,9 +85,8 @@ toc:
 
 ## => Markdown Enhancements
 ##############################
-## Mathjax
-mathjax: false # false (default), true
-mathjax_autoNumber: false # false (default), true
+## Katex
+katex: false # false (default), true
 
 ## Mermaid
 mermaid: false # false (default), true
