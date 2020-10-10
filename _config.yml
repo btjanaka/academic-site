@@ -201,6 +201,10 @@ defaults:
       show_subscribe: true
       pageview: true
 
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
+
 ## => Plugins
 ##############################
 plugins:
@@ -209,3 +213,4 @@ plugins:
   - jekyll-sitemap
   - jemoji
   - jekyll/scholar
+  - jekyll-minifier
