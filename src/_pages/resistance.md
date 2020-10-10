@@ -28,7 +28,7 @@ article_header:
 86868: The Resistance was a high school robotics team from Santa Clara,
 California consisting of brothers Bryon Tjanaka and Dylon Tjanaka. The team
 competed in the
-[VEX Robotics Competition]("https://en.wikipedia.org/wiki/VEX_Robotics_Competition")
+[VEX Robotics Competition](https://en.wikipedia.org/wiki/VEX_Robotics_Competition)
 from 2016-2019. In its inaugural season playing the game
 [Starstruck](https://youtu.be/0t2zstQ84Tw), the team experienced unprecedented
 success, winning 13 regional tournaments and the 2017 VEX Robotics High School
@@ -97,7 +97,11 @@ The Resistance is proud to be affiliated with the following alliances:
     <div class="cell cell--6"><div>
       <div class="card">
         <div class="card__image">
-          <img class="image" src="/assets/img/resistance/camel.jpg"/>
+          <img
+            class="image"
+            alt="Camel Alliance"
+            src="/assets/img/resistance/camel.jpg"
+          />
         </div>
         <div class="card__content">
           <div class="card__header">
@@ -109,7 +113,12 @@ The Resistance is proud to be affiliated with the following alliances:
     <div class="cell cell--6"><div>
       <div class="card">
         <div class="card__image">
-          <img class="image" style="background-color:black" src="/assets/img/resistance/breadstick.png"/>
+          <img
+            class="image"
+            alt="Breadstick Alliance"
+            style="background-color:black"
+            src="/assets/img/resistance/breadstick.png"
+          />
         </div>
         <div class="card__content">
           <div class="card__header">

@@ -5,7 +5,7 @@ help:
 	@echo "build-site        -> Build the site"
 	@echo "serve-site        -> Serve the site with live reload"
 	@echo "profile-site      -> Generate a profile of site build time"
-	@echo "htmlproofer       -> Run html-proofer on the site"
+	@echo "html-proofer      -> Run html-proofer on the site"
 	@echo "webpack           -> Build Webpack components"
 	@echo "webpack-reload    -> Live reload Webpack components"
 
@@ -19,8 +19,8 @@ serve-site:
 	bundle exec jekyll serve --livereload-port 8001
 profile-site:
 	bundle exec jekyll build --profile
-htmlproofer:
-	bundle exec htmlproofer --assume-extension --check-html --check-favicon ./build
+html-proofer:
+	tools/html-proofer.sh
 
 webpack:
 	npm run build

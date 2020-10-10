@@ -25,6 +25,7 @@ cache:
 script:
   - npm run build
   - JEKYLL_ENV=production bundle exec jekyll build
+  - tools/html-proofer.sh
 
 deploy:
   provider: pages
