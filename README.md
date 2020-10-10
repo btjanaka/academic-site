@@ -17,6 +17,7 @@ from the `master` branch at https://github.com/btjanaka/btjanaka.github.io.
 
 * [Instructions](#instructions)
   * [Installation](#installation)
+  * [Makefile](#makefile)
   * [Adding a Page](#adding-a-page)
   * [Adding Quote Drawings to the Personal Page](#adding-quote-drawings-to-the-personal-page)
 * [Modifications to TeXt-theme](#modifications-to-text-theme)
@@ -53,9 +54,14 @@ bundle exec jekyll serve --livereload-port 8001
 npm start
 ```
 
-The first command can also be replaced with `tools/start-jekyll.sh`.
+The first command can also be replaced with `make serve-site`.
 
 The site will now be available at http://localhost:8000.
+
+### Makefile
+
+The provided `Makefile` provides many useful commands. Run `make help` for more
+info.
 
 ### Adding a Page
 
