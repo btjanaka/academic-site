@@ -53,8 +53,9 @@ Or just:
 make install
 ```
 
-The site uses Ruby 2.7.0 if you do not have that installed, consider using
-[RVM (Ruby Version Manager)](https://rvm.io).
+The site uses Ruby 2.7.0. If you do not have that installed, consider using
+[RVM (Ruby Version Manager)](https://rvm.io). If you do not have Node installed,
+I recommend using [NVM (Node Version Manager](https://github.com/nvm-sh/nvm).
 
 To get a live preview of the site, run the following commands at the same time
 (e.g. in two different terminals, or with one or both in the background):
