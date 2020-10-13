@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - 2.7
+  - 2.7.0
 
 git:
   depth: 1
