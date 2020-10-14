@@ -20,6 +20,7 @@ from the `master` branch at https://github.com/btjanaka/btjanaka.github.io.
   * [Makefile](#makefile)
   * [Adding a Page](#adding-a-page)
   * [Adding Quote Drawings to the Personal Page](#adding-quote-drawings-to-the-personal-page)
+  * [Lighthouse](#lighthouse)
 * [Modifications to TeXt-theme](#modifications-to-text-theme)
   * [Article / Page Configuration](#article--page-configuration)
   * [Webpack / React](#webpack--react)
@@ -42,14 +43,14 @@ More docs available
 
 Clone the repo, then run:
 
-```
+```bash
 bundle install
 npm install
 ```
 
 Or just:
 
-```
+```bash
 make install
 ```
 
@@ -60,7 +61,7 @@ I recommend using [NVM (Node Version Manager](https://github.com/nvm-sh/nvm).
 To get a live preview of the site, run the following commands at the same time
 (e.g. in two different terminals, or with one or both in the background):
 
-```
+```bash
 bundle exec jekyll serve --livereload-port 8001
 npm start
 ```
@@ -88,6 +89,14 @@ info.
 The Personal page (in `src/personal.md`) hosts quote drawings from the repo
 https://github.com/btjanaka/art. To pull in a new drawing, run the
 `tools/add_quote_drawing.py` script.
+
+### Lighthouse
+
+To run Lighthouse on https://btjanaka.net, use
+
+```bash
+make lighthouse
+```
 
 ## Modifications to TeXt-theme
 
