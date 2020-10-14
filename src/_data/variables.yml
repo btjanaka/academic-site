@@ -44,25 +44,10 @@ default:
     use_page_title_as_title: false
 
 sources:
-  bootcdn:
-    font_awesome: "https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-    academicons: "https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
-    jquery: "https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"
-    leancloud_js_sdk: "//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js"
-    chart: "https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js"
-    gitalk:
-      js: "https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.js"
-      css: "https://cdn.bootcss.com/gitalk/1.2.2/gitalk.min.css"
-    valine: "https://unpkg.com/valine/dist/Valine.min.js" # bootcdn not available
-    katex:
-      js: "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
-      css: "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
-      autorender: "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
-    mermaid: "https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"
   unpkg:
     font_awesome: "https://use.fontawesome.com/releases/v5.0.13/css/all.css"
     academicons: "https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
-    jquery: "https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"
+    jquery: "https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"
     leancloud_js_sdk: "//cdn.jsdelivr.net/npm/leancloud-storage@3.13.2/dist/av-min.js"
     chart: "https://unpkg.com/chart.js@2.7.2/dist/Chart.min.js"
     gitalk:

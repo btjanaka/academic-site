@@ -106,7 +106,7 @@ paginate_path: /blog/page:num
 
 ## => Sources
 ##############################
-sources: unpkg # unpkg (default), bootcdn
+sources: unpkg # unpkg (default)
 
 ## => Sharing
 ##############################
