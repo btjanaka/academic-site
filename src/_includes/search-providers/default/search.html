@@ -3,8 +3,12 @@
     <div class="search__header">{{ _locale_search }}</div>
     <div class="search-bar">
       <div class="search-box js-search-box">
-        <div class="search-box__icon-search"><i class="fas fa-search"></i></div>
-        <input type="text" />
+        <div class="search-box__icon-search">
+          <label for="search-input">
+            <i title="Search Box" class="fas fa-search"></i>
+          </label>
+        </div>
+        <input id="search-input" type="text" />
         <div class="search-box__icon-clear js-icon-clear">
           <a><i class="fas fa-times"></i></a>
         </div>
