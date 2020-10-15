@@ -57,11 +57,14 @@
   <link id="main-stylesheet" rel="stylesheet" href="{{ __return }}">
 </noscript>
 
-<!-- FontAwesome and Academicons -->
+<!-- FontAwesome and Academicons
+  These are deferred, see https://web.dev/defer-non-critical-css/ -->
 {%- include snippets/get-sources.html -%}
 {%- assign _sources = __return -%}
-<link rel="stylesheet" href="{{ _sources.font_awesome }}" >
-<link rel="stylesheet" href="{{ _sources.academicons }}" >
+<link rel="preload" href="{{ _sources.font_awesome }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ _sources.font_awesome }}"></noscript>
+<link rel="preload" href="{{ _sources.academicons }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ _sources.academicons }}"></noscript>
 
 <!-- Webpack -->
 {%- if page.use_webpack -%}
