@@ -9,6 +9,7 @@ help:
 	@echo "webpack        -> Build Webpack components"
 	@echo "webpack-reload -> Live reload Webpack components"
 	@echo "lighthouse     -> Run lighthouse on btjanaka.net"
+	@echo "docker         -> Build the site in a Docker container"
 
 install:
 	bundle install
@@ -30,3 +31,9 @@ webpack-reload:
 
 lighthouse:
 	npm run lighthouse
+
+docker:
+	docker run --rm \
+		--volume="$(PWD):/srv/jekyll" \
+		-it jekyll/jekyll:4.1.0 \
+		/bin/bash -c "npm install && npm run build && jekyll build"
