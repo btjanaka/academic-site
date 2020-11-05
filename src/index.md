@@ -18,9 +18,9 @@ at [USC](https://www.usc.edu/), supervised by
 webmaster of USC's [VGSA](http://vgsa.usc.edu), and as a senator representing
 the Viterbi School in [GSG](https://gsg.usc.edu). Previously, I was an
 undergraduate in computer science at [UC Irvine](https://uci.edu/), where I
-worked with [Roy Fox](https://royf.org/) and the Intelligent Dynamics Lab on
-hierarchical reinforcement learning, and with
-[David Mobley](https://mobleylab.org/people/david-mobley/),
+worked with [Roy Fox](https://royf.org/) and the
+[Intelligent Dynamics Lab](https://indylab.org/) on hierarchical reinforcement
+learning, and with [David Mobley](https://mobleylab.org/people/david-mobley/),
 [Jessica Maat](https://www.linkedin.com/in/jessica-maat-2a1875119/), and the
 [Mobley Lab](https://mobleylab.org/) on molecular dynamics force fields.
 Additionally, I was the Internal Vice President of
