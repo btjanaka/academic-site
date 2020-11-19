@@ -9,4 +9,5 @@ bundle exec htmlproofer \
   --check-favicon \
   --check-opengraph \
   --only-4xx \
+  --url-ignore "/instagram.com/" \
   ./build
