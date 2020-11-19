@@ -56,7 +56,7 @@
           url: https://taxicab175.github.io
         - name: Report
           url: https://taxicab175.github.io/assets/pdf/taxicab175-final-report.pdf
-- category_name: Miscellaneous
+- category_name: AI
   projects:
     - name: AI Practice
       date: Dec. 2019 - Present
@@ -67,6 +67,36 @@
       links:
         - name: GitHub
           url: https://github.com/btjanaka/ai-practice
+    - name: LogDir
+      date: Oct. 2020 - Present
+      img: /assets/img/projects/logdir.svg
+      description: >
+        A utility for managing logging directories.
+      links:
+        - name: Website
+          url: https://logdir.btjanaka.net
+        - name: GitHub
+          url: https://github.com/btjanaka/logdir
+        - name: PyPI
+          url: https://pypi.org/project/logdir
+    - name: Safeline
+      date: Feb. 2018
+      img: /assets/img/projects/safeline.png
+      description: >
+        Falls are one of the leading causes of injury for the elderly. To help
+        solve this problem, Safeline uses a Raspberry Pi camera to continuously
+        scan for falls. Once a fall is detected, Safeline alerts connected users
+        by pushing a notification to their iPhones. These users can then seek
+        medical assistance for the fall victim.
+      links:
+        - name: DevPost
+          url: https://devpost.com/software/safeline-9eqyxs
+        - name: GitHub
+          url: https://github.com/codyenokida/safeline
+        - name: Website
+          url: https://codyenokida.github.io/safeline/
+- category_name: Competitive Programming
+  projects:
     - name: Algorithm Problems
       date: Jul. 2018 - Present
       img: /assets/img/projects/handwritten-code.jpg
@@ -94,19 +124,3 @@
           url: https://github.com/btjanaka/cpsm
         - name: PyPI
           url: https://pypi.org/project/cpsm
-    - name: Safeline
-      date: Feb. 2018
-      img: /assets/img/projects/safeline.png
-      description: >
-        Falls are one of the leading causes of injury for the elderly. To help
-        solve this problem, Safeline uses a Raspberry Pi camera to continuously
-        scan for falls. Once a fall is detected, Safeline alerts connected users
-        by pushing a notification to their iPhones. These users can then seek
-        medical assistance for the fall victim.
-      links:
-        - name: DevPost
-          url: https://devpost.com/software/safeline-9eqyxs
-        - name: GitHub
-          url: https://github.com/codyenokida/safeline
-        - name: Website
-          url: https://codyenokida.github.io/safeline/
