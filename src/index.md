@@ -28,8 +28,9 @@ Additionally, I was the Internal Vice President of
 [Google](https://google.com) for three summers.
 
 My main interests are in robotics and AI, particularly reinforcement learning,
-clustering, and human-robot collaboration. I have also explored computational
-chemistry, competitive programming, and web development.
+evolutionary algorithms, and human-robot collaboration. I have also explored
+clustering, computational chemistry, competitive programming, and web
+development.
 
 During high school, I competed in the
 [VEX Robotics Competition](https://en.wikipedia.org/wiki/VEX_Robotics_Competition)
