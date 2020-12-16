@@ -1,6 +1,10 @@
 {%- include snippets/get-sources.html -%}
 {%- assign _sources = __return -%}
 
+<!--
+  Katex automatically loads fonts from the `fonts` directory that is relative
+  to it.
+-->
 <link rel="stylesheet" href="{{ _sources.katex.css }}" />
 <script defer src="{{ _sources.katex.js }}"></script>
 <script>
