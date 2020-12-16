@@ -66,6 +66,12 @@
 <link rel="preload" href="{{ _sources.academicons }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{{ _sources.academicons }}"></noscript>
 
+<!-- TensorFlow -->
+{%- if page.use_tensorflow -%}
+<script src="{{ _sources.tensorflow.js }}"></script>
+<script src="{{ _sources.tensorflow.viz }}"></script>
+{%- endif -%}
+
 <!-- Webpack -->
 {%- if page.use_webpack -%}
 <script type="text/javascript" src="/assets/bundle/bundle.js" defer></script>

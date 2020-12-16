@@ -15,7 +15,7 @@ default:
   chart: false
   toc:
     selectors: "h1,h2,h3"
-  sources: unpkg
+  sources: default
 
   page:
     mode: normal
@@ -44,7 +44,7 @@ default:
     use_page_title_as_title: false
 
 sources:
-  unpkg:
+  default:
     font_awesome: "https://use.fontawesome.com/releases/v5.0.13/css/all.css"
     academicons: "https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
     jquery: "https://unpkg.com/jquery@3.5.1/dist/jquery.min.js"
@@ -59,3 +59,6 @@ sources:
       css: "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
       autorender: "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
     mermaid: "https://unpkg.com/mermaid@8.0.0-rc.8/dist/mermaid.min.js"
+    tensorflow:
+      js: "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"
+      viz: "https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"
