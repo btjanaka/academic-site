@@ -95,9 +95,6 @@ const CPPN = (function () {
     model = CPPN.newModel(latentSize, hiddenDim, hiddenLayers, outputMode);
   }
 
-  // Initialize model.
-  restart();
-
   // Sets up the label value to change when the slider changes.
   function linkVal(slider, valId) {
     const val = document.getElementById(valId);
@@ -223,7 +220,6 @@ const CPPN = (function () {
     );
     ctx.putImageData(imageData, 0, 0);
   };
-  drawButton.onclick(); // Automatically draw when the page is loaded.
 
   // Save the image when the save button is clicked.
   const saveButton = document.getElementById("button-save");
@@ -233,4 +229,10 @@ const CPPN = (function () {
       .toDataURL("image/png")
       .replace(/^data:image\/[^;]/, "data:application/octet-stream");
   };
+
+  // Load the model and draw initial image when page loads.
+  document.addEventListener("DOMContentLoaded", () => {
+    restart();
+    drawButton.onclick();
+  });
 })();
