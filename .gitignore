@@ -20,3 +20,4 @@ vendor/
 # Editor
 *.swp
 .vscode/
+*.vim

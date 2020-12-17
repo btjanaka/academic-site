@@ -1,0 +1,144 @@
+---
+layout: article
+title: "CPPN Image Generator"
+use_tensorflow: true
+katex: true
+---
+
+<p>
+  <a
+    href="https://en.wikipedia.org/wiki/Compositional_pattern-producing_network"
+    >Compositional Pattern-Producing Networks (CPPNs)</a
+  >
+  are networks which, among other things, may be used to encode images at
+  (theoretically) infinite resolution. While other networks output images all at
+  once, CPPNs take in individual $x$ and $y$ coordinate and output one pixel at
+  time. In this demo, a CPPN is used to generate random images. The architecture
+  of the CPPN is as follows:
+</p>
+
+<ol>
+  <li>
+    An input layer takes in a random latent vector with values in the range
+    $[-1, 1]$, as well as $x$ and $y$ coordinates of the pixel and a radius $r =
+    \sqrt{x^2 + y^2}$.
+  </li>
+  <li>
+    The inputs then flow through several hidden layers with tanh activations.
+  </li>
+  <li>
+    Finally, there is an output layer of size 1 (for greyscale images) or size 3
+    (for RGB images) with sigmoid activation (this ensures all outputs are in
+    the range $[0, 1]$).
+  </li>
+</ol>
+
+<p>
+  All weights are initially drawn from a unit normal distribution. When you
+  press the <code>Restart</code> button, these weights will be re-initialized.
+  To get the final image, pixel values are calculated on a grid of
+  <code>width</code> uniformly spaced coordinates in the $x$ direction and
+  <code>height</code> uniformly spaced coordinates in the $y$ direction.
+</p>
+
+<p>
+  For more info about CPPNs, I highly recommend referring to David Ha's
+  <a
+    href="https://blog.otoro.net/2016/03/25/generating-abstract-patterns-with-tensorflow/"
+    >blog post</a
+  >. This demo is based on that blog post, as well as the corresponding
+  <a href="https://otoro.net/ml/netart/">demo</a>. The network in this demo was
+  implemented with <a href="https://www.tensorflow.org/js">TensorFlow.js</a>.
+</p>
+
+<div class="project__cppn">
+  {% assign size="240" %}
+
+  <label class="control-label" for="output-width"
+    >Width: <span id="output-width-val">{{ size }}</span></label
+  >
+  <input
+    type="range"
+    min="100"
+    max="1920"
+    value="{{ size }}"
+    step="10"
+    class="slider"
+    id="output-width"
+  />
+
+  <label class="control-label" for="output-height"
+    >Height: <span id="output-height-val">{{ size }}</span></label
+  >
+  <input
+    type="range"
+    min="100"
+    max="1920"
+    value="{{ size }}"
+    step="10"
+    class="slider"
+    id="output-height"
+  />
+
+  <label class="control-label" for="output-mode">Color Mode</label>
+  <select id="output-mode" name="Mode">
+    <option value="grey">Greyscale</option>
+    <option value="rgb">RGB</option>
+  </select>
+
+  <label class="control-label" for="hidden-layers"
+    >Hidden Layers: <span id="hidden-layers-val">8</span></label
+  >
+  <input
+    type="range"
+    min="0"
+    max="16"
+    value="8"
+    step="1"
+    class="slider"
+    id="hidden-layers"
+  />
+
+  <label class="control-label" for="hidden-dim"
+    >Hidden Layer Dimension: <span id="hidden-dim-val">16</span></label
+  >
+  <input
+    type="range"
+    min="1"
+    max="64"
+    value="16"
+    step="1"
+    class="slider"
+    id="hidden-dim"
+  />
+
+  <label class="control-label" for="latent-size"
+    >Latent Vector Size: <span id="latent-size-val">2</span></label
+  >
+  <input
+    type="range"
+    min="0"
+    max="16"
+    value="2"
+    step="1"
+    class="slider"
+    id="latent-size"
+  />
+
+  <div id="latent-controls"></div>
+
+  <div class="buttons">
+    <a class="button button--primary button--pill" id="button-draw">Draw</a>
+    <a class="button button--primary button--pill" id="button-save">Save</a>
+    <a class="button button--primary button--pill" id="button-restart">
+      Restart
+    </a>
+    <a class="button button--primary button--pill" id="button-randomize">
+      Randomize Latent
+    </a>
+  </div>
+
+  <canvas id="output-image" width="{{ size }}" height="{{ size }}"></canvas>
+
+  <script src="assets/js/cppn.js"></script>
+</div>
