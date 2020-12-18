@@ -33,6 +33,19 @@ I typically use [Inkscape](https://inkscape.org) to draw these. Refer to this
   </div>
 {% endfor %}
 
+#### Abstract Art
+
+This was generated with a
+[CPPN](https://en.wikipedia.org/wiki/Compositional_pattern-producing_network). I
+have created an online [CPPN image generator](cppn), as well as a
+[Python notebook](https://github.com/btjanaka/ai-practice/blob/master/vision/abstract_cppn.ipynb).
+This video was made with the notebook.
+
+<video width="300" height="300" style="margin: 10px auto; display: block" autoplay loop>
+  <source src="assets/img/graphic-design/abstract.mp4" type="video/mp4" />
+  <source src="assets/img/graphic-design/abstract.webm" type="video/webm" />
+</video>
+
 ### Drone
 
 Filmed with a [DJI Spark](https://www.dji.com/spark).
