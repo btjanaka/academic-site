@@ -39,11 +39,24 @@ This was generated with a
 [CPPN](https://en.wikipedia.org/wiki/Compositional_pattern-producing_network). I
 have created an online [CPPN image generator](cppn), as well as a
 [Python notebook](https://github.com/btjanaka/ai-practice/blob/master/vision/abstract_cppn.ipynb).
-This video was made with the notebook.
+This video was made with the notebook. The video shown below is a compressed
+version. For the full version, see
+[here](assets/img/graphic-design/abstract-original.mp4).
 
-<video width="300" height="300" style="margin: 10px auto; display: block" autoplay loop>
+<video
+  width="300"
+  height="300"
+  style="margin: 10px auto; display: block"
+  autoplay
+  loop
+  muted
+  controls="true"
+  playsinline
+>
   <source src="assets/img/graphic-design/abstract.mp4" type="video/mp4" />
   <source src="assets/img/graphic-design/abstract.webm" type="video/webm" />
+  <source src="assets/img/graphic-design/abstract.ogg" type="video/ogg" />
+  <p>Your browser does not support the video tag.</p>
 </video>
 
 ### Drone
