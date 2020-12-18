@@ -39,9 +39,9 @@ This was generated with a
 [CPPN](https://en.wikipedia.org/wiki/Compositional_pattern-producing_network). I
 have created an online [CPPN image generator](cppn), as well as a
 [Python notebook](https://github.com/btjanaka/ai-practice/blob/master/vision/abstract_cppn.ipynb).
-This video was made with the notebook. The video shown below is a compressed
-version. For the full version, see
-[here](assets/img/graphic-design/abstract-original.mp4).
+This video was made with the notebook. The video shown below is a lower-quality
+version. For the original video (or if the video is not showing up for you),
+click [here](assets/img/graphic-design/abstract-original.mp4).
 
 <video
   width="300"
