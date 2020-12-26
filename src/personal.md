@@ -119,31 +119,6 @@ known to magically change its ordering to _Byron_ from time to time.
 **Tjanaka** is pronounced like _chuh-NAH-kah_. Just imagine the _tj_ as a _ch_,
 and you'll be well on your way.
 
-<blockquote class="twitter-tweet tw-align-center">
-  <p lang="en" dir="ltr">
-    Re: Mispronouncing my name
-    <br>
-    <br>
-    ~~ Phone conversation excerpt ~~
-    <br>
-    A: Hi, is this Byron Tanaka?
-    <br>
-    Me: Yes, this is __Bryon Tjanaka (pronounced like Brian chuh-NAH-kah)__
-    <br>
-    A: Ok Byron, I&#39;m calling about...
-    <br>
-    Me:
-    <a href="https://t.co/cjhHBIfjqH">
-      pic.twitter.com/cjhHBIfjqH
-    </a>
-  </p>
-  &mdash; Bryon Tjanaka (@btjanaka)
-  <a href="https://twitter.com/btjanaka/status/1296674265018793984?ref_src=twsrc%5Etfw">
-    August 21, 2020
-  </a>
-</blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 ### Quotes
 
 {% for quote in site.data.personal.quotes %}
