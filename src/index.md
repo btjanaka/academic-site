@@ -73,39 +73,6 @@ with [86868: The Resistance](/resistance) and won the
   {% endif %}
 </div>
 
-<!-- Konami Code and Car Animation -->
-<!-- See also https://www.w3schools.com/howto/howto_css_modals.asp -->
-
-<!-- A modal that displays the animation. It starts out hidden. -->
-<div id="modal" class="custom__modal">
-  <div class="custom__modal-content">
-    <span id="close" class="custom__modal-close">&times;</span>
-    <h2>Konami Code!</h2>
-    {% include projects/car/car.html %}
-  </div>
-</div>
-
+<!-- Konami Code -->
 <script type="text/javascript" src="/assets/js/konami.js"></script>
-
-<script type="text/javascript">
-  let modal = document.getElementById("modal");
-
-  // Clicking on the close button or outside the window closes the modal.
-  let close = document.getElementById("close");
-  close.onclick = function() {
-    window.showing_car = false;
-    modal.style.display = "none";
-  }
-  window.onclick = function(event) {
-    if(event.target == modal) {
-      window.showing_car = false;
-      modal.style.display = "none";
-    }
-  }
-
-  // Konami code activates the modal.
-  let konami = new Konami(function() {
-    window.showing_car = true; // Global variable for activating the car.
-    modal.style.display = "block";
-  });
-</script>
+<script>let konami = new Konami("https://art.btjanaka.net");</script>
