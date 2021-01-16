@@ -13,8 +13,11 @@ I typically use [Inkscape](https://inkscape.org) to draw these. Refer to this
 [GitHub repo](https://github.com/btjanaka/art) for the SVG sources.
 
 {% for collection in site.data.personal.graphic_design %}
+
 #### {{ collection.name }}
+
 {% if collection.description %}{{ collection.description }}{% endif %}
+
   <div class="swiper swiper-{{ collection.name | downcase | replace: ' ', '-' }}">
     <div class="swiper__wrapper">
       {% for img in collection.items %}
@@ -43,21 +46,22 @@ This video was made with the notebook. The video shown below is a lower-quality
 version. For the original video (or if the video is not showing up for you),
 click [here](assets/img/graphic-design/abstract-original.mp4).
 
-<video
-  width="300"
-  height="300"
-  style="margin: 10px auto; display: block"
-  autoplay
-  loop
-  muted
-  controls="true"
-  playsinline
+<video width="300" height="300" style="margin: 10px auto; display: block"
+autoplay loop muted controls="true" playsinline
+
 >
+
   <source src="assets/img/graphic-design/abstract.mp4" type="video/mp4" />
   <source src="assets/img/graphic-design/abstract.webm" type="video/webm" />
   <source src="assets/img/graphic-design/abstract.ogg" type="video/ogg" />
   <p>Your browser does not support the video tag.</p>
 </video>
+
+Here is a video using the same kind of CPPN to generate abstract art for the
+song "Blue Jeans" by Lana Del Rey. Source code is available
+[here](https://github.com/btjanaka/ai-practice/blob/master/vision/abstract_cppn_video.py).
+
+<div>{%- include extensions/youtube.html id='O9qnrEp8miQ' -%}</div>
 
 ### Drone
 
@@ -122,6 +126,7 @@ and you'll be well on your way.
 ### Quotes
 
 {% for quote in site.data.personal.quotes %}
+
   <blockquote id="quote-{% increment quote_counter %}">
   <p>{{ quote.quote }}</p>
   {%- if quote.speaker -%}
@@ -145,7 +150,6 @@ and you'll be well on your way.
 ## Varia
 
 [Random Widgets](/widgets)
-
 
 <!-- Swiper script - all swipers should be initialized here. -->
 <script>
