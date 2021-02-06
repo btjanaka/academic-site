@@ -1,5 +1,18 @@
 - category_name: Research
   projects:
+    - name: pyribs
+      date: Sep. 2020 - Present
+      img: /assets/img/projects/pyribs.png
+      description: A bare-bones quality diversity optimization library.
+      links:
+        - name: Website
+          url: https://pyribs.org
+        - name: Documentation
+          url: https://docs.pyribs.org
+        - name: GitHub
+          url: https://github.com/icaros-usc/pyribs
+        - name: PyPI
+          url: https://pypi.org/project/ribs
     - name: ACBC
       date: Oct. 2019 - Jun. 2020
       img: /assets/img/projects/acbc-ant-sub-tasks.png
