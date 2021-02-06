@@ -17,3 +17,7 @@ events:
     desc: I have graduated from <a href="https://uci.edu">UC Irvine</a>!
   - date: 24 August 2020
     desc: I have started my PhD at <a href="https://usc.edu">USC</a>!
+  - date: 5 February 2021
+    desc:
+      Check out <a href="https://pyribs.org">pyribs</a>, a quality diversity
+      algorithm library I created with the ICAROS Lab.
