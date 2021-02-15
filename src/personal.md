@@ -10,7 +10,8 @@ aside:
 ### Graphic Design
 
 I typically use [Inkscape](https://inkscape.org) to draw these. Refer to this
-[GitHub repo](https://github.com/btjanaka/art) for the SVG sources.
+[GitHub repo](https://github.com/btjanaka/art) for the SVG sources. See
+[here](https://art.btjanaka.net) for more art.
 
 {% for collection in site.data.personal.graphic_design %}
 
