@@ -1,6 +1,5 @@
 ---
 layout: article
-title: Bryon Tjanaka
 use_page_title_as_title: true
 ---
 
