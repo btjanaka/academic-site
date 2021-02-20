@@ -12,30 +12,27 @@ use_page_title_as_title: true
   </div>
 </div>
 
-I am a computer science PhD student in the [ICAROS Lab](http://icaros.usc.edu)
-at [USC](https://www.usc.edu/), supervised by
-[Stefanos Nikolaidis](https://stefanosnikolaidis.net). I also serve as the
-webmaster of USC's [VGSA](http://vgsa.usc.edu), and as a senator representing
-the Viterbi School in [GSG](https://gsg.usc.edu). Previously, I was an
-undergraduate in computer science at [UC Irvine](https://uci.edu/), where I
-worked with [Roy Fox](https://royf.org/) and the
-[Intelligent Dynamics Lab](https://indylab.org/) on hierarchical reinforcement
-learning, and with [David Mobley](https://mobleylab.org/people/david-mobley/),
-[Jessica Maat](https://www.linkedin.com/in/jessica-maat-2a1875119/), and the
-[Mobley Lab](https://mobleylab.org/) on molecular dynamics force fields.
-Additionally, I was the Internal Vice President of
-[ACM@UCI](http://acm-uci.org/). Outside of academia, I have interned at
-[Google](https://google.com) for three summers.
+I am a PhD student in the [ICAROS Lab](http://icaros.usc.edu) at
+[USC](https://www.usc.edu/), supervised by
+[Stefanos Nikolaidis](https://stefanosnikolaidis.net). Previously, I studied at
+[UCI](https://uci.edu/), where I worked with [Roy Fox](https://royf.org/) and
+the [indylab](https://indylab.org/) on
+[RL](https://en.wikipedia.org/wiki/Reinforcement_learning), and with the
+[Mobley Lab](https://mobleylab.org/) on
+[force fields](<https://en.wikipedia.org/wiki/Force_field_(chemistry)>).
 
-My main interests are in robotics and AI, particularly quality diversity
-algorithms, evolutionary algorithms, reinforcement learning, and human-robot
-collaboration. I have also explored clustering, computational chemistry,
-competitive programming, and web development.
+My research focuses on robotics and AI, particularly applications of
+[quality diversity optimization](https://quality-diversity.github.io) and
+[evolutionary algorithms](https://en.wikipedia.org/wiki/Evolutionary_algorithm)
+to reinforcement learning and
+[human-robot collaboration](https://en.wikipedia.org/wiki/Human-robot_collaboration).
 
-During high school, I competed in the
-[VEX Robotics Competition](https://en.wikipedia.org/wiki/VEX_Robotics_Competition)
-with [86868: The Resistance](/resistance) and won the
-[2017 VEX Robotics High School World Championship](https://www.robotevents.com/robot-competitions/vex-robotics-competition/RE-VRC-17-4887.html).
+Outside research, I have spent time at [Google](https://google.com). Currently,
+I am the webmaster of USC's [VGSA](http://vgsa.usc.edu). At UCI, I served as
+[ACM@UCI](http://acm-uci.org/)'s Internal VP. During high school, I competed in
+[VEX Robotics](https://en.wikipedia.org/wiki/VEX_Robotics_Competition) with
+[The Resistance](/resistance) and won the
+[World Championship](https://www.robotevents.com/robot-competitions/vex-robotics-competition/RE-VRC-17-4887.html).
 
 [<i class="far fa-file-alt"></i> Resume](/btjanaka-resume.pdf){:.button.button--primary.button--pill}
 [<i class="far fa-file-alt"></i> CV](/btjanaka-cv.pdf){:.button.button--primary.button--pill}
