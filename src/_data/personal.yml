@@ -5,8 +5,10 @@
 graphic_design:
   - name: Landscapes
     items:
+      - img: /assets/img/graphic-design/retrowave-city.png
+        caption: Driving into the night...
       - img: /assets/img/graphic-design/mountain-explorer-blue.png
-        caption: Mountain explorer (Guess Who?)
+        caption: Mountain explorer
       - img: /assets/img/graphic-design/hero.png
         caption: A hero holding up a sword
         vertical: true
